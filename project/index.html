@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <ul class="menu-top">
+                    <li><a class="" href="" title="My Home">My Home</a></li>
+                    <li><a href="" title="로그아웃">로그아웃</a></li>
+                    <li><a class="active" href="" title="VR 만들기">VR 만들기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-bottom">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="logo">
+                        <h1><a href="" title=""></a></h1>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarmenu">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="" class="nav-link" title="HOME">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link" title="VR World">VR World</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link" title="지도로 보기">지도로 보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <form method="" action="" class="form_search pr">
+                            <div class="input_group">
+                                <input type="text" name="">
+                                <button class="button_search" type="submit"></button>
+                                <i class="fas fa-times form_close"></i>
+                            </div>
+                        </form>
+                    </div>
+                    <a href="javascript:void(0)" class="icon_search"></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="box-slider pr">
+            <!--<div class="slider-overlay"></div>-->
+            <div class="slider">
+                <div class="item">
+                    <img src="assets/images/slide.jpg" alt="">
+                    <article>
+
+                    </article>
+                </div>
+                <div class="item">
+                    <img src="assets/images/slide.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/images/slide.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-control">
+                <button class="slick-prev slick-arrow">prev</button>
+                <button class="slick-next slick-arrow">next</button>
+                <ul class="slick-dots">
+
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="assets/js/slick.js"></script>
+<script>
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 9000,
+        dots: true,
+        infinite: true,
+        speed: 800,
+        fade: true,
+        cssEase: 'linear',
+        prevArrow: '.slick-prev',
+        nextArrow: '.slick-next',
+        appendDots: '.slick-dots'
+    });
+    $('.icon_search').click(function () {
+       $('.search').addClass('active');
+       $('.search input').focus();
+       $(this).css('display','none');
+    });
+    $('.form_close').click(function () {
+        $('.search').removeClass('active');
+        $('.icon_search').css('display','block');
+    });
+</script>
+</body>
+</html>
