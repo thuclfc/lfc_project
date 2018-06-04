@@ -14,8 +14,8 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top">
-                    <li><a class="" href="" title="My Home">My Home</a></li>
-                    <li><a href="" title="로그아웃">로그아웃</a></li>
+                    <li><a class="" href="profile.html" title="My Home">My Home</a></li>
+                    <li><a href="javascript:void(0)" title="로그아웃" data-toggle="modal" data-target="#popuplogin">로그아웃</a></li>
                     <li><a class="active" href="" title="VR 만들기">VR 만들기</a></li>
                 </ul>
             </div>
@@ -32,13 +32,13 @@
                     <div class="collapse navbar-collapse" id="navbarmenu">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a href="" class="nav-link" title="HOME">HOME</a>
+                                <a href="index.html" class="nav-link" title="HOME">HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link" title="VR World">VR World</a>
+                                <a href="vr_tour.html" class="nav-link" title="VR World">VR World</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link" title="지도로 보기">지도로 보기</a>
+                                <a href="map.html" class="nav-link" title="지도로 보기">지도로 보기</a>
                             </li>
                         </ul>
                     </div>
@@ -53,6 +53,28 @@
                     </div>
                     <a href="javascript:void(0)" class="icon_search"></a>
                 </nav>
+            </div>
+        </div>
+        <div class="modal fade" id="popuplogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog popup-login" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <h3>레이어</h3>
+                    <form method="" action="">
+                        <div class="group-input">
+                            <input type="text" placeholder="레이어" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="group-input">
+                            <input type="password" placeholder="레이어" required>
+                            <i class="icon"></i>
+                        </div>
+                        <div class="group-input">
+                            <label><input type="checkbox" value="" />레이어</label>
+                        </div>
+                        <input type="submit" value="레이어">
+                    </form>
+                </div>
             </div>
         </div>
     </header>
@@ -253,28 +275,6 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="assets/js/slick.js"></script>
-<script>
-    $('.slider').slick({
-        autoplay: false,
-        autoplaySpeed: 9000,
-        dots: true,
-        infinite: true,
-        speed: 400,
-        fade: true,
-        cssEase: 'linear',
-        prevArrow: '.slick-prev',
-        nextArrow: '.slick-next',
-        appendDots: '.slick-dots'
-    });
-    $('.icon_search').click(function () {
-       $('.search').addClass('active');
-       $('.search input').focus();
-       $(this).css('display','none');
-    });
-    $('.form_close').click(function () {
-        $('.search').removeClass('active');
-        $('.icon_search').css('display','block');
-    });
-</script>
+<script src="assets/js/page.js"></script>
 </body>
 </html>
