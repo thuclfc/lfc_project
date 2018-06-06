@@ -506,10 +506,10 @@ header{height: 80px;}
     }
   }
   .ada_pertanyaan{
-    padding: 50px 20px; background: rgb(0, 179, 227);
-    h4{@extend %h4; margin-bottom: 20px !important; color: #fff !important; text-align: center !important;}
-    h4:after{background: #fff !important; margin: 0 auto;}
-    .intro p{color: #fff;}
+    padding: 50px 20px; background: #fafafa;
+    h4{@extend %h4; margin-bottom: 42px !important; text-align: center !important;}
+    h4:after{ margin: 0 auto;}
+    .intro p{text-align: center;}
     .buttons{
       display: flex;
       display: -webkit-flex;
@@ -519,6 +519,12 @@ header{height: 80px;}
     }
   }
   .google_play{margin-top: 0 !important;}
+  .simulasi_bunga{
+    a.lebih_lanjut{
+      @extend %button_home;
+      background: #00B3E3;
+    }
+  }
  }
 article.intro p{
   font: 16px 'oxygen_light', sans-serif;
@@ -647,6 +653,7 @@ ul.list-item{
   width: 100%;
   text-align: center;
   background: rgb(213, 28, 41);
+  p{font: 18px 'Oxygen', sans-serif; color: #fff; line-height: 27px;}
 }
 .google_play h4{
   display: block;
@@ -664,7 +671,7 @@ ul.list-item{
   display: block;
   text-indent: -9999em;
   background: url("../images/google_play.png") no-repeat;
-  margin: 0 auto;
+  margin: 42px auto 0;
 }
 /*.post p:before{
   content: ".";
@@ -790,7 +797,6 @@ ul.list-item{
     background: url("../images/icon_select.png") no-repeat -19px 0;
   }
 }
-
 
 .blog,.faq,.event{
   padding: 0 20px;
@@ -1095,7 +1101,7 @@ ul.list-item{
   .item ul{
     display: flex; display: -webkit-flex; margin-top: 10px; padding: 0; height: 40px; width: 100%; border: 1px solid rgb(213, 28, 41); border-radius: 8px;
     li{width: 50%; list-style: none; font: 18px helveticaneuemedium; color:  rgb(213, 28, 41); line-height: 40px; text-align: center;}
-    li span{font-size: 12px; margin-top: -6px; padding-right: 4px;}
+    li span{font-size: 12px; margin-top: 5px; padding-right: 4px;}
     li.active{background: rgb(213, 28, 41); color: #fff;}
     li:nth-child(1).active{border-radius: 8px 0 0 8px;}
     li:nth-child(2).active{border-radius: 0 8px 8px 0;}
@@ -1110,7 +1116,7 @@ ul.list-item{
     li{margin-bottom: 15px; list-style: none; display: flex; justify-content: space-between;}
     li p{font: 18px 'Dosis-Medium'; color: rgb( 84, 84, 86);}
     li p:nth-child(2){display: flex; font: 18px helveticaneuemedium; color: rgb(0, 179, 227);}
-    p span{font-size: 12px; padding-right: 5px;}
+    p span{font-size: 12px; margin-top: 7px; padding-right: 5px;}
     p strong{color: rgb(213, 28, 41); font: bold 18px 'Dosis';}
   }
   .total{
@@ -1128,7 +1134,7 @@ ul.list-item{
     font: 14px 'Dosis-Medium';
   }
   .total .total_price{display: flex; font: 18px 'Dosis', sans-serif; font-weight: bold;}
-  .total .total_price span{font-size: 12px; padding-right: 5px; font-weight: normal;}
+  .total .total_price span{font-size: 12px; margin-top: 7px; padding-right: 5px; font-weight: normal;}
   h5{margin: 0; font: 18px 'Dosis-Medium', sans-serif; color: rgb(84, 84, 86);}
 }
 /*end*/
@@ -1140,13 +1146,15 @@ ul.list-item{
 }
 /*end*/
 
+
+
 /*footer*/
 footer{
   display: block;
   margin-top: 50px;
   width: 100%;
   background: rgb(84, 84, 86);
-  .footer-inner{padding: 40px 20px 0;}
+  .footer-inner{padding: 50px 20px 30px;}
 }
 footer .logo{
   width: 131px; height: 35px;
@@ -1163,7 +1171,7 @@ footer h4{
   text-transform: uppercase;
   color: #fff;
 }
-footer .qk h4{font: 12px 'Oxygen', sans-serif; text-transform: none;}
+footer .qk h4{font: bold 12px 'Oxygen', sans-serif; text-transform: none;}
 footer .Sanggahan{
   padding: 30px 0;
   ul{padding-left: 25px;}
@@ -1178,6 +1186,7 @@ footer .address{
     display: flex;
     color: rgba(255, 255, 255, 0.75);
     p{margin: 0; line-height: 21px; font: 14px 'Dosis', sans-serif}
+    p span{display: block; margin-bottom: 3px;}
   }
   ul strong{
     display: block; margin-right: 11px; color: #fff; font: 14px 'Dosis', sans-serif; font-weight: bold;
@@ -1191,13 +1200,12 @@ footer .footer-menu{
   -webkit-justify-content: space-between;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
-  margin: 50px 0 0 0;
-  background: rgb( 51, 49, 50);
-  padding: 50px 20px;
+  margin: 0;
+  padding: 0 0 22px 0;
   li{width: 50%; margin: 5px 0; list-style: none;}
   li a{
-    color: rgba(255,255,255,0.75); letter-spacing: 1px;
-    font: 14px 'Dosis', sans-serif; line-height: 27px; text-transform: uppercase;
+    color: #fff; letter-spacing: 1px;
+    font: bold 14px 'Dosis', sans-serif; line-height: 27px; text-transform: uppercase;
   }
 }
 footer .social{
@@ -1206,33 +1214,126 @@ footer .social{
   padding: 0 20px;
   align-items: center;
   -webkit-align-items: center;
-  background: rgb( 51, 49, 50);
   li{list-style: none; margin-right: 30px;}
   li i{color: #fff; font-size: 30px;}
+  li:last-child{margin-right: 0;}
 }
-footer p.copyright{
+.footer-bt{
+  padding: 35px 0 25px 0;
   background: rgb( 51, 49, 50);
-  margin: 0;
-  padding: 20px;
+}
+footer .copyright{
+  color: #fff;
   font: 14px 'Dosis', sans-serif;
-  line-height: 27px; color: rgba(255,255,255,0.75);
+  a{color: #fff;}
+  p{margin: 0;}
+  a:before{
+    content: "|";
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0 8px 0 6px;
+  }
+  span{color: rgba(255, 255, 255, 0.75)}
 }
 /*end*/
 
 
 @media (min-width: 1200px) {
+  %h4{
+    font-size: 36px; line-height: 45px; margin-bottom: 60px;
+    &:after{width: 40px; margin-top: 19px;}
+  }
+  %button_home{width: 200px; height: 60px; margin-top: 37.6px; font: 14px 'Dosis', sans-serif; line-height: 60px;}
   .home{
     header{
       background: #d51c29;
       .logo-finmas{width: 131px; height: 35px; background: url("../images/logo-footer.png") no-repeat;}
       .toggle-bar{display: none;}
     }
+    .banner{
+      padding: 50px 0 0 0;
+      .container{display: flex;}
+      .content{width: 540px; margin-right: 100px; padding-top: 49px;}
+      .image{margin-bottom: -4px;}
+      h2{
+        letter-spacing: 1.5px;
+        font: bold 36px 'Dosis', sans-serif;
+        line-height: 45px;
+        margin-bottom: 32px;
+        &:after{
+          content: "";
+          width: 40px;
+          height: 1px;
+          display: block;
+          margin-top: 19px;
+          border-radius: 2px;
+          background-color: #ffffff;
+        }
+      }
+      p{font: 18px 'Oxygen',sans-serif; line-height: 27px; margin-top: 0;}
+    }
+    .mengapa_finmas{
+      margin-top: 80px;
+      article{
+        width: 520px; margin-bottom: 37px;
+        h3{margin-top: 0; font-size: 24px;}
+        h3 i{margin-right: 20px;}
+        p{margin: 12px 0 0 0;}
+      }
+      .list_post{
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        display: -webkit-flex;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+      }
+    }
+    .mudahnya_meminjam{
+      padding: 80px 0 77px 0;
+      article{
+        margin-bottom: 0; width: 320px;
+        h3{font-size: 24px; margin-top: 0;}
+        h3 i{background: #fff; margin-right: 20px;}
+        p{margin:12px 0 0;}
+      }
+      .list_post{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+    .simulasi_bunga{padding: 80px 20px;}
+    .pendanaan{
+      padding: 80px 0;
+      .container{display: flex; align-items: center;}
+      h4{margin-bottom: 42px;}
+      h4:before{display: none;}
+      .content{width: 520px;}
+      .boxIcon{
+        width: 250px;
+        height: 250px;
+        display: flex;
+        margin-left: 160px;
+        align-items: center;
+        justify-content: center;
+        background: #F5F5F5;
+        border-radius: 50%;
+      }
+    }
+    .ada_pertanyaan{
+      padding: 80px 0;
+      p{width: 520px; margin: 0 auto;}
+      .buttons{
+        width: 440px; margin: 40px auto 0;
+        a{width: 200px; height: 60px; margin-top: 0; line-height: 60px; background: #00B3E3; color: #fff;}
+      }
+    }
   }
   header{
-    display: flex; height: 100px;
-    display: -webkit-flex;
+    width: 100%; height: 100px; position: fixed; top: 0; padding: 0 50px;
+    .container{width: 1440px; padding: 0 50px; margin: 0 auto; display: flex; height: 100%; align-items: center; position: relative;}
     nav{
-      margin-left: 16px;
+      margin-left: 36px;
       opacity: 1;
       visibility: visible;
       width: auto;
@@ -1242,15 +1343,78 @@ footer p.copyright{
       flex-basis: auto;
     }
     nav a.close-menu{display: none;}
+    .button{
+      position: absolute; right: 50px;
+      a{
+        display: block;
+        width: 160px;
+        height: 50px;
+        border-radius: 8px;
+        background-color: #00b3e3;
+      }
+      span{display: block; text-align: center; font: bold 12px 'Dosis',sans-serif; color: #fff; text-transform: uppercase; letter-spacing: 1px; line-height: 50px;}
+    }
   }
-  .header-inner{width: auto; height: 100%; position: relative;}
+  .header-inner{width: auto; height: 100%; position: relative; padding: 0;}
   .menu-finmas{
     display: flex; align-items: center;
     padding: 0; margin: 0;
-    li{margin: 0 15px;}
-    li span{color: #fff; letter-spacing: 1px; font: 14px 'Oxygen', sans-serif;}
+    li{margin: 0 20px;}
+    li span{color: #fff; letter-spacing: 1px; font-size: 14px; line-height: 18px;}
+  }
+  main{margin-top: 100px;}
+  .container{width: 1080px; margin: 0 auto;}
+  .mengapa_finmas .container{
+    width: 1080px;
+  }
+  .total_bunga{
+    width: 315px;
+    margin: 0 130px 0 115px;
+  }
+  .simulasi_bunga{
+    h4{margin-bottom: 42px !important;}
+    .container{display: flex; flex-direction: row-reverse;}
+    .content{
+      width: 520px; padding-top: 40px;
+      p{font: 300 16px 'Oxygen', sans-serif; line-height: 24px; color: #fff;}
+    }
+  }
+  .google_play{
+    padding: 80px 0;
+    h4{font-size: 36px; margin-bottom: 42px;}
+    h4:after{
+      content: "";
+      width: 40px;
+      height: 1px;
+      background: #fff;
+      display: block;
+      margin: 19px auto 0;
+    }
+    a{width: 220px; height: 66px; background: url("../images/google_play2x.png") no-repeat;}
+    p{width: 520px; margin: 0 auto;}
+  }
+
+  footer{
+    .footer-inner{
+      display: flex; justify-content: center;
+    }
+    .container{display: flex; width: 1190px;}
+    .col1{width: 260px;}
+    .Sanggahan{width: 650px; margin: 0 40px 0 88px; padding: 0;}
+    .qk{width: 152px;}
+    .footer-menu{
+      justify-content: flex-start;
+      li{width: auto; margin: 0 20px;}
+      li:first-child{margin-left: 0;}
+    }
+    .footer-bt{
+      background: rgb( 51, 49, 50);
+      .container{display: flex; justify-content: space-between;}
+    }
+    .social{padding: 0;}
   }
 }
+
 
 
 .modal{
