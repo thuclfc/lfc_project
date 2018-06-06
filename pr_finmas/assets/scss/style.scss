@@ -470,6 +470,7 @@ header{height: 80px;}
     padding: 50px 20px 50px; background: rgb(213, 28, 41);
     h4{@extend %h4; color: #fff !important;}
     h4:after{background: #fff !important;}
+    .content p{color: #fff;}
     .intro p{
       font: 14px 'oxygen_light', sans-serif;
       font-weight: 300;
@@ -499,7 +500,7 @@ header{height: 80px;}
       content: "";
       width: 100px;
       height: 100px;
-      display: block;
+      display: none;
       margin-bottom: 20px;
       background: rgb(245, 245, 245) url("../images/icon_pendanaan.png") no-repeat center center;
       border-radius: 50%;
@@ -649,7 +650,7 @@ ul.list-item{
 .google_play{
   display: block;
   padding: 40px 0;
-  margin: 40px 0 -50px 0;
+  margin: 40px 0 0 0;
   width: 100%;
   text-align: center;
   background: rgb(213, 28, 41);
@@ -808,7 +809,7 @@ ul.list-item{
     .thumb img{width: 100%; height: 100%; object-fit: cover;}
     h3{margin: 10px 0;}
     h3 a{display: block; margin-bottom: 10px; font: 24px 'Dosis',sans-serif; font-weight: bold; color: rgb(84, 84, 86); line-height: 36px;}
-    time{color: rgb(0, 179, 227); font: 12px 'Dosis', sans-serif; text-transform: uppercase;}
+    time{color: #545456; font: 12px 'Dosis', sans-serif; text-transform: uppercase;}
     article{margin-bottom: 40px;}
   }
 }
@@ -841,7 +842,7 @@ ul.list-item{
     line-height: 36px;
     color: rgb(84,84,86);
   }
-  time{display: block; margin-bottom: 40px; color: rgb(0, 179, 227); font: 12px 'Dosis', sans-serif; text-transform: uppercase;}
+  time{display: block; color: #545456; font:400 12px 'Dosis', sans-serif; text-transform: uppercase;}
   .link-post{
     display: flex; margin: 40px 0 0; padding: 0 20px; align-items: center; -webkit-align-items: center;
     li{list-style: none; margin-right: 30px;}
@@ -911,6 +912,11 @@ ul.list-item{
     margin-bottom: -50px;
     h4{@extend %h4;}
   }
+  .category_time{
+    display: flex; margin-bottom: 40px;
+    span{display: flex; align-items: center; color: #00b3e3; font: 12px 'Dosis', sans-serif; text-transform: uppercase; letter-spacing: 2px;}
+    span:after{content: ""; width: 3px; height: 3px; display: block; margin: 0 5px; background: rgba(84, 84, 86, 0.5); border-radius: 50%;}
+  }
 }
 /*end*/
 
@@ -919,7 +925,7 @@ ul.list-item{
   .title h2:before{
     content: "";
     width: 100px; height: 100px;
-    display: block;
+    display: none;
     margin: 0 auto 20px;
     background: rgb(245, 245, 245) url("../images/group.png") no-repeat center center;
     border-radius: 50%;
@@ -985,10 +991,11 @@ ul.list-item{
 /*Pendanaan*/
 .pendanaan,.peminjaman{
   padding: 0 20px;
+  h4{@extend %h4;}
   .title h2:before{
     content: "";
     width: 100px; height: 100px;
-    display: block;
+    display: none;
     margin: 0 auto 20px;
     background: rgb(245, 245, 245) url("../images/icon_pendanaan.png") no-repeat center center;
     border-radius: 50%;
@@ -1069,16 +1076,21 @@ ul.list-item{
     background: rgb(250,250,250);
     article{
       padding: 0; margin-bottom: 40px;
-      h3{display: flex; margin-bottom: 0; align-items: center; -webkit-align-items: center; font:400 18px 'Dosis-Medium', sans-serif; color: rgb(0, 179, 227); line-height: 27px;}
+      h3{display: flex; margin: 0; align-items: center; -webkit-align-items: center; font:400 18px 'Dosis-Medium', sans-serif; color: rgb(0, 179, 227); line-height: 27px;}
       h3 a{color: rgb(0, 179, 227);}
-      h3:before{
-        content: "";
-        width: 60px; height: 60px;
-        display: block;
-        background: rgb(216, 216, 216);
+      h3 i{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        background: #fff;
         margin-right: 10px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        color: #cd1521;
+        font-size: 18px;
       }
-      p{font: 16px 'Oxygen', sans-serif; color: rgb(84, 84, 86); line-height: 24px;}
+      p{margin-bottom: 0; font: 16px 'Oxygen', sans-serif; color: rgb(84, 84, 86); line-height: 24px;}
     }
   }
   h4{@extend %h4;}
@@ -1100,13 +1112,14 @@ ul.list-item{
   .item{padding: 0 20px;}
   .item ul{
     display: flex; display: -webkit-flex; margin-top: 10px; padding: 0; height: 40px; width: 100%; border: 1px solid rgb(213, 28, 41); border-radius: 8px;
-    li{width: 50%; list-style: none; font: 18px helveticaneuemedium; color:  rgb(213, 28, 41); line-height: 40px; text-align: center;}
+    li{width: 50%; list-style: none; font: 18px 'Dosis', sans-serif; color:  rgb(213, 28, 41); line-height: 40px; text-align: center;}
     li span{font-size: 12px; margin-top: 5px; padding-right: 4px;}
-    li.active{background: rgb(213, 28, 41); color: #fff;}
+    li.active{background: rgb(213, 28, 41); color: #fff; font-weight: bold;}
     li:nth-child(1).active{border-radius: 8px 0 0 8px;}
     li:nth-child(2).active{border-radius: 0 8px 8px 0;}
     p{margin: 0; display: flex; justify-content: center;}
   }
+  .item:nth-child(2) ul li{font-size: 14px;}
   .listp{
     margin-top: 30px;
     background: rgb(250, 250, 250);
@@ -1115,7 +1128,7 @@ ul.list-item{
     p{margin: 0;}
     li{margin-bottom: 15px; list-style: none; display: flex; justify-content: space-between;}
     li p{font: 18px 'Dosis-Medium'; color: rgb( 84, 84, 86);}
-    li p:nth-child(2){display: flex; font: 18px helveticaneuemedium; color: rgb(0, 179, 227);}
+    li p:nth-child(2){display: flex; font:bold 18px 'Dosis', sans-serif; color: rgb(0, 179, 227);}
     p span{font-size: 12px; margin-top: 7px; padding-right: 5px;}
     p strong{color: rgb(213, 28, 41); font: bold 18px 'Dosis';}
   }
@@ -1131,7 +1144,7 @@ ul.list-item{
     background: rgb(0, 179, 227);
     border-radius: 0 0 8px 8px;
     color: #fff;
-    font: 14px 'Dosis-Medium';
+    font: 18px 'Dosis-Medium';
   }
   .total .total_price{display: flex; font: 18px 'Dosis', sans-serif; font-weight: bold;}
   .total .total_price span{font-size: 12px; margin-top: 7px; padding-right: 5px; font-weight: normal;}
@@ -1151,7 +1164,6 @@ ul.list-item{
 /*footer*/
 footer{
   display: block;
-  margin-top: 50px;
   width: 100%;
   background: rgb(84, 84, 86);
   .footer-inner{padding: 50px 20px 30px;}
@@ -1238,11 +1250,11 @@ footer .copyright{
 
 
 @media (min-width: 1200px) {
-  %h4{
+  %h4,.main .title h2{
     font-size: 36px; line-height: 45px; margin-bottom: 60px;
     &:after{width: 40px; margin-top: 19px;}
   }
-  %button_home{width: 200px; height: 60px; margin-top: 37.6px; font: 14px 'Dosis', sans-serif; line-height: 60px;}
+  %button_home{width: 200px; height: 60px; margin-top: 37.6px; font: bold 14px 'Dosis', sans-serif; line-height: 60px;}
   .home{
     header{
       background: #d51c29;
@@ -1309,16 +1321,7 @@ footer .copyright{
       h4{margin-bottom: 42px;}
       h4:before{display: none;}
       .content{width: 520px;}
-      .boxIcon{
-        width: 250px;
-        height: 250px;
-        display: flex;
-        margin-left: 160px;
-        align-items: center;
-        justify-content: center;
-        background: #F5F5F5;
-        border-radius: 50%;
-      }
+
     }
     .ada_pertanyaan{
       padding: 80px 0;
@@ -1328,9 +1331,10 @@ footer .copyright{
         a{width: 200px; height: 60px; margin-top: 0; line-height: 60px; background: #00B3E3; color: #fff;}
       }
     }
+    .menu-finmas li span{color: #fff;}
   }
   header{
-    width: 100%; height: 100px; position: fixed; top: 0; padding: 0 50px;
+    width: 100%; height: 100px; background: #fff; position: fixed; top: 0; padding: 0 50px; z-index: 9;
     .container{width: 1440px; padding: 0 50px; margin: 0 auto; display: flex; height: 100%; align-items: center; position: relative;}
     nav{
       margin-left: 36px;
@@ -1354,13 +1358,15 @@ footer .copyright{
       }
       span{display: block; text-align: center; font: bold 12px 'Dosis',sans-serif; color: #fff; text-transform: uppercase; letter-spacing: 1px; line-height: 50px;}
     }
+    .logo-finmas{width: 131px; height: 36px; background: url("../images/logo@2x.png") no-repeat; background-size: 131px 36px;}
+    .toggle-bar{display: none;}
   }
   .header-inner{width: auto; height: 100%; position: relative; padding: 0;}
   .menu-finmas{
     display: flex; align-items: center;
     padding: 0; margin: 0;
     li{margin: 0 20px;}
-    li span{color: #fff; letter-spacing: 1px; font-size: 14px; line-height: 18px;}
+    li span{color: #545456; letter-spacing: 1px; font-size: 14px; line-height: 18px;}
   }
   main{margin-top: 100px;}
   .container{width: 1080px; margin: 0 auto;}
@@ -1376,11 +1382,12 @@ footer .copyright{
     .container{display: flex; flex-direction: row-reverse;}
     .content{
       width: 520px; padding-top: 40px;
-      p{font: 300 16px 'Oxygen', sans-serif; line-height: 24px; color: #fff;}
+      p{font: 300 16px 'Oxygen', sans-serif; line-height: 24px; color: #545456;}
     }
   }
   .google_play{
     padding: 80px 0;
+    margin-top: 0;
     h4{font-size: 36px; margin-bottom: 42px;}
     h4:after{
       content: "";
@@ -1390,10 +1397,89 @@ footer .copyright{
       display: block;
       margin: 19px auto 0;
     }
-    a{width: 220px; height: 66px; background: url("../images/google_play2x.png") no-repeat;}
+    a{width: 220px; height: 66px; margin-top: 32px; background: url("../images/google_play2x.png") no-repeat;}
     p{width: 520px; margin: 0 auto;}
   }
 
+  .boxIcon{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    margin: 125px 0 0 160px;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5F5;
+    border-radius: 50%;
+  }
+  /*main*/
+  .main{
+    .head{
+      padding: 80px 0 77px 0;
+      .container{
+        display: flex;
+      }
+      .content{width: 520px;}
+      article{padding: 0;}
+      p{font: 300 16px 'Oxygen', sans-serif; line-height: 24px; color: #545456;}
+      p span{font-weight: bold; color: #00b3e3;}
+    }
+    .title{margin-top: 0; padding-top: 80px;}
+    .title h2{margin-top: 0;}
+  }
+  .peminjaman{
+    .cara_meminjam{margin-top: 0; padding: 80px 0 77px 0;}
+    .list_post_cara{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      article{
+        width: 320px; margin-bottom: 0;
+        h3{font-size: 24px;}
+        h3 i{margin-right: 20px;}
+      }
+    }
+    .simulasi_bunga{padding: 80px 0;}
+  }
+  .pendanaan{
+    .captcha{align-items: center;}
+    input[type="submit"]{width: 200px; height: 60px; font: bold 14px 'Dosis', sans-serif; line-height: 60px; margin-left: 40px;}
+  }
+  .faq,.karir{
+    padding-bottom: 80px;
+    .search{width: 520px; margin: 0 auto;}
+    .list-faq,.list_pt{width: 700px; margin: 50px auto 0;}
+  }
+  .karir{
+    .intro{width: 520px; margin: 0 auto;}
+    .search{margin-top: 57px;}
+  }
+  .blog-post{
+    display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;
+    article{width: 335px; margin-bottom: 49px;}
+    a.thumb{display: block; max-height: 200px;}
+  }
+  .searchFilter{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .search{width: 520px; margin-top: 0;}
+    .boxFilter{width: 330px; margin-top: 0;}
+  }
+  .blog{
+    .post-detail,.link-post,.commetns{width: 700px; margin: 30px auto 0; padding: 0;}
+    .commetns{padding-bottom: 50px;}
+  }
+  .blog-post-detail{
+    h2.title-post{font-size: 36px; line-height: 54px;}
+    .commetns form input[type="submit"]{width: 160px; height: 50px; line-height: 50px;}
+    .post_related{
+      margin-bottom: 0; padding: 0; background: #fff; display: flex; flex-wrap: wrap; justify-content: space-between;
+      h4{flex-basis: 100%; margin-bottom: 30px; font-size: 24px; line-height: 36px;}
+      h4:after{margin-top: 16px;}
+      article{width: 335px;}
+      a.thumb{display: block; max-height: 200px;}
+    }
+  }
   footer{
     .footer-inner{
       display: flex; justify-content: center;
@@ -1415,7 +1501,15 @@ footer .copyright{
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1440px) {
+  header .container{width: 1190px; padding: 0;}
+  header .button{right: 0;}
+}
+.loading{
+  width: 62px; height: 60px; display: block; background: url("../images/loading.png") no-repeat;
+  animation: rotate 1.5s infinite;
 
+}
 
 .modal{
   width: 100%;
@@ -1464,6 +1558,26 @@ footer .copyright{
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.rotate{
+  animation-name: rotate;
+  -webkit-animation-name: rotate;
 }
 /*
 .fs{

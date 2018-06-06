@@ -436,6 +436,8 @@ header {
     color: #fff !important; }
   .home .simulasi_bunga h4:after {
     background: #fff !important; }
+  .home .simulasi_bunga .content p {
+    color: #fff; }
   .home .simulasi_bunga .intro p {
     font: 14px 'oxygen_light', sans-serif;
     font-weight: 300;
@@ -460,7 +462,7 @@ header {
   content: "";
   width: 100px;
   height: 100px;
-  display: block;
+  display: none;
   margin-bottom: 20px;
   background: whitesmoke url("../images/icon_pendanaan.png") no-repeat center center;
   border-radius: 50%; }
@@ -639,7 +641,7 @@ ul.list-item {
 .google_play {
   display: block;
   padding: 40px 0;
-  margin: 40px 0 -50px 0;
+  margin: 40px 0 0 0;
   width: 100%;
   text-align: center;
   background: #d51c29; }
@@ -835,19 +837,19 @@ ul.list-item {
       color: #545456;
       line-height: 36px; }
     .blog-post time, .blog .post_related time, .faq-post time, .faq .post_related time, .event-post time, .event .post_related time {
-      color: #00b3e3;
+      color: #545456;
       font: 12px 'Dosis', sans-serif;
       text-transform: uppercase; }
     .blog-post article, .blog .post_related article, .faq-post article, .faq .post_related article, .event-post article, .event .post_related article {
       margin-bottom: 40px; }
 
-.home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .peminjaman h4 {
+.home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .pendanaan h4, .peminjaman h4 {
   display: block;
   margin: 0 0 30px 0;
   font: bold 24px 'Dosis', sans-serif;
   text-transform: uppercase;
   color: #d51c29; }
-  .home .mengapa_finmas h4:after, .home .mudahnya_meminjam h4:after, .home .simulasi_bunga h4:after, .home .pendanaan h4:after, .home .ada_pertanyaan h4:after, .blog-post-detail .post_related h4:after, .peminjaman h4:after {
+  .home .mengapa_finmas h4:after, .home .mudahnya_meminjam h4:after, .home .simulasi_bunga h4:after, .home .pendanaan h4:after, .home .ada_pertanyaan h4:after, .blog-post-detail .post_related h4:after, .pendanaan h4:after, .peminjaman h4:after {
     content: "";
     width: 20px;
     height: 1px;
@@ -874,9 +876,8 @@ ul.list-item {
 
 .blog-post-detail time {
   display: block;
-  margin-bottom: 40px;
-  color: #00b3e3;
-  font: 12px 'Dosis', sans-serif;
+  color: #545456;
+  font: 400 12px 'Dosis', sans-serif;
   text-transform: uppercase; }
 
 .blog-post-detail .link-post {
@@ -973,13 +974,32 @@ ul.list-item {
   padding: 30px 20px 20px;
   margin-bottom: -50px; }
 
+.blog-post-detail .category_time {
+  display: flex;
+  margin-bottom: 40px; }
+  .blog-post-detail .category_time span {
+    display: flex;
+    align-items: center;
+    color: #00b3e3;
+    font: 12px 'Dosis', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .blog-post-detail .category_time span:after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    display: block;
+    margin: 0 5px;
+    background: rgba(84, 84, 86, 0.5);
+    border-radius: 50%; }
+
 /*end*/
 /*faq*/
 .main .faq .title h2:before {
   content: "";
   width: 100px;
   height: 100px;
-  display: block;
+  display: none;
   margin: 0 auto 20px;
   background: whitesmoke url("../images/group.png") no-repeat center center;
   border-radius: 50%; }
@@ -1060,7 +1080,7 @@ ul.list-item {
     content: "";
     width: 100px;
     height: 100px;
-    display: block;
+    display: none;
     margin: 0 auto 20px;
     background: whitesmoke url("../images/icon_pendanaan.png") no-repeat center center;
     border-radius: 50%; }
@@ -1152,7 +1172,7 @@ ul.list-item {
       margin-bottom: 40px; }
       .peminjaman .cara_meminjam article h3 {
         display: flex;
-        margin-bottom: 0;
+        margin: 0;
         align-items: center;
         -webkit-align-items: center;
         font: 400 18px 'Dosis-Medium', sans-serif;
@@ -1160,14 +1180,19 @@ ul.list-item {
         line-height: 27px; }
       .peminjaman .cara_meminjam article h3 a {
         color: #00b3e3; }
-      .peminjaman .cara_meminjam article h3:before {
-        content: "";
+      .peminjaman .cara_meminjam article h3 i {
         width: 60px;
         height: 60px;
-        display: block;
-        background: #d8d8d8;
-        margin-right: 10px; }
+        display: flex;
+        background: #fff;
+        margin-right: 10px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        color: #cd1521;
+        font-size: 18px; }
       .peminjaman .cara_meminjam article p {
+        margin-bottom: 0;
         font: 16px 'Oxygen', sans-serif;
         color: #545456;
         line-height: 24px; }
@@ -1201,7 +1226,7 @@ ul.list-item {
   .total_bunga .item ul li {
     width: 50%;
     list-style: none;
-    font: 18px helveticaneuemedium;
+    font: 18px 'Dosis', sans-serif;
     color: #d51c29;
     line-height: 40px;
     text-align: center; }
@@ -1211,7 +1236,8 @@ ul.list-item {
     padding-right: 4px; }
   .total_bunga .item ul li.active {
     background: #d51c29;
-    color: #fff; }
+    color: #fff;
+    font-weight: bold; }
   .total_bunga .item ul li:nth-child(1).active {
     border-radius: 8px 0 0 8px; }
   .total_bunga .item ul li:nth-child(2).active {
@@ -1220,6 +1246,9 @@ ul.list-item {
     margin: 0;
     display: flex;
     justify-content: center; }
+
+.total_bunga .item:nth-child(2) ul li {
+  font-size: 14px; }
 
 .total_bunga .listp {
   margin-top: 30px;
@@ -1238,7 +1267,7 @@ ul.list-item {
     color: #545456; }
   .total_bunga .listp li p:nth-child(2) {
     display: flex;
-    font: 18px helveticaneuemedium;
+    font: bold 18px 'Dosis', sans-serif;
     color: #00b3e3; }
   .total_bunga .listp p span {
     font-size: 12px;
@@ -1260,7 +1289,7 @@ ul.list-item {
   background: #00b3e3;
   border-radius: 0 0 8px 8px;
   color: #fff;
-  font: 14px 'Dosis-Medium'; }
+  font: 18px 'Dosis-Medium'; }
 
 .total_bunga .total .total_price {
   display: flex;
@@ -1289,7 +1318,6 @@ ul.list-item {
 /*footer*/
 footer {
   display: block;
-  margin-top: 50px;
   width: 100%;
   background: #545456; }
   footer .footer-inner {
@@ -1409,18 +1437,18 @@ footer .copyright {
 
 /*end*/
 @media (min-width: 1200px) {
-  .home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .peminjaman h4 {
+  .home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .pendanaan h4, .peminjaman h4, .main .title h2 {
     font-size: 36px;
     line-height: 45px;
     margin-bottom: 60px; }
-    .home .mengapa_finmas h4:after, .home .mudahnya_meminjam h4:after, .home .simulasi_bunga h4:after, .home .pendanaan h4:after, .home .ada_pertanyaan h4:after, .blog-post-detail .post_related h4:after, .peminjaman h4:after {
+    .home .mengapa_finmas h4:after, .home .mudahnya_meminjam h4:after, .home .simulasi_bunga h4:after, .home .pendanaan h4:after, .home .ada_pertanyaan h4:after, .blog-post-detail .post_related h4:after, .pendanaan h4:after, .peminjaman h4:after, .main .title h2:after {
       width: 40px;
       margin-top: 19px; }
   .home .mudahnya_meminjam a.lebih_lanjut, .home .pendanaan a.lebih_lanjut, .home .simulasi_bunga a.lebih_lanjut, .list-faq a.lamar_sekarang, .list_pt a.lamar_sekarang {
     width: 200px;
     height: 60px;
     margin-top: 37.6px;
-    font: 14px 'Dosis', sans-serif;
+    font: bold 14px 'Dosis', sans-serif;
     line-height: 60px; }
   .home header {
     background: #d51c29; }
@@ -1506,15 +1534,6 @@ footer .copyright {
       display: none; }
     .home .pendanaan .content {
       width: 520px; }
-    .home .pendanaan .boxIcon {
-      width: 250px;
-      height: 250px;
-      display: flex;
-      margin-left: 160px;
-      align-items: center;
-      justify-content: center;
-      background: #F5F5F5;
-      border-radius: 50%; }
   .home .ada_pertanyaan {
     padding: 80px 0; }
     .home .ada_pertanyaan p {
@@ -1530,12 +1549,16 @@ footer .copyright {
         line-height: 60px;
         background: #00B3E3;
         color: #fff; }
+  .home .menu-finmas li span {
+    color: #fff; }
   header {
     width: 100%;
     height: 100px;
+    background: #fff;
     position: fixed;
     top: 0;
-    padding: 0 50px; }
+    padding: 0 50px;
+    z-index: 9; }
     header .container {
       width: 1440px;
       padding: 0 50px;
@@ -1572,6 +1595,13 @@ footer .copyright {
         text-transform: uppercase;
         letter-spacing: 1px;
         line-height: 50px; }
+    header .logo-finmas {
+      width: 131px;
+      height: 36px;
+      background: url("../images/logo@2x.png") no-repeat;
+      background-size: 131px 36px; }
+    header .toggle-bar {
+      display: none; }
   .header-inner {
     width: auto;
     height: 100%;
@@ -1585,7 +1615,7 @@ footer .copyright {
     .menu-finmas li {
       margin: 0 20px; }
     .menu-finmas li span {
-      color: #fff;
+      color: #545456;
       letter-spacing: 1px;
       font-size: 14px;
       line-height: 18px; }
@@ -1610,9 +1640,10 @@ footer .copyright {
     .simulasi_bunga .content p {
       font: 300 16px 'Oxygen', sans-serif;
       line-height: 24px;
-      color: #fff; }
+      color: #545456; }
   .google_play {
-    padding: 80px 0; }
+    padding: 80px 0;
+    margin-top: 0; }
     .google_play h4 {
       font-size: 36px;
       margin-bottom: 42px; }
@@ -1626,10 +1657,131 @@ footer .copyright {
     .google_play a {
       width: 220px;
       height: 66px;
+      margin-top: 32px;
       background: url("../images/google_play2x.png") no-repeat; }
     .google_play p {
       width: 520px;
       margin: 0 auto; }
+  .boxIcon {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    margin: 125px 0 0 160px;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5F5;
+    border-radius: 50%; }
+  /*main*/
+  .main .head {
+    padding: 80px 0 77px 0; }
+    .main .head .container {
+      display: flex; }
+    .main .head .content {
+      width: 520px; }
+    .main .head article {
+      padding: 0; }
+    .main .head p {
+      font: 300 16px 'Oxygen', sans-serif;
+      line-height: 24px;
+      color: #545456; }
+    .main .head p span {
+      font-weight: bold;
+      color: #00b3e3; }
+  .main .title {
+    margin-top: 0;
+    padding-top: 80px; }
+  .main .title h2 {
+    margin-top: 0; }
+  .peminjaman .cara_meminjam {
+    margin-top: 0;
+    padding: 80px 0 77px 0; }
+  .peminjaman .list_post_cara {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .peminjaman .list_post_cara article {
+      width: 320px;
+      margin-bottom: 0; }
+      .peminjaman .list_post_cara article h3 {
+        font-size: 24px; }
+      .peminjaman .list_post_cara article h3 i {
+        margin-right: 20px; }
+  .peminjaman .simulasi_bunga {
+    padding: 80px 0; }
+  .pendanaan .captcha {
+    align-items: center; }
+  .pendanaan input[type="submit"] {
+    width: 200px;
+    height: 60px;
+    font: bold 14px 'Dosis', sans-serif;
+    line-height: 60px;
+    margin-left: 40px; }
+  .faq, .karir {
+    padding-bottom: 80px; }
+    .faq .search, .karir .search {
+      width: 520px;
+      margin: 0 auto; }
+    .faq .list-faq, .faq .list_pt, .karir .list-faq, .karir .list_pt {
+      width: 700px;
+      margin: 50px auto 0; }
+  .karir .intro {
+    width: 520px;
+    margin: 0 auto; }
+  .karir .search {
+    margin-top: 57px; }
+  .blog-post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px; }
+    .blog-post article {
+      width: 335px;
+      margin-bottom: 49px; }
+    .blog-post a.thumb {
+      display: block;
+      max-height: 200px; }
+  .searchFilter {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; }
+    .searchFilter .search {
+      width: 520px;
+      margin-top: 0; }
+    .searchFilter .boxFilter {
+      width: 330px;
+      margin-top: 0; }
+  .blog .post-detail, .blog .link-post, .blog .commetns {
+    width: 700px;
+    margin: 30px auto 0;
+    padding: 0; }
+  .blog .commetns {
+    padding-bottom: 50px; }
+  .blog-post-detail h2.title-post {
+    font-size: 36px;
+    line-height: 54px; }
+  .blog-post-detail .commetns form input[type="submit"] {
+    width: 160px;
+    height: 50px;
+    line-height: 50px; }
+  .blog-post-detail .post_related {
+    margin-bottom: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .blog-post-detail .post_related h4 {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 36px; }
+    .blog-post-detail .post_related h4:after {
+      margin-top: 16px; }
+    .blog-post-detail .post_related article {
+      width: 335px; }
+    .blog-post-detail .post_related a.thumb {
+      display: block;
+      max-height: 200px; }
   footer .footer-inner {
     display: flex;
     justify-content: center; }
@@ -1658,6 +1810,20 @@ footer .copyright {
       justify-content: space-between; }
   footer .social {
     padding: 0; } }
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  header .container {
+    width: 1190px;
+    padding: 0; }
+  header .button {
+    right: 0; } }
+
+.loading {
+  width: 62px;
+  height: 60px;
+  display: block;
+  background: url("../images/loading.png") no-repeat;
+  animation: rotate 1.5s infinite; }
 
 .modal {
   width: 100%;
@@ -1698,6 +1864,22 @@ footer .copyright {
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.rotate {
+  animation-name: rotate;
+  -webkit-animation-name: rotate; }
 
 /*
 .fs{
