@@ -347,7 +347,7 @@ header {
   top: 0;
   z-index: 9; }
 
-.home .mudahnya_meminjam a.lebih_lanjut, .home .pendanaan a.lebih_lanjut, .home .simulasi_bunga a.lebih_lanjut, .list-faq a.lamar_sekarang, .list_pt a.lamar_sekarang {
+.home .mudahnya_meminjam a.lebih_lanjut, .home .pendanaan a.lebih_lanjut, .home .simulasi_bunga a.lebih_lanjut, .address_map .hubungi_kami, .list-faq a.lamar_sekarang, .list_pt a.lamar_sekarang {
   width: 160px;
   height: 50px;
   display: block;
@@ -372,15 +372,24 @@ header {
 
 .home .banner {
   display: block;
-  padding: 60px 20px 102px;
+  padding: 35px 20px 0;
   background: #d51c29;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
   .home .banner h2 {
     display: block;
-    margin: 0 0 10px 0;
+    margin: 0 0 25px 0;
     font: bold 24px 'Dosis', sans-serif;
     line-height: 36px;
     text-transform: uppercase; }
+    .home .banner h2:after {
+      content: "";
+      width: 20px;
+      height: 1px;
+      display: block;
+      margin-top: 10px;
+      border-radius: 2px;
+      background-color: #ffffff; }
   .home .banner a.play_store {
     width: 175px;
     height: 51px;
@@ -412,7 +421,7 @@ header {
       width: 60px;
       height: 60px;
       display: flex;
-      background: #f5f5f5;
+      background: #fff;
       margin-right: 10px;
       border-radius: 50%;
       align-items: center;
@@ -424,6 +433,9 @@ header {
       font: 16px 'Oxygen', sans-serif;
       color: #545456;
       line-height: 24px; }
+
+.home .mengapa_finmas h3 i {
+  background: #F5F5F5 !important; }
 
 .home .mudahnya_meminjam {
   background: #fafafa;
@@ -471,7 +483,7 @@ header {
   padding: 50px 20px;
   background: #fafafa; }
   .home .ada_pertanyaan h4 {
-    margin-bottom: 42px !important;
+    margin-bottom: 20px !important;
     text-align: center !important; }
   .home .ada_pertanyaan h4:after {
     margin: 0 auto; }
@@ -500,6 +512,10 @@ header {
 
 .home .simulasi_bunga a.lebih_lanjut {
   background: #00B3E3; }
+
+.home .image {
+  box-shadow: 0 1px 34px rgba(0, 0, 0, 0.3);
+  border-radius: 50px 50px 0 0; }
 
 article.intro p {
   font: 16px 'oxygen_light', sans-serif;
@@ -542,6 +558,9 @@ header nav.active {
   visibility: visible;
   right: 0; }
 
+header .download {
+  display: none; }
+
 .menu-finmas {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -553,14 +572,16 @@ header nav.active {
 
 .menu-finmas li span {
   display: block;
-  color: #d51c29;
-  font-family: 'Dosis', sans-serif;
+  color: #545456;
+  font-family: 'Dosis-Medium', sans-serif;
   font-size: 18px;
   text-transform: uppercase; }
 
 .menu-finmas li a {
   display: block;
   padding: 15px 0; }
+  .menu-finmas li a:hover span {
+    color: #d51c29; }
 
 header nav a.close-menu {
   color: #545456;
@@ -608,6 +629,10 @@ header nav a.close-menu {
   background: #d51c29;
   margin: 10px auto 0; }
 
+.main .head p span {
+  font-weight: bold;
+  color: #00b3e3; }
+
 .post {
   font: 14px 'Oxygen', sans-serif;
   color: #545456;
@@ -622,7 +647,7 @@ header nav a.close-menu {
   font: 14px 'Oxygen', sans-serif;
   font-weight: 700;
   line-height: 21px;
-  margin: 10px 0; }
+  margin: 40px 0 14px 0; }
 
 .post h5 {
   margin: 10px 0;
@@ -631,17 +656,22 @@ header nav a.close-menu {
   font-weight: normal; }
 
 .post p {
-  padding-left: 5px;
+  padding-left: 0;
+  margin-top: 0;
   position: relative;
   line-height: 24px; }
+  .post p span {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px; }
 
 ul.list-item {
-  padding-left: 25px; }
+  padding-left: 15px; }
 
 .google_play {
   display: block;
   padding: 40px 0;
-  margin: 40px 0 0 0;
+  margin: 0;
   width: 100%;
   text-align: center;
   background: #d51c29; }
@@ -657,8 +687,15 @@ ul.list-item {
   font: 24px 'Dosis', sans-serif;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 1px; }
+  .google_play h4:after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    display: block;
+    margin: 19px auto 0; }
 
 .google_play a {
   width: 175px;
@@ -676,6 +713,34 @@ ul.list-item {
   position: absolute; top: -10px;
   left: 5px;
 }*/
+/*end*/
+/*tentag finmas*/
+.tentag_finmas h2 {
+  text-align: left !important; }
+
+.tentag_finmas h2:after {
+  margin: 19px 0 0 !important; }
+
+.aqua-blue {
+  background: #00b3e3 !important; }
+  .aqua-blue article {
+    top: 40px !important; }
+
+.tentag_finmas_header {
+  display: flex;
+  justify-content: space-between; }
+  .tentag_finmas_header .thumb, .tentag_finmas_header article {
+    width: 520px; }
+  .tentag_finmas_header article p {
+    margin-top: 0;
+    font: 300 16px 'Oxygen', sans-serif;
+    line-height: 24px;
+    color: #545456; }
+  .tentag_finmas_header .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 /*end*/
 /*hubungi_kami*/
 .hubungi_kami {
@@ -706,6 +771,7 @@ ul.list-item {
   .hubungi_kami input:focus {
     outline: none; }
   .hubungi_kami input[type="submit"] {
+    width: 160px;
     height: 50px;
     border-radius: 8px;
     background: #d51c29;
@@ -713,44 +779,60 @@ ul.list-item {
     color: #fff;
     text-transform: uppercase;
     font-size: 12px; }
-  .hubungi_kami .address {
-    margin-top: 50px; }
-    .hubungi_kami .address h4 {
+
+.address_map {
+  display: flex;
+  height: 320px;
+  margin-top: 80px; }
+  .address_map .address {
+    width: 37.5%;
+    background: #d51c29; }
+    .address_map .address article {
+      position: absolute;
+      top: 77px;
+      right: 82px; }
+    .address_map .address h4 {
       display: block;
-      margin-bottom: 5px;
-      font: 15px 'Dosis', sans-serif;
+      margin: 0 0 5px 0;
+      font: 18px 'Dosis', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
-      color: #00b3e3;
-      line-height: 21px;
+      color: #fff;
+      line-height: 36px;
       letter-spacing: 1px; }
-    .hubungi_kami .address ul {
+    .address_map .address ul {
       padding: 0;
       margin: 0; }
-      .hubungi_kami .address ul strong {
+      .address_map .address ul strong {
         display: block;
-        margin-right: 11px;
-        color: #d51c29;
-        font: 15px 'Dosis', sans-serif;
-        font-weight: bold; }
-      .hubungi_kami .address ul li {
-        color: #545456;
+        margin-right: 22px;
+        color: #fff;
+        font: bold 16px 'Dosis', sans-serif; }
+      .address_map .address ul li {
+        color: #fff;
         margin-bottom: 5px;
         list-style: none;
         display: flex; }
-      .hubungi_kami .address ul li p {
+      .address_map .address ul li p {
         margin: 0;
         line-height: 21px;
         font: 14px 'Dosis', sans-serif; }
-      .hubungi_kami .address ul a {
-        color: #545456; }
+      .address_map .address ul p span {
+        display: block;
+        margin-bottom: 5px;
+        letter-spacing: 1px; }
+      .address_map .address ul a {
+        color: #fff; }
+  .address_map .hubungi_kami {
+    letter-spacing: 1px;
+    margin-top: 30px !important; }
 
-#map iframe {
-  border: 0;
-  width: 100%;
-  min-height: 250px;
-  margin-top: 40px;
-  margin-bottom: -50px; }
+#map {
+  width: 62.5%; }
+  #map iframe {
+    border: 0;
+    width: 100%;
+    min-height: 320px; }
 
 /*end*/
 .blog .search, .faq .search, .event .search, .karir .search {
@@ -836,6 +918,8 @@ ul.list-item {
       font-weight: bold;
       color: #545456;
       line-height: 36px; }
+    .blog-post h3 a:hover, .blog .post_related h3 a:hover, .faq-post h3 a:hover, .faq .post_related h3 a:hover, .event-post h3 a:hover, .event .post_related h3 a:hover {
+      color: #00b3e3; }
     .blog-post time, .blog .post_related time, .faq-post time, .faq .post_related time, .event-post time, .event .post_related time {
       color: #545456;
       font: 12px 'Dosis', sans-serif;
@@ -860,7 +944,10 @@ ul.list-item {
 .blog-post-detail .post-detail {
   padding: 0 20px;
   font: 18px 'Oxygen', sans-serif;
-  line-height: 27px; }
+  line-height: 27px;
+  color: #545456; }
+  .blog-post-detail .post-detail img {
+    max-width: 100%; }
 
 .blog-post-detail img.thumb {
   width: 100%;
@@ -878,7 +965,8 @@ ul.list-item {
   display: block;
   color: #545456;
   font: 400 12px 'Dosis', sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 .blog-post-detail .link-post {
   display: flex;
@@ -909,7 +997,7 @@ ul.list-item {
   padding: 0 20px; }
   .blog-post-detail .commetns h4 {
     display: block;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
     font: bold 24px 'Dosis', sans-serif;
     text-transform: uppercase;
     color: #d51c29; }
@@ -969,9 +1057,8 @@ ul.list-item {
       margin-top: 15px; }
 
 .blog-post-detail .post_related {
-  margin-top: 50px;
+  padding: 50px 0 40px 0;
   background: #fafafa;
-  padding: 30px 20px 20px;
   margin-bottom: -50px; }
 
 .blog-post-detail .category_time {
@@ -1116,6 +1203,7 @@ ul.list-item {
   .pendanaan input:focus, .peminjaman input:focus {
     outline: none; }
   .pendanaan input[type="submit"], .peminjaman input[type="submit"] {
+    width: 160px;
     height: 50px;
     border-radius: 8px;
     background: #d51c29;
@@ -1159,13 +1247,13 @@ ul.list-item {
 /*peminjaman*/
 .peminjaman {
   padding: 0; }
-  .peminjaman article {
-    padding: 0 20px; }
+  .peminjaman .head {
+    padding: 50px 20px 0; }
   .peminjaman .title h2:before {
     background: whitesmoke url("../images/icon_dana.png") no-repeat center center; }
   .peminjaman .cara_meminjam {
     padding: 50px 20px 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     background: #fafafa; }
     .peminjaman .cara_meminjam article {
       padding: 0;
@@ -1175,7 +1263,7 @@ ul.list-item {
         margin: 0;
         align-items: center;
         -webkit-align-items: center;
-        font: 400 18px 'Dosis-Medium', sans-serif;
+        font: 20px 'Dosis-Medium', sans-serif;
         color: #00b3e3;
         line-height: 27px; }
       .peminjaman .cara_meminjam article h3 a {
@@ -1205,7 +1293,7 @@ ul.list-item {
 
 .total_bunga {
   width: 94%;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
   padding: 29px 0 0;
   background: #fff;
   border-radius: 8px;
@@ -1248,7 +1336,11 @@ ul.list-item {
     justify-content: center; }
 
 .total_bunga .item:nth-child(2) ul li {
-  font-size: 14px; }
+  font-size: 15px !important; }
+
+.total_bunga .item:nth-child(2) ul li.active {
+  font: bold 15px 'Dosis' !important;
+  line-height: 40px !important; }
 
 .total_bunga .listp {
   margin-top: 30px;
@@ -1342,12 +1434,13 @@ footer h4 {
 
 footer .qk h4 {
   font: bold 12px 'Oxygen', sans-serif;
-  text-transform: none; }
+  text-transform: none;
+  letter-spacing: 0; }
 
 footer .Sanggahan {
   padding: 30px 0; }
   footer .Sanggahan ul {
-    padding-left: 25px; }
+    padding-left: 22px; }
   footer .Sanggahan li {
     color: rgba(255, 255, 255, 0.75); }
   footer .Sanggahan p {
@@ -1369,7 +1462,8 @@ footer .address ul li {
     font: 14px 'Dosis', sans-serif; }
   footer .address ul li p span {
     display: block;
-    margin-bottom: 3px; }
+    margin-bottom: 3px;
+    letter-spacing: 1px; }
 
 footer .address ul strong {
   display: block;
@@ -1418,7 +1512,8 @@ footer .social {
     margin-right: 0; }
 
 .footer-bt {
-  padding: 35px 0 25px 0;
+  padding: 35px 20px 25px 20px;
+  position: relative;
   background: #333132; }
 
 footer .copyright {
@@ -1436,6 +1531,111 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.75); }
 
 /*end*/
+@media (min-width: 320px) and (max-width: 1200px) {
+  .home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .pendanaan h4, .peminjaman h4 {
+    margin-bottom: 40px; }
+  .banner {
+    overflow: hidden; }
+  .image {
+    width: 60%;
+    margin: 45px auto 0; }
+    .image img {
+      max-width: 100%;
+      margin-bottom: -4px; }
+  .simulasi_bunga h4 {
+    margin-bottom: 20px !important; }
+  .simulasi_bunga .content p {
+    font: 300 15px 'Oxygen', sans-serif;
+    line-height: 24px; }
+  .total_bunga .item ul li span {
+    margin-top: -3px; }
+  .total_bunga .listp p span, .total_bunga .total .total_price span {
+    margin-top: -2px; }
+  .boxIcon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background: whitesmoke; }
+    .boxIcon img {
+      max-width: 100%; }
+  .pendanaan h4, .peminjaman .head h4 {
+    margin-bottom: 20px !important; }
+  .pendanaan .container, .peminjaman .head .container {
+    display: flex;
+    flex-direction: column-reverse; }
+  .pendanaan .boxIcon img, .peminjaman .head .boxIcon img {
+    max-width: 54px; }
+  .ada_pertanyaan .buttons a {
+    border: none;
+    background: #00b3e3; }
+  .google_play a {
+    margin-top: 25px; }
+  .menu-finmas {
+    padding-bottom: 20px;
+    height: auto; }
+  header .download {
+    display: block;
+    padding-left: 40px; }
+    header .download p {
+      font: 14px 'Dosis-Medium', sans-serif;
+      color: #545456; }
+    header .download a {
+      width: 175px;
+      height: 51px;
+      display: block;
+      text-indent: -9999em;
+      background: url(../images/google_play.png) no-repeat;
+      margin-top: 20px; }
+  main .head {
+    padding-top: 50px; }
+  main .head p {
+    font: 400 15px 'Oxygen', sans-serif !important;
+    line-height: 24px !important; }
+  .pendanaan .captcha, .peminjaman .captcha, .hubungi_kami .captcha {
+    flex-wrap: wrap; }
+  .pendanaan input[type="submit"], .hubungi_kami input[type="submit"] {
+    margin-top: 30px; }
+  .address_map {
+    flex-wrap: wrap;
+    margin-top: 50px;
+    height: auto; }
+    .address_map .address, .address_map #map {
+      width: 100%; }
+    .address_map .address article {
+      position: relative;
+      top: 0;
+      right: 0;
+      padding: 50px 20px; }
+    .address_map #map iframe {
+      min-height: 250px; }
+  .aqua-blue article {
+    top: 0 !important; }
+  .karir, .page-post {
+    padding-bottom: 50px; }
+  .tentag_finmas .title, .tentag_finmas .tentag_finmas_header {
+    padding: 0 20px; }
+  .tentag_finmas_header {
+    flex-wrap: wrap; }
+  footer .footer-inner {
+    padding: 40px 20px; }
+  footer .copyright {
+    margin-top: 60px; }
+    footer .copyright span {
+      display: block;
+      margin-bottom: 5px; }
+    footer .copyright a:nth-child(2):before {
+      display: none; }
+  footer .social {
+    padding: 0;
+    position: absolute;
+    top: 130px; }
+  footer .footer-bt {
+    padding-top: 30px; } }
+
 @media (min-width: 1200px) {
   .home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .pendanaan h4, .peminjaman h4, .main .title h2 {
     font-size: 36px;
@@ -1444,7 +1644,7 @@ footer .copyright {
     .home .mengapa_finmas h4:after, .home .mudahnya_meminjam h4:after, .home .simulasi_bunga h4:after, .home .pendanaan h4:after, .home .ada_pertanyaan h4:after, .blog-post-detail .post_related h4:after, .pendanaan h4:after, .peminjaman h4:after, .main .title h2:after {
       width: 40px;
       margin-top: 19px; }
-  .home .mudahnya_meminjam a.lebih_lanjut, .home .pendanaan a.lebih_lanjut, .home .simulasi_bunga a.lebih_lanjut, .list-faq a.lamar_sekarang, .list_pt a.lamar_sekarang {
+  .home .mudahnya_meminjam a.lebih_lanjut, .home .pendanaan a.lebih_lanjut, .home .simulasi_bunga a.lebih_lanjut, .address_map .hubungi_kami, .list-faq a.lamar_sekarang, .list_pt a.lamar_sekarang {
     width: 200px;
     height: 60px;
     margin-top: 37.6px;
@@ -1474,13 +1674,8 @@ footer .copyright {
       line-height: 45px;
       margin-bottom: 32px; }
       .home .banner h2:after {
-        content: "";
         width: 40px;
-        height: 1px;
-        display: block;
-        margin-top: 19px;
-        border-radius: 2px;
-        background-color: #ffffff; }
+        margin-top: 19px; }
     .home .banner p {
       font: 18px 'Oxygen',sans-serif;
       line-height: 27px;
@@ -1547,10 +1742,13 @@ footer .copyright {
         height: 60px;
         margin-top: 0;
         line-height: 60px;
+        font-size: 14px;
         background: #00B3E3;
         color: #fff; }
   .home .menu-finmas li span {
     color: #fff; }
+  .home .boxIcon {
+    margin-top: 20px; }
   header {
     width: 100%;
     height: 100px;
@@ -1648,12 +1846,7 @@ footer .copyright {
       font-size: 36px;
       margin-bottom: 42px; }
     .google_play h4:after {
-      content: "";
-      width: 40px;
-      height: 1px;
-      background: #fff;
-      display: block;
-      margin: 19px auto 0; }
+      width: 40px; }
     .google_play a {
       width: 220px;
       height: 66px;
@@ -1682,16 +1875,17 @@ footer .copyright {
       padding: 0; }
     .main .head p {
       font: 300 16px 'Oxygen', sans-serif;
+      margin: 0;
       line-height: 24px;
       color: #545456; }
-    .main .head p span {
-      font-weight: bold;
-      color: #00b3e3; }
   .main .title {
     margin-top: 0;
     padding-top: 80px; }
   .main .title h2 {
     margin-top: 0; }
+  .main .pendanaan .head p {
+    font: 400 18px 'Oxygen', sans-serif !important;
+    line-height: 27px !important; }
   .peminjaman .cara_meminjam {
     margin-top: 0;
     padding: 80px 0 77px 0; }
@@ -1708,9 +1902,9 @@ footer .copyright {
         margin-right: 20px; }
   .peminjaman .simulasi_bunga {
     padding: 80px 0; }
-  .pendanaan .captcha {
+  .pendanaan .captcha, .hubungi_kami .captcha {
     align-items: center; }
-  .pendanaan input[type="submit"] {
+  .pendanaan input[type="submit"], .hubungi_kami input[type="submit"] {
     width: 200px;
     height: 60px;
     font: bold 14px 'Dosis', sans-serif;
@@ -1739,7 +1933,12 @@ footer .copyright {
       margin-bottom: 49px; }
     .blog-post a.thumb {
       display: block;
-      max-height: 200px; }
+      max-height: 200px;
+      overflow: hidden; }
+      .blog-post a.thumb img {
+        transition: linear 1s; }
+      .blog-post a.thumb:hover img {
+        transform: scale(1.1); }
   .searchFilter {
     display: flex;
     align-items: flex-end;
@@ -1750,12 +1949,20 @@ footer .copyright {
     .searchFilter .boxFilter {
       width: 330px;
       margin-top: 0; }
-  .blog .post-detail, .blog .link-post, .blog .commetns {
+  .blog .post-detail, .blog .link-post {
     width: 700px;
     margin: 30px auto 0;
     padding: 0; }
   .blog .commetns {
     padding-bottom: 50px; }
+  .blog .commetns {
+    background: #fafafa;
+    padding: 50px 0; }
+    .blog .commetns .container {
+      width: 700px;
+      margin: 0 auto; }
+  .blog .link-post {
+    padding-bottom: 30px; }
   .blog-post-detail h2.title-post {
     font-size: 36px;
     line-height: 54px; }
@@ -1764,8 +1971,9 @@ footer .copyright {
     height: 50px;
     line-height: 50px; }
   .blog-post-detail .post_related {
-    margin-bottom: 0;
-    padding: 0;
+    width: 1080px;
+    margin: 0 auto 0;
+    padding: 50px 0 40px 0;
     background: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -1776,18 +1984,27 @@ footer .copyright {
       font-size: 24px;
       line-height: 36px; }
     .blog-post-detail .post_related h4:after {
-      margin-top: 16px; }
+      margin-top: 16px;
+      width: 20px; }
     .blog-post-detail .post_related article {
       width: 335px; }
     .blog-post-detail .post_related a.thumb {
       display: block;
       max-height: 200px; }
+  .hubungi_kami .container {
+    width: 520px;
+    margin: 0 auto; }
+  .page-post {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0 0 80px; }
   footer .footer-inner {
     display: flex;
     justify-content: center; }
   footer .container {
     display: flex;
-    width: 1190px; }
+    width: 1440px;
+    padding: 0 50px; }
   footer .col1 {
     width: 260px; }
   footer .Sanggahan {
@@ -1812,18 +2029,31 @@ footer .copyright {
     padding: 0; } }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
-  header .container {
+  header .container, .footer .container {
     width: 1190px;
     padding: 0; }
   header .button {
     right: 0; } }
 
 .loading {
-  width: 62px;
-  height: 60px;
-  display: block;
-  background: url("../images/loading.png") no-repeat;
-  animation: rotate 1.5s infinite; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0 59px 0; }
+  .loading img {
+    width: 60px;
+    height: 59px;
+    display: block;
+    background: url("../images/loading.png") no-repeat;
+    animation: linear rotate 1.5s infinite; }
+  .loading span {
+    display: block;
+    margin-top: 21px;
+    font: 400 18px 'Dosis', sans-serif;
+    line-height: 23px;
+    color: #A0A0A0; }
 
 .modal {
   width: 100%;

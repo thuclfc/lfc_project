@@ -403,15 +403,25 @@ header{height: 80px;}
   }
   .banner{
     display: block;
-    padding: 60px 20px 102px;
+    padding: 35px 20px 0;
     background: rgb(213, 28, 41);
     color: #fff;
+    overflow: hidden;
     h2{
       display: block;
-      margin: 0 0 10px 0;
+      margin: 0 0 25px 0;
       font: bold 24px 'Dosis', sans-serif;
       line-height: 36px;
       text-transform: uppercase;
+      &:after{
+        content: "";
+        width: 20px;
+        height: 1px;
+        display: block;
+        margin-top: 10px;
+        border-radius: 2px;
+        background-color: #ffffff;
+      }
     }
     a.play_store{
       width: 175px;
@@ -443,7 +453,7 @@ header{height: 80px;}
         width: 60px;
         height: 60px;
         display: flex;
-        background: #f5f5f5;
+        background: #fff;
         margin-right: 10px;
         border-radius: 50%;
         align-items: center;
@@ -458,6 +468,9 @@ header{height: 80px;}
         line-height: 24px;
       }
     }
+  }
+  .mengapa_finmas{
+    h3 i{background: #F5F5F5 !important;}
   }
   .mudahnya_meminjam{
     background: rgb(250, 250, 250);
@@ -490,9 +503,7 @@ header{height: 80px;}
   }
   .pendanaan{
     padding: 50px 20px;
-    a.lebih_lanjut{
-      @extend %button_home;
-    }
+    a.lebih_lanjut{@extend %button_home;}
   }
   .pendanaan h4{
     @extend %h4;
@@ -508,7 +519,7 @@ header{height: 80px;}
   }
   .ada_pertanyaan{
     padding: 50px 20px; background: #fafafa;
-    h4{@extend %h4; margin-bottom: 42px !important; text-align: center !important;}
+    h4{@extend %h4; margin-bottom: 20px !important; text-align: center !important;}
     h4:after{ margin: 0 auto;}
     .intro p{text-align: center;}
     .buttons{
@@ -526,6 +537,8 @@ header{height: 80px;}
       background: #00B3E3;
     }
   }
+  .image{    box-shadow: 0 1px 34px rgba(0, 0, 0, 0.3);
+    border-radius: 50px 50px 0 0;}
  }
 article.intro p{
   font: 16px 'oxygen_light', sans-serif;
@@ -567,20 +580,22 @@ header nav.active{
   visibility: visible;
   right: 0;
 }
+header .download{display: none;}
 .menu-finmas{padding-top: 40px; padding-bottom: 40px; height: 100%; overflow: auto}
 .menu-finmas li{
   list-style: none;
 }
 .menu-finmas li span{
   display: block;
-  color: rgb(213, 28, 41);
-  font-family: 'Dosis', sans-serif;
+  color: #545456;
+  font-family: 'Dosis-Medium', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
 }
 .menu-finmas li a{
   display: block;
   padding: 15px 0;
+  &:hover span{color: #d51c29;}
 }
 header nav a.close-menu{
   color: rgb(84, 84, 86);
@@ -625,6 +640,11 @@ header nav a.close-menu{
   background: rgb(213, 28, 41);
   margin: 10px auto 0;
 }
+.main{
+  .head{
+    p span{font-weight: bold; color: #00b3e3;}
+  }
+}
 .post{
   font: 14px 'Oxygen', sans-serif;
   color: rgb(84, 84, 86);
@@ -636,21 +656,23 @@ header nav a.close-menu{
   font: 14px 'Oxygen', sans-serif;
   font-weight: 700;
   line-height: 21px;
-  margin: 10px 0;
+  margin: 40px 0 14px 0;
 }
 .post h5{margin: 10px 0; font-size: 14px; color: rgb(84, 84, 86); font-weight: normal;}
 .post p{
-  padding-left: 5px;
+  padding-left: 0;
+  margin-top: 0;
   position: relative;
   line-height: 24px;
+  span{display: block; margin-left: 0; margin-top: 10px;}
 }
 ul.list-item{
-  padding-left: 25px;
+  padding-left: 15px;
 }
 .google_play{
   display: block;
   padding: 40px 0;
-  margin: 40px 0 0 0;
+  margin:  0;
   width: 100%;
   text-align: center;
   background: rgb(213, 28, 41);
@@ -663,8 +685,16 @@ ul.list-item{
   font: 24px 'Dosis', sans-serif;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: 1px;
+  &:after{
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    display: block;
+    margin: 19px auto 0;
+  }
 }
 .google_play a{
   width: 175px;
@@ -684,6 +714,22 @@ ul.list-item{
 }*/
 /*end*/
 
+/*tentag finmas*/
+.tentag_finmas{
+  h2{text-align: left !important;}
+  h2:after{margin: 19px 0 0 !important;}
+}
+.aqua-blue{
+  background: #00b3e3 !important;
+  article{top: 40px !important;}
+}
+.tentag_finmas_header{
+  display: flex; justify-content: space-between;
+  .thumb,article{width: 520px;}
+  article p{margin-top: 0; font: 300 16px 'Oxygen', sans-serif; line-height: 24px; color: #545456;}
+  .thumb img{width: 100%; height: 100%; object-fit: cover;}
+}
+/*end*/
 
 /*hubungi_kami*/
 .hubungi_kami{
@@ -708,6 +754,7 @@ ul.list-item{
   textarea{min-height: 85px; line-height: 26px;}
   input:focus{outline: none;}
   input[type="submit"]{
+    width: 160px;
     height: 50px;
     border-radius: 8px;
     background: rgb(213, 28, 41);
@@ -716,38 +763,47 @@ ul.list-item{
     text-transform: uppercase;
     font-size: 12px;
   }
+}
+.address_map{
+  display: flex; height: 320px; margin-top: 80px;
   .address{
-    margin-top: 50px;
+    width: 37.5%; background: #d51c29;
+    article{position: absolute; top: 77px; right: 82px;}
     h4{
       display: block;
-      margin-bottom: 5px;
-      font: 15px 'Dosis', sans-serif;
+      margin: 0 0 5px 0;
+      font: 18px 'Dosis', sans-serif;
       font-weight: bold;
       text-transform: uppercase;
-      color: rgb(0, 179, 227);
-      line-height: 21px;
+      color: #fff;
+      line-height: 36px;
       letter-spacing: 1px;
     }
     ul{
       padding: 0; margin: 0;
-      strong{display: block; margin-right: 11px; color: rgb( 213, 28, 41); font: 15px 'Dosis', sans-serif; font-weight: bold;}
+      strong{display: block; margin-right: 22px; color: #fff; font: bold 16px 'Dosis', sans-serif;}
       li{
-        color: rgb(84,84,86);
+        color: #fff;
         margin-bottom: 5px;
         list-style: none;
         display: flex;
       }
       li p{margin: 0; line-height: 21px; font: 14px 'Dosis', sans-serif}
-      a{color: rgb(84,84,86);}
+      p span{display: block; margin-bottom: 5px; letter-spacing: 1px;}
+      a{color: #fff;}
     }
   }
+  .hubungi_kami{
+    @extend %button_home; letter-spacing: 1px; margin-top: 30px !important;
+  }
 }
-#map iframe{
-  border: 0;
-  width: 100%;
-  min-height: 250px;
-  margin-top: 40px;
-  margin-bottom: -50px;
+#map{
+  width: 62.5%;
+  iframe{
+    border: 0;
+    width: 100%;
+    min-height: 320px;
+  }
 }
 /*end*/
 
@@ -809,6 +865,7 @@ ul.list-item{
     .thumb img{width: 100%; height: 100%; object-fit: cover;}
     h3{margin: 10px 0;}
     h3 a{display: block; margin-bottom: 10px; font: 24px 'Dosis',sans-serif; font-weight: bold; color: rgb(84, 84, 86); line-height: 36px;}
+    h3 a:hover{color: #00b3e3;}
     time{color: #545456; font: 12px 'Dosis', sans-serif; text-transform: uppercase;}
     article{margin-bottom: 40px;}
   }
@@ -833,6 +890,8 @@ ul.list-item{
     padding: 0 20px;
     font: 18px 'Oxygen', sans-serif;
     line-height: 27px;
+    color: #545456;
+    img{max-width: 100%;}
   }
   img.thumb{width: 100%; height: 100%; object-fit: cover;}
   h2.title-post{
@@ -842,7 +901,7 @@ ul.list-item{
     line-height: 36px;
     color: rgb(84,84,86);
   }
-  time{display: block; color: #545456; font:400 12px 'Dosis', sans-serif; text-transform: uppercase;}
+  time{display: block; color: #545456; font:400 12px 'Dosis', sans-serif; text-transform: uppercase; letter-spacing: 2px;}
   .link-post{
     display: flex; margin: 40px 0 0; padding: 0 20px; align-items: center; -webkit-align-items: center;
     li{list-style: none; margin-right: 30px;}
@@ -856,7 +915,7 @@ ul.list-item{
     display: block; margin-top: 50px; padding: 0 20px;
     h4{
       display: block;
-      margin-bottom: 30px;
+      margin: 0 0 30px 0;
       font: bold 24px 'Dosis', sans-serif;
       text-transform: uppercase;
       color: rgb(213, 28, 41);
@@ -906,9 +965,8 @@ ul.list-item{
     }
   }
   .post_related{
-    margin-top: 50px;
+   padding: 50px 0 40px 0;
     background: rgb(250, 250, 250);
-    padding: 30px 20px 20px;
     margin-bottom: -50px;
     h4{@extend %h4;}
   }
@@ -1027,6 +1085,7 @@ ul.list-item{
   textarea:focus{outline: none;}
   input:focus{outline: none;}
   input[type="submit"]{
+    width: 160px;
     height: 50px;
     border-radius: 8px;
     background: rgb(213, 28, 41);
@@ -1066,17 +1125,17 @@ ul.list-item{
 /*peminjaman*/
 .peminjaman{
   padding: 0;
-  article{padding: 0 20px;}
+  .head{padding: 50px 20px 0;}
   .title h2:before{
     background: rgb(245, 245, 245) url("../images/icon_dana.png") no-repeat center center;
   }
   .cara_meminjam{
     padding: 50px 20px 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     background: rgb(250,250,250);
     article{
       padding: 0; margin-bottom: 40px;
-      h3{display: flex; margin: 0; align-items: center; -webkit-align-items: center; font:400 18px 'Dosis-Medium', sans-serif; color: rgb(0, 179, 227); line-height: 27px;}
+      h3{display: flex; margin: 0; align-items: center; -webkit-align-items: center; font: 20px 'Dosis-Medium', sans-serif; color: rgb(0, 179, 227); line-height: 27px;}
       h3 a{color: rgb(0, 179, 227);}
       h3 i{
         width: 60px;
@@ -1102,7 +1161,7 @@ ul.list-item{
 }
 .total_bunga{
   width: 94%;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
   padding: 29px 0 0;
   background: #fff;
   border-radius: 8px;
@@ -1119,7 +1178,13 @@ ul.list-item{
     li:nth-child(2).active{border-radius: 0 8px 8px 0;}
     p{margin: 0; display: flex; justify-content: center;}
   }
-  .item:nth-child(2) ul li{font-size: 14px;}
+  .item:nth-child(2) ul{
+     li{font-size: 15px !important;}
+     li.active {
+      font: bold 15px 'Dosis' !important;
+      line-height: 40px !important;
+    }
+  }
   .listp{
     margin-top: 30px;
     background: rgb(250, 250, 250);
@@ -1183,10 +1248,10 @@ footer h4{
   text-transform: uppercase;
   color: #fff;
 }
-footer .qk h4{font: bold 12px 'Oxygen', sans-serif; text-transform: none;}
+footer .qk h4{font: bold 12px 'Oxygen', sans-serif; text-transform: none; letter-spacing: 0;}
 footer .Sanggahan{
   padding: 30px 0;
-  ul{padding-left: 25px;}
+  ul{padding-left: 22px;}
   li{color: rgba(255, 255, 255, 0.75);}
   p{ font: 12px 'Oxygen', sans-serif; line-height: 18px;}
 }
@@ -1198,7 +1263,7 @@ footer .address{
     display: flex;
     color: rgba(255, 255, 255, 0.75);
     p{margin: 0; line-height: 21px; font: 14px 'Dosis', sans-serif}
-    p span{display: block; margin-bottom: 3px;}
+    p span{display: block; margin-bottom: 3px; letter-spacing: 1px;}
   }
   ul strong{
     display: block; margin-right: 11px; color: #fff; font: 14px 'Dosis', sans-serif; font-weight: bold;
@@ -1231,7 +1296,7 @@ footer .social{
   li:last-child{margin-right: 0;}
 }
 .footer-bt{
-  padding: 35px 0 25px 0;
+  padding: 35px 20px 25px 20px; position: relative;
   background: rgb( 51, 49, 50);
 }
 footer .copyright{
@@ -1247,6 +1312,91 @@ footer .copyright{
   span{color: rgba(255, 255, 255, 0.75)}
 }
 /*end*/
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  %h4{margin-bottom: 40px;}
+  .banner{overflow: hidden;}
+  .image{
+    width: 60%; margin: 45px auto 0;
+    img{max-width: 100%; margin-bottom: -4px;}
+  }
+  .simulasi_bunga{
+    h4{margin-bottom: 20px !important;}
+    .content p {
+      font: 300 15px 'Oxygen', sans-serif;
+      line-height: 24px;
+    }
+  }
+  .total_bunga{
+    .item ul li span{margin-top: -3px;}
+    .listp p span,.total .total_price span{margin-top: -2px;}
+  }
+  .boxIcon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background: rgb(245, 245, 245);
+    img{max-width: 100%;}
+  }
+  .pendanaan,.peminjaman .head{
+    h4{margin-bottom: 20px !important;}
+    .container{display: flex; flex-direction: column-reverse;}
+    .boxIcon img{max-width: 54px;}
+  }
+  .ada_pertanyaan{
+    .buttons a{border: none; background: #00b3e3;}
+  }
+  .google_play a{margin-top: 25px;}
+  .menu-finmas{
+    padding-bottom: 20px;
+    height: auto;
+  }
+  header .download{
+    display: block; padding-left: 40px;
+    p{font: 14px 'Dosis-Medium', sans-serif; color: #545456;}
+    a{width: 175px;
+      height: 51px;
+      display: block;
+      text-indent: -9999em;
+      background: url(../images/google_play.png) no-repeat;
+      margin-top: 20px;}
+  }
+  main{
+    .head{padding-top: 50px;}
+    .head p{    font: 400 15px 'Oxygen', sans-serif !important;
+      line-height: 24px !important;}
+  }
+  .pendanaan .captcha, .peminjaman .captcha,.hubungi_kami .captcha{flex-wrap: wrap;}
+  .pendanaan input[type="submit"],.hubungi_kami input[type="submit"]{margin-top: 30px;}
+  .address_map{
+    flex-wrap: wrap; margin-top: 50px; height: auto;
+    .address,#map{width: 100%;}
+    .address article{position: relative; top: 0; right: 0; padding: 50px 20px;}
+    #map iframe{min-height: 250px;}
+  }
+  .aqua-blue article{top: 0 !important;}
+  .karir,.page-post{padding-bottom: 50px;}
+  .tentag_finmas{
+    .title,.tentag_finmas_header{padding: 0 20px;}
+  }
+  .tentag_finmas_header{
+    flex-wrap: wrap; 
+  }
+  footer{
+    .footer-inner{padding: 40px 20px;}
+    .copyright{
+      margin-top: 60px;
+      span{display: block; margin-bottom: 5px;}
+      a:nth-child(2):before{display: none;}
+    }
+    .social{padding: 0; position: absolute; top: 130px;}
+    .footer-bt{padding-top: 30px;}
+  }
+}
 
 
 @media (min-width: 1200px) {
@@ -1272,13 +1422,8 @@ footer .copyright{
         line-height: 45px;
         margin-bottom: 32px;
         &:after{
-          content: "";
           width: 40px;
-          height: 1px;
-          display: block;
           margin-top: 19px;
-          border-radius: 2px;
-          background-color: #ffffff;
         }
       }
       p{font: 18px 'Oxygen',sans-serif; line-height: 27px; margin-top: 0;}
@@ -1321,17 +1466,17 @@ footer .copyright{
       h4{margin-bottom: 42px;}
       h4:before{display: none;}
       .content{width: 520px;}
-
     }
     .ada_pertanyaan{
       padding: 80px 0;
       p{width: 520px; margin: 0 auto;}
       .buttons{
         width: 440px; margin: 40px auto 0;
-        a{width: 200px; height: 60px; margin-top: 0; line-height: 60px; background: #00B3E3; color: #fff;}
+        a{width: 200px; height: 60px; margin-top: 0; line-height: 60px; font-size: 14px; background: #00B3E3; color: #fff;}
       }
     }
     .menu-finmas li span{color: #fff;}
+    .boxIcon{margin-top: 20px;}
   }
   header{
     width: 100%; height: 100px; background: #fff; position: fixed; top: 0; padding: 0 50px; z-index: 9;
@@ -1390,12 +1535,7 @@ footer .copyright{
     margin-top: 0;
     h4{font-size: 36px; margin-bottom: 42px;}
     h4:after{
-      content: "";
-      width: 40px;
-      height: 1px;
-      background: #fff;
-      display: block;
-      margin: 19px auto 0;
+     width: 40px;
     }
     a{width: 220px; height: 66px; margin-top: 32px; background: url("../images/google_play2x.png") no-repeat;}
     p{width: 520px; margin: 0 auto;}
@@ -1415,16 +1555,14 @@ footer .copyright{
   .main{
     .head{
       padding: 80px 0 77px 0;
-      .container{
-        display: flex;
-      }
+      .container{display: flex;}
       .content{width: 520px;}
       article{padding: 0;}
-      p{font: 300 16px 'Oxygen', sans-serif; line-height: 24px; color: #545456;}
-      p span{font-weight: bold; color: #00b3e3;}
+      p{font: 300 16px 'Oxygen', sans-serif; margin: 0; line-height: 24px; color: #545456;}
     }
     .title{margin-top: 0; padding-top: 80px;}
     .title h2{margin-top: 0;}
+    .pendanaan .head p{font: 400 18px 'Oxygen', sans-serif !important; line-height: 27px !important;}
   }
   .peminjaman{
     .cara_meminjam{margin-top: 0; padding: 80px 0 77px 0;}
@@ -1440,7 +1578,7 @@ footer .copyright{
     }
     .simulasi_bunga{padding: 80px 0;}
   }
-  .pendanaan{
+  .pendanaan,.hubungi_kami {
     .captcha{align-items: center;}
     input[type="submit"]{width: 200px; height: 60px; font: bold 14px 'Dosis', sans-serif; line-height: 60px; margin-left: 40px;}
   }
@@ -1456,7 +1594,11 @@ footer .copyright{
   .blog-post{
     display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;
     article{width: 335px; margin-bottom: 49px;}
-    a.thumb{display: block; max-height: 200px;}
+    a.thumb{
+      display: block; max-height: 200px; overflow: hidden;
+      img{transition: linear 1s;}
+      &:hover img{transform: scale(1.1);}
+    }
   }
   .searchFilter{
     display: flex;
@@ -1466,25 +1608,36 @@ footer .copyright{
     .boxFilter{width: 330px; margin-top: 0;}
   }
   .blog{
-    .post-detail,.link-post,.commetns{width: 700px; margin: 30px auto 0; padding: 0;}
+    .post-detail,.link-post{width: 700px; margin: 30px auto 0; padding: 0;}
     .commetns{padding-bottom: 50px;}
+    .commetns{
+      background: #fafafa; padding: 50px 0;
+      .container{width: 700px; margin: 0 auto;}
+    }
+    .link-post{padding-bottom: 30px;}
   }
   .blog-post-detail{
     h2.title-post{font-size: 36px; line-height: 54px;}
     .commetns form input[type="submit"]{width: 160px; height: 50px; line-height: 50px;}
     .post_related{
-      margin-bottom: 0; padding: 0; background: #fff; display: flex; flex-wrap: wrap; justify-content: space-between;
+      width: 1080px; margin: 0 auto 0;  padding: 50px 0 40px 0; background: #fff; display: flex; flex-wrap: wrap; justify-content: space-between;
       h4{flex-basis: 100%; margin-bottom: 30px; font-size: 24px; line-height: 36px;}
-      h4:after{margin-top: 16px;}
+      h4:after{margin-top: 16px; width: 20px;}
       article{width: 335px;}
       a.thumb{display: block; max-height: 200px;}
     }
+  }
+  .hubungi_kami{
+    .container{width: 520px; margin: 0 auto;}
+  }
+  .page-post{
+    width: 700px; margin: 0 auto; padding: 0 0 80px;
   }
   footer{
     .footer-inner{
       display: flex; justify-content: center;
     }
-    .container{display: flex; width: 1190px;}
+    .container{display: flex; width: 1440px; padding: 0 50px;}
     .col1{width: 260px;}
     .Sanggahan{width: 650px; margin: 0 40px 0 88px; padding: 0;}
     .qk{width: 152px;}
@@ -1502,13 +1655,16 @@ footer .copyright{
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
-  header .container{width: 1190px; padding: 0;}
+  header .container,.footer .container{width: 1190px; padding: 0;}
   header .button{right: 0;}
 }
 .loading{
-  width: 62px; height: 60px; display: block; background: url("../images/loading.png") no-repeat;
-  animation: rotate 1.5s infinite;
-
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 10px 0 59px 0;
+  img{
+    width: 60px; height: 59px; display: block; background: url("../images/loading.png") no-repeat;
+    animation: linear rotate 1.5s infinite;
+  }
+  span{display: block; margin-top: 21px; font: 400 18px 'Dosis', sans-serif; line-height: 23px; color: #A0A0A0;}
 }
 
 .modal{
