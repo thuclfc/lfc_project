@@ -355,10 +355,11 @@ header {
   text-align: center;
   background: #d51c29;
   border-radius: 8px;
-  font: 12px 'Dosis';
+  font: bold 12px 'Dosis';
   text-transform: uppercase;
   color: #fff;
-  line-height: 50px; }
+  line-height: 50px;
+  transition: 0.5s; }
 
 .home .header-inner {
   background: #d51c29; }
@@ -402,6 +403,9 @@ header {
     font: 18px "oxygen_light";
     line-height: 27px; }
 
+.home .menu-finmas li a:hover span {
+  color: #ccc; }
+
 .home .mengapa_finmas, .home .mudahnya_meminjam {
   padding: 0 20px;
   margin-top: 40px; }
@@ -409,6 +413,7 @@ header {
     margin-bottom: 40px; }
     .home .mengapa_finmas article h3, .home .mudahnya_meminjam article h3 {
       display: flex;
+      display: -webkit-flex;
       margin-bottom: 0;
       align-items: center;
       -webkit-align-items: center;
@@ -421,11 +426,14 @@ header {
       width: 60px;
       height: 60px;
       display: flex;
+      display: -webkit-flex;
       background: #fff;
       margin-right: 10px;
       border-radius: 50%;
       align-items: center;
+      -webkit-align-items: center;
       justify-content: center;
+      -webkit-justify-content: center;
       color: #cd1521;
       font-size: 18px; }
     .home .mengapa_finmas article p, .home .mudahnya_meminjam article p {
@@ -469,6 +477,8 @@ header {
 
 .home .pendanaan {
   padding: 50px 20px; }
+  .home .pendanaan a.lebih_lanjut:hover {
+    background: #b31520; }
 
 .home .pendanaan h4:before {
   content: "";
@@ -505,13 +515,18 @@ header {
       line-height: 50px;
       text-transform: uppercase;
       text-align: center;
-      border: 2px solid #fff; }
+      border: 2px solid #fff;
+      transition: 0.5s; }
+      .home .ada_pertanyaan .buttons a:hover {
+        background: #019ac3; }
 
 .home .google_play {
   margin-top: 0 !important; }
 
 .home .simulasi_bunga a.lebih_lanjut {
   background: #00B3E3; }
+  .home .simulasi_bunga a.lebih_lanjut:hover {
+    background: #019ac3; }
 
 .home .image {
   box-shadow: 0 1px 34px rgba(0, 0, 0, 0.3);
@@ -525,7 +540,7 @@ article.intro p {
 
 header .logo-finmas {
   width: 87px;
-  height: 24px;
+  height: 23px;
   display: block;
   background: url("../images/logo.png") no-repeat; }
 
@@ -584,11 +599,11 @@ header .download {
     color: #d51c29; }
 
 header nav a.close-menu {
-  color: #545456;
+  color: #d51c29;
   font-family: arial;
   position: absolute;
   right: 20px;
-  top: 10px;
+  top: 20px;
   font-size: 18px; }
 
 /*main post*/
@@ -728,7 +743,9 @@ ul.list-item {
 
 .tentag_finmas_header {
   display: flex;
-  justify-content: space-between; }
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
   .tentag_finmas_header .thumb, .tentag_finmas_header article {
     width: 520px; }
   .tentag_finmas_header article p {
@@ -752,7 +769,9 @@ ul.list-item {
     margin-bottom: 30px; }
   .hubungi_kami .captcha {
     display: flex;
-    justify-content: center; }
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center; }
   .hubungi_kami label {
     display: block;
     margin-bottom: 10px;
@@ -782,6 +801,7 @@ ul.list-item {
 
 .address_map {
   display: flex;
+  display: -webkit-flex;
   height: 320px;
   margin-top: 80px; }
   .address_map .address {
@@ -812,7 +832,8 @@ ul.list-item {
         color: #fff;
         margin-bottom: 5px;
         list-style: none;
-        display: flex; }
+        display: flex;
+        display: -webkit-flex; }
       .address_map .address ul li p {
         margin: 0;
         line-height: 21px;
@@ -824,8 +845,13 @@ ul.list-item {
       .address_map .address ul a {
         color: #fff; }
   .address_map .hubungi_kami {
+    width: 160px;
+    height: 50px;
     letter-spacing: 1px;
+    line-height: 50px;
     margin-top: 30px !important; }
+    .address_map .hubungi_kami:hover {
+      background: #b31520; }
 
 #map {
   width: 62.5%; }
@@ -869,7 +895,9 @@ ul.list-item {
   margin-top: 35px; }
   .boxFilter .filter {
     display: flex;
-    justify-content: space-between; }
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
   .boxFilter .filter-group {
     width: 46%;
     position: relative; }
@@ -970,6 +998,7 @@ ul.list-item {
 
 .blog-post-detail .link-post {
   display: flex;
+  display: -webkit-flex;
   margin: 40px 0 0;
   padding: 0 20px;
   align-items: center;
@@ -1063,10 +1092,13 @@ ul.list-item {
 
 .blog-post-detail .category_time {
   display: flex;
+  display: -webkit-flex;
   margin-bottom: 40px; }
   .blog-post-detail .category_time span {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
     color: #00b3e3;
     font: 12px 'Dosis', sans-serif;
     text-transform: uppercase;
@@ -1179,22 +1211,38 @@ ul.list-item {
   .pendanaan form, .peminjaman form {
     margin-top: 50px; }
   .pendanaan .frm_group, .peminjaman .frm_group {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative; }
+    .pendanaan .frm_group i.icon, .peminjaman .frm_group i.icon {
+      width: 10px;
+      height: 7px;
+      display: block;
+      background: url("../images/invalidName.png") no-repeat;
+      position: absolute;
+      right: 0;
+      bottom: 14px; }
   .pendanaan .captcha, .peminjaman .captcha {
     display: flex;
-    justify-content: center; }
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center; }
   .pendanaan label, .peminjaman label {
     display: block;
     margin-bottom: 10px;
     font: 12px 'Dosis', sans-serif;
     color: #a0a0a0; }
-  .pendanaan input, .pendanaan textarea, .peminjaman input, .peminjaman textarea {
+  .pendanaan input, .pendanaan textarea, .pendanaan select, .peminjaman input, .peminjaman textarea, .peminjaman select {
     width: 100%;
     border: none;
     border-bottom: 1px solid #e4e4e4;
     font: 18px 'Oxygen', sans-serif;
     color: #545456;
-    padding-bottom: 8px; }
+    padding-bottom: 9px;
+    position: relative;
+    z-index: 4; }
+  .pendanaan select, .peminjaman select {
+    -webkit-appearance: none;
+    background: transparent; }
   .pendanaan textarea, .peminjaman textarea {
     min-height: 85px;
     line-height: 26px; }
@@ -1232,10 +1280,11 @@ ul.list-item {
         font: 15px 'Dosis', sans-serif;
         font-weight: bold; }
       .pendanaan .address ul li, .peminjaman .address ul li {
+        display: flex;
+        display: -webkit-flex;
         color: #545456;
         margin-bottom: 5px;
-        list-style: none;
-        display: flex; }
+        list-style: none; }
       .pendanaan .address ul li p, .peminjaman .address ul li p {
         margin: 0;
         line-height: 21px;
@@ -1260,6 +1309,7 @@ ul.list-item {
       margin-bottom: 40px; }
       .peminjaman .cara_meminjam article h3 {
         display: flex;
+        display: -webkit-flex;
         margin: 0;
         align-items: center;
         -webkit-align-items: center;
@@ -1272,11 +1322,14 @@ ul.list-item {
         width: 60px;
         height: 60px;
         display: flex;
+        display: -webkit-flex;
         background: #fff;
         margin-right: 10px;
         border-radius: 50%;
         align-items: center;
+        -webkit-align-items: center;
         justify-content: center;
+        -webkit-justify-content: center;
         color: #cd1521;
         font-size: 18px; }
       .peminjaman .cara_meminjam article p {
@@ -1293,7 +1346,7 @@ ul.list-item {
 
 .total_bunga {
   width: 94%;
-  margin: 50px auto 0;
+  margin: 50px auto;
   padding: 29px 0 0;
   background: #fff;
   border-radius: 8px;
@@ -1327,13 +1380,15 @@ ul.list-item {
     color: #fff;
     font-weight: bold; }
   .total_bunga .item ul li:nth-child(1).active {
-    border-radius: 8px 0 0 8px; }
+    border-radius: 7px 0 0 7px; }
   .total_bunga .item ul li:nth-child(2).active {
-    border-radius: 0 8px 8px 0; }
+    border-radius: 0 7px 7px 0; }
   .total_bunga .item ul p {
-    margin: 0;
     display: flex;
-    justify-content: center; }
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin: 0; }
 
 .total_bunga .item:nth-child(2) ul li {
   font-size: 15px !important; }
@@ -1350,15 +1405,18 @@ ul.list-item {
   .total_bunga .listp p {
     margin: 0; }
   .total_bunga .listp li {
-    margin-bottom: 15px;
-    list-style: none;
     display: flex;
-    justify-content: space-between; }
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin-bottom: 15px;
+    list-style: none; }
   .total_bunga .listp li p {
     font: 18px 'Dosis-Medium';
     color: #545456; }
   .total_bunga .listp li p:nth-child(2) {
     display: flex;
+    display: -webkit-flex;
     font: bold 18px 'Dosis', sans-serif;
     color: #00b3e3; }
   .total_bunga .listp p span {
@@ -1385,6 +1443,7 @@ ul.list-item {
 
 .total_bunga .total .total_price {
   display: flex;
+  display: -webkit-flex;
   font: 18px 'Dosis', sans-serif;
   font-weight: bold; }
 
@@ -1407,6 +1466,29 @@ ul.list-item {
     margin-top: 30px; }
 
 /*end*/
+.loading {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  text-align: center;
+  padding: 10px 0 59px 0; }
+  .loading img {
+    width: 60px;
+    height: 59px;
+    display: block;
+    animation: linear rotate 1.5s infinite; }
+  .loading span {
+    display: block;
+    margin-top: 21px;
+    font: 400 18px 'Dosis', sans-serif;
+    line-height: 23px;
+    color: #A0A0A0; }
+
 /*footer*/
 footer {
   display: block;
@@ -1455,6 +1537,7 @@ footer .address ul li {
   margin-bottom: 5px;
   list-style: none;
   display: flex;
+  display: -webkit-flex;
   color: rgba(255, 255, 255, 0.75); }
   footer .address ul li p {
     margin: 0;
@@ -1495,9 +1578,12 @@ footer .footer-menu {
     font: bold 14px 'Dosis', sans-serif;
     line-height: 27px;
     text-transform: uppercase; }
+    footer .footer-menu li a:hover {
+      color: #ccc; }
 
 footer .social {
   display: flex;
+  display: -webkit-flex;
   margin: -1px 0 0 0;
   padding: 0 20px;
   align-items: center;
@@ -1534,13 +1620,17 @@ footer .copyright {
 @media (min-width: 320px) and (max-width: 1200px) {
   .home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .pendanaan h4, .peminjaman h4 {
     margin-bottom: 40px; }
+  header nav {
+    overflow: auto; }
   .banner {
     overflow: hidden; }
   .image {
     width: 60%;
     margin: 45px auto 0; }
     .image img {
-      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
       margin-bottom: -4px; }
   .simulasi_bunga h4 {
     margin-bottom: 20px !important; }
@@ -1555,8 +1645,11 @@ footer .copyright {
     width: 100px;
     height: 100px;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
     border-radius: 50%;
     margin-bottom: 20px;
     background: whitesmoke; }
@@ -1566,7 +1659,9 @@ footer .copyright {
     margin-bottom: 20px !important; }
   .pendanaan .container, .peminjaman .head .container {
     display: flex;
-    flex-direction: column-reverse; }
+    display: -webkit-flex;
+    flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse; }
   .pendanaan .boxIcon img, .peminjaman .head .boxIcon img {
     max-width: 54px; }
   .ada_pertanyaan .buttons a {
@@ -1574,12 +1669,19 @@ footer .copyright {
     background: #00b3e3; }
   .google_play a {
     margin-top: 25px; }
+  .google_play h4:after {
+    margin-top: 10px; }
+  .peminjaman .cara_meminjam article p {
+    font-size: 15px; }
   .menu-finmas {
     padding-bottom: 20px;
+    padding-top: 50px;
     height: auto; }
+    .menu-finmas li span {
+      letter-spacing: 1.5px; }
   header .download {
     display: block;
-    padding-left: 40px; }
+    padding: 0 0 50px 40px; }
     header .download p {
       font: 14px 'Dosis-Medium', sans-serif;
       color: #545456; }
@@ -1593,14 +1695,17 @@ footer .copyright {
   main .head {
     padding-top: 50px; }
   main .head p {
+    color: #545456;
     font: 400 15px 'Oxygen', sans-serif !important;
     line-height: 24px !important; }
   .pendanaan .captcha, .peminjaman .captcha, .hubungi_kami .captcha {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
   .pendanaan input[type="submit"], .hubungi_kami input[type="submit"] {
     margin-top: 30px; }
   .address_map {
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     margin-top: 50px;
     height: auto; }
     .address_map .address, .address_map #map {
@@ -1611,7 +1716,8 @@ footer .copyright {
       right: 0;
       padding: 50px 20px; }
     .address_map #map iframe {
-      min-height: 250px; }
+      min-height: 250px;
+      margin-bottom: -4px; }
   .aqua-blue article {
     top: 0 !important; }
   .karir, .page-post {
@@ -1619,7 +1725,21 @@ footer .copyright {
   .tentag_finmas .title, .tentag_finmas .tentag_finmas_header {
     padding: 0 20px; }
   .tentag_finmas_header {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .tentag_finmas_header .thumb, .tentag_finmas_header article {
+      width: 100%; }
+  .blog-post-detail .post-detail {
+    font-size: 16px; }
+  .blog-post-detail .post_related {
+    padding: 50px 20px 40px; }
+  .blog-detail {
+    padding: 0; }
+  .loading {
+    padding-bottom: 50px; }
+    .loading img {
+      width: 40px;
+      height: 39px; }
   footer .footer-inner {
     padding: 40px 20px; }
   footer .copyright {
@@ -1661,7 +1781,8 @@ footer .copyright {
   .home .banner {
     padding: 50px 0 0 0; }
     .home .banner .container {
-      display: flex; }
+      display: flex;
+      display: -webkit-flex; }
     .home .banner .content {
       width: 540px;
       margin-right: 100px;
@@ -1714,15 +1835,20 @@ footer .copyright {
         margin: 12px 0 0; }
     .home .mudahnya_meminjam .list_post {
       display: flex;
+      display: -webkit-flex;
       flex-wrap: wrap;
-      justify-content: space-between; }
+      -webkit-flex-wrap: wrap;
+      justify-content: space-between;
+      -webkit-justify-content: space-between; }
   .home .simulasi_bunga {
     padding: 80px 20px; }
   .home .pendanaan {
     padding: 80px 0; }
     .home .pendanaan .container {
       display: flex;
-      align-items: center; }
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center; }
     .home .pendanaan h4 {
       margin-bottom: 42px; }
     .home .pendanaan h4:before {
@@ -1762,8 +1888,10 @@ footer .copyright {
       padding: 0 50px;
       margin: 0 auto;
       display: flex;
+      display: -webkit-flex;
       height: 100%;
       align-items: center;
+      -webkit-align-items: center;
       position: relative; }
     header nav {
       margin-left: 36px;
@@ -1773,7 +1901,8 @@ footer .copyright {
       position: relative;
       right: 0;
       background: none;
-      flex-basis: auto; }
+      flex-basis: auto;
+      -webkit-flex-basis: auto; }
     header nav a.close-menu {
       display: none; }
     header .button {
@@ -1784,7 +1913,10 @@ footer .copyright {
         width: 160px;
         height: 50px;
         border-radius: 8px;
-        background-color: #00b3e3; }
+        background-color: #00b3e3;
+        transition: 0.5s; }
+      header .button a:hover {
+        background: #019ac3; }
       header .button span {
         display: block;
         text-align: center;
@@ -1807,7 +1939,9 @@ footer .copyright {
     padding: 0; }
   .menu-finmas {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
     padding: 0;
     margin: 0; }
     .menu-finmas li {
@@ -1831,7 +1965,9 @@ footer .copyright {
     margin-bottom: 42px !important; }
   .simulasi_bunga .container {
     display: flex;
-    flex-direction: row-reverse; }
+    display: -webkit-flex;
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse; }
   .simulasi_bunga .content {
     width: 520px;
     padding-top: 40px; }
@@ -1855,20 +1991,28 @@ footer .copyright {
     .google_play p {
       width: 520px;
       margin: 0 auto; }
+  .address_map .hubungi_kami {
+    width: 160px;
+    height: 50px;
+    line-height: 50px; }
   .boxIcon {
     width: 250px;
     height: 250px;
     display: flex;
+    display: -webkit-flex;
     margin: 125px 0 0 160px;
     align-items: center;
+    -webkit-align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
     background: #F5F5F5;
     border-radius: 50%; }
   /*main*/
   .main .head {
     padding: 80px 0 77px 0; }
     .main .head .container {
-      display: flex; }
+      display: flex;
+      display: -webkit-flex; }
     .main .head .content {
       width: 520px; }
     .main .head article {
@@ -1891,8 +2035,11 @@ footer .copyright {
     padding: 80px 0 77px 0; }
   .peminjaman .list_post_cara {
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
     .peminjaman .list_post_cara article {
       width: 320px;
       margin-bottom: 0; }
@@ -1925,8 +2072,11 @@ footer .copyright {
     margin-top: 57px; }
   .blog-post {
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     margin-top: 50px; }
     .blog-post article {
       width: 335px;
@@ -1941,8 +2091,11 @@ footer .copyright {
         transform: scale(1.1); }
   .searchFilter {
     display: flex;
+    display: -webkit-flex;
     align-items: flex-end;
-    justify-content: space-between; }
+    -webkit-align-items: flex-end;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
     .searchFilter .search {
       width: 520px;
       margin-top: 0; }
@@ -1976,10 +2129,14 @@ footer .copyright {
     padding: 50px 0 40px 0;
     background: #fff;
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
     .blog-post-detail .post_related h4 {
       flex-basis: 100%;
+      -webkit-flex-basis: 100%;
       margin-bottom: 30px;
       font-size: 24px;
       line-height: 36px; }
@@ -2000,9 +2157,12 @@ footer .copyright {
     padding: 0 0 80px; }
   footer .footer-inner {
     display: flex;
-    justify-content: center; }
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center; }
   footer .container {
     display: flex;
+    display: -webkit-flex;
     width: 1440px;
     padding: 0 50px; }
   footer .col1 {
@@ -2014,7 +2174,8 @@ footer .copyright {
   footer .qk {
     width: 152px; }
   footer .footer-menu {
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start; }
     footer .footer-menu li {
       width: auto;
       margin: 0 20px; }
@@ -2024,36 +2185,18 @@ footer .copyright {
     background: #333132; }
     footer .footer-bt .container {
       display: flex;
+      display: -webkit-flex;
+      -webkit-justify-content: space-between;
       justify-content: space-between; }
   footer .social {
     padding: 0; } }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
-  header .container, .footer .container {
+  header .container, footer .container {
     width: 1190px;
     padding: 0; }
   header .button {
     right: 0; } }
-
-.loading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px 0 59px 0; }
-  .loading img {
-    width: 60px;
-    height: 59px;
-    display: block;
-    background: url("../images/loading.png") no-repeat;
-    animation: linear rotate 1.5s infinite; }
-  .loading span {
-    display: block;
-    margin-top: 21px;
-    font: 400 18px 'Dosis', sans-serif;
-    line-height: 23px;
-    color: #A0A0A0; }
 
 .modal {
   width: 100%;

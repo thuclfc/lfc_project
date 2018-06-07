@@ -11,4 +11,8 @@ $(document).ready(function () {
     $('.list-faq li,.list_pt li').click(function () {
         $(this).toggleClass('active');
     });
+    $('.hari li').click(function () {
+       $('.hari li').removeClass('active');
+       $(this).addClass('active');
+    });
 });
