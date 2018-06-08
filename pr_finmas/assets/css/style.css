@@ -689,7 +689,20 @@ ul.list-item {
   margin: 0;
   width: 100%;
   text-align: center;
-  background: #d51c29; }
+  background: #d51c29;
+  position: relative; }
+  .google_play:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .google_play .container {
+    position: relative;
+    z-index: 4; }
   .google_play p {
     font: 18px 'Oxygen', sans-serif;
     color: #fff;
@@ -975,7 +988,9 @@ ul.list-item {
   line-height: 27px;
   color: #545456; }
   .blog-post-detail .post-detail img {
-    max-width: 100%; }
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
 
 .blog-post-detail img.thumb {
   width: 100%;
@@ -1187,7 +1202,7 @@ ul.list-item {
   .list-faq article ul li p, .list_pt article ul li p {
     padding: 5px 0 !important; }
   .list-faq a.lamar_sekarang, .list_pt a.lamar_sekarang {
-    width: 90%;
+    width: 160px;
     margin: 30px auto;
     letter-spacing: 1px; }
 
@@ -1631,7 +1646,7 @@ footer .copyright {
       width: 100%;
       object-fit: cover;
       object-position: top center;
-      margin-bottom: -4px; }
+      margin-bottom: -26%; }
   .simulasi_bunga h4 {
     margin-bottom: 20px !important; }
   .simulasi_bunga .content p {
@@ -1700,7 +1715,11 @@ footer .copyright {
     line-height: 24px !important; }
   .pendanaan .captcha, .peminjaman .captcha, .hubungi_kami .captcha {
     flex-wrap: wrap;
-    -webkit-flex-wrap: wrap; }
+    -webkit-flex-wrap: wrap;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center; }
   .pendanaan input[type="submit"], .hubungi_kami input[type="submit"] {
     margin-top: 30px; }
   .address_map {
@@ -1735,6 +1754,8 @@ footer .copyright {
     padding: 50px 20px 40px; }
   .blog-detail {
     padding: 0; }
+  .faq {
+    padding-bottom: 50px; }
   .loading {
     padding-bottom: 50px; }
     .loading img {
@@ -1755,6 +1776,50 @@ footer .copyright {
     top: 130px; }
   footer .footer-bt {
     padding-top: 30px; } }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .image {
+    max-width: 300px; }
+  .home .ada_pertanyaan .buttons {
+    justify-content: center;
+    -webkit-justify-content: center; }
+    .home .ada_pertanyaan .buttons a {
+      width: 160px;
+      margin: 20px 20px 0; }
+  .blog-post, .post_related {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
+    .blog-post article, .post_related article {
+      width: 50%;
+      padding: 0 15px; }
+    .blog-post article:first-child, .post_related article:first-child {
+      padding-left: 0; }
+    .blog-post article:last-child, .post_related article:last-child {
+      padding-right: 0; }
+    .blog-post a.thumb, .post_related a.thumb {
+      display: block;
+      max-height: 200px;
+      overflow: hidden; }
+  .post_related h4 {
+    flex-basis: 100%; }
+  .post_related article:nth-child(2) {
+    padding-left: 0; }
+  .tentag_finmas_header .thumb {
+    text-align: center; }
+  .tentag_finmas_header .thumb img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto; } }
+
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .blog-post article, .post_related article {
+    width: 33.33%;
+    padding: 0 15px; } }
 
 @media (min-width: 1200px) {
   .home .mengapa_finmas h4, .home .mudahnya_meminjam h4, .home .simulasi_bunga h4, .home .pendanaan h4, .home .ada_pertanyaan h4, .blog-post-detail .post_related h4, .pendanaan h4, .peminjaman h4, .main .title h2 {
@@ -1881,7 +1946,6 @@ footer .copyright {
     background: #fff;
     position: fixed;
     top: 0;
-    padding: 0 50px;
     z-index: 9; }
     header .container {
       width: 1440px;

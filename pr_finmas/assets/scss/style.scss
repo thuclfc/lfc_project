@@ -430,7 +430,7 @@ header{height: 80px;}
       display: block;
       text-indent: -9999em;
       background: url(../images/google_play.png) no-repeat;
-     margin-top: 30px;
+      margin-top: 30px;
     }
     p{margin-top: 10px; font: 18px "oxygen_light"; line-height: 27px;}
   }
@@ -563,7 +563,7 @@ header{height: 80px;}
   }
   .image{    box-shadow: 0 1px 34px rgba(0, 0, 0, 0.3);
     border-radius: 50px 50px 0 0;}
- }
+}
 article.intro p{
   font: 16px 'oxygen_light', sans-serif;
   font-weight: 300;
@@ -700,6 +700,9 @@ ul.list-item{
   width: 100%;
   text-align: center;
   background: rgb(213, 28, 41);
+  position: relative;
+  &:before{content: ""; width: 100%; height: 100%; display: block; background: rgba(0,0,0,0.6); position: absolute; top: 0; left: 0;}
+  .container{position: relative; z-index: 4;}
   p{font: 18px 'Oxygen', sans-serif; color: #fff; line-height: 27px;}
 }
 .google_play h4{
@@ -902,7 +905,7 @@ ul.list-item{
 .blog,.faq,.event{
   padding: 0 20px;
   .search{
-   @extend %search;
+    @extend %search;
   }
   &-post,.post_related{
     margin-top: 40px;
@@ -935,7 +938,7 @@ ul.list-item{
     font: 18px 'Oxygen', sans-serif;
     line-height: 27px;
     color: #545456;
-    img{max-width: 100%;}
+    img{max-width: 100%; display: block; margin: 0 auto;}
   }
   img.thumb{width: 100%; height: 100%; object-fit: cover;}
   h2.title-post{
@@ -1020,7 +1023,7 @@ ul.list-item{
     }
   }
   .post_related{
-   padding: 50px 0 40px 0;
+    padding: 50px 0 40px 0;
     background: rgb(250, 250, 250);
     margin-bottom: -50px;
     h4{@extend %h4;}
@@ -1106,7 +1109,7 @@ ul.list-item{
     strong{display: block; margin: 10px 0; font: bold 14px 'Oxygen', sans-serif; line-height: 21px; color: rgb(84,84,86);}
     ul li p{padding: 5px 0 !important;}
   }
-  a.lamar_sekarang{@extend %button_home; width: 90%; margin: 30px auto; letter-spacing: 1px;}
+  a.lamar_sekarang{@extend %button_home; width: 160px; margin: 30px auto; letter-spacing: 1px;}
 }
 /*end*/
 
@@ -1287,8 +1290,8 @@ ul.list-item{
     }
   }
   .item:nth-child(2) ul{
-     li{font-size: 15px !important;}
-     li.active {
+    li{font-size: 15px !important;}
+    li.active {
       font: bold 15px 'Dosis' !important;
       line-height: 40px !important;
     }
@@ -1463,7 +1466,7 @@ footer .copyright{
   .banner{overflow: hidden;}
   .image{
     width: 60%; margin: 45px auto 0;
-    img{width: 100%; object-fit: cover; object-position: top center; margin-bottom: -4px;}
+    img{width: 100%; object-fit: cover; object-position: top center; margin-bottom: -26%;}
   }
   .simulasi_bunga{
     h4{margin-bottom: 20px !important;}
@@ -1534,7 +1537,14 @@ footer .copyright{
       line-height: 24px !important;
     }
   }
-  .pendanaan .captcha, .peminjaman .captcha,.hubungi_kami .captcha{flex-wrap: wrap; -webkit-flex-wrap: wrap;}
+  .pendanaan .captcha, .peminjaman .captcha,.hubungi_kami .captcha{
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+  }
   .pendanaan input[type="submit"],.hubungi_kami input[type="submit"]{margin-top: 30px;}
   .address_map{
     flex-wrap: wrap;
@@ -1560,6 +1570,7 @@ footer .copyright{
     .post_related{padding: 50px 20px 40px;}
   }
   .blog-detail{padding: 0;}
+  .faq{padding-bottom: 50px;}
   .loading{
     padding-bottom: 50px;
     img{width: 40px; height: 39px;}
@@ -1573,6 +1584,42 @@ footer .copyright{
     }
     .social{padding: 0; position: absolute; top: 130px;}
     .footer-bt{padding-top: 30px;}
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .image{max-width: 300px;}
+  .home{
+    .ada_pertanyaan .buttons{
+      justify-content: center; -webkit-justify-content: center;
+      a{width: 160px; margin: 20px 20px 0;}
+    }
+  }
+  .blog-post,.post_related{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    article{width: 50%; padding: 0 15px;}
+    article:first-child{padding-left: 0;}
+    article:last-child{padding-right: 0;}
+    a.thumb{display: block; max-height: 200px; overflow: hidden;}
+  }
+  .post_related{
+    h4{flex-basis: 100%;}
+    article:nth-child(2){padding-left: 0;}
+  }
+  .tentag_finmas_header{
+    .thumb{text-align: center;}
+    .thumb img{max-width: 100%; width: auto; height: auto; margin: 0 auto;}
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1200px) {
+  .blog-post,.post_related{
+    article{width: 33.33%; padding: 0 15px;}
   }
 }
 
@@ -1665,7 +1712,7 @@ footer .copyright{
     .boxIcon{margin-top: 20px;}
   }
   header{
-    width: 100%; height: 100px; background: #fff; position: fixed; top: 0; padding: 0 50px; z-index: 9;
+    width: 100%; height: 100px; background: #fff; position: fixed; top: 0; z-index: 9;
     .container{
       width: 1440px;
       padding: 0 50px;
@@ -1742,7 +1789,7 @@ footer .copyright{
     margin-top: 0;
     h4{font-size: 36px; margin-bottom: 42px;}
     h4:after{
-     width: 40px;
+      width: 40px;
     }
     a{width: 220px; height: 66px; margin-top: 32px; background: url("../images/google_play2x.png") no-repeat;}
     p{width: 520px; margin: 0 auto;}
@@ -1869,7 +1916,7 @@ footer .copyright{
       display: flex;
       display: -webkit-flex;
       justify-content: center;
-     -webkit-justify-content: center;
+      -webkit-justify-content: center;
     }
     .container{display: flex; display: -webkit-flex; width: 1440px; padding: 0 50px;}
     .col1{width: 260px;}
