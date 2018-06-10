@@ -230,7 +230,7 @@ body{
   p{display: block; font-size: 14px; font-weight: 500; color: var(--greyish-brown);}
   a{color: var(--barney); font-weight: 700;}
 }
-.social{
+.headerTop .social{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -873,6 +873,137 @@ table.history{
   .author span.name{color: var(--greyish-brown);}
 }
 /*end service*/
+
+/*modal*/
+.popup_photo_detail{
+  width: 1260px;
+  height: 90%;
+  position: fixed;
+  background: #fff;
+  left: 0;
+  right: 0;
+  top: 42px;
+  margin: 0 auto;
+  overflow: auto;
+  z-index: 99;
+  .col-left{width: 770px;}
+  .col-right{
+    width: 370px; margin-left: 30px;
+    h4{@extend %h4;}
+  }
+  .box_slider{background: #000; padding-top: 37px;}
+  .slider-nav{
+    padding: 15px 0;
+    .item{margin: 0 5px;}
+    img{width: 40px; height: 40px; object-fit: cover;}
+  }
+  .slider_popup{width: 968px; margin: 0 auto;}
+  .slick-arrow{position: absolute; border: none; background: none;  top: 50%; transform: translateY(-50%);}
+  .detail{padding: 24px 45px 51px;}
+   h2.title{padding-top: 0; text-align: left;}
+  .cat_time{
+    margin-bottom: 32px;
+    color: var(--greyish); font-weight: 500;
+    time{margin-left: 30px;}
+  }
+  .author{
+    img{width: 40px; height: 40px; margin-right: 4px;}
+    .name{font-size: 18px; color: var(--greyish-brown);}
+  }
+  .book{
+    @extend %button;
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 42px;
+    margin-left: 45px;
+    justify-content: center;
+    ion-icon{font-size: 18px; color: var(--barney); margin-right: 8px;}
+  }
+  article{
+    padding: 24px 0 0;
+    p{margin-bottom: 25px; line-height: 22px; color: var(--greyish-brown)}
+  }
+  .list-comment{
+    padding: 28px 0;
+    border-top: 1px solid var(--white);
+    .comment{margin-bottom: 32px;}
+    .author{
+      min-width: 129px;
+      margin-right: 22px;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      img{width: 26px; height: 26px;}
+      .name{font-size: 12px;  white-space: nowrap;}
+      .time_comment{display: block; margin-top: 3px; flex-basis: 100%; font-size: 12px; color: var(--greyish); font-weight: 500;}
+    }
+  }
+  .wirte_comment{
+    h4{@extend %h4;}
+    textarea{
+      width: 100%;
+      height: 166px;
+      display: block;
+      padding: 10px;
+      margin: 20px 0;
+      border-radius: 4px;
+      background: var(--white-three);
+      &:focus{outline: none;}
+    }
+    button{
+      @extend %button;
+      width: 150px;
+      height: 42px;
+      padding: 0;
+      line-height: 38px;
+      cursor: pointer;
+      &:focus{outline: none;}
+    }
+  }
+  .statistical{
+    width: 100%;
+    li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 63px;
+      border-bottom: 1px solid var(--white);
+      font-weight: 500;
+      color: var(--greyish);
+    }
+    li p{
+      display: flex; align-items: center;
+    }
+    li:last-child{border-bottom: none;}
+    .tol{font-size: 18px;}
+    ion-icon{margin-right: 15px; font-size: 24px; color: var(--greyish);}
+    li:nth-child(1) ion-icon{color: var(--barney);}
+  }
+  .tags{
+    padding: 29px 0 19px 0;
+    h4{margin-bottom: 10px;}
+    a{display: inline-block; height: 34px; padding: 0 9px; margin: 0 10px 10px 0; border: 1px solid var(--greyish); border-radius: 4px; font-weight: bold; color: var(--greyish); line-height: 32px;}
+  }
+  .album_another{
+    h4{margin-bottom: 20px;}
+    .list-album{
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      li{margin-bottom: 10px; width: 48.6%;}
+      img{width: 100%; height: 100%; object-fit: cover; border-radius: 4px;}
+    }
+  }
+  .social{
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--white);
+    a{@include block(block,32px,32px); margin-right: 40px; border: solid 2px #b2b2b2; border-radius: 4px;}
+  }
+}
+.modal{width: 100%; height: 100%; display: block; position: fixed; left: 0; right: 0; background-color: rgba(26, 26, 26, 0.8); z-index: 10;}
+
+/*end*/
 
 /*service photo detail*/
 .photo-detail,.endUser,.makeup-model{
