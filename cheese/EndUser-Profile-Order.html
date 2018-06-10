@@ -39,14 +39,38 @@
                     </h1>
                 </div>
                 <div class="loginResgiter">
-                    <div class="beforeLogin">
+                    <div class="beforeLogin" style="display: none;">
                         <div class="buttons flex">
                             <a href="" title="Đăng nhập">Đăng nhập</a>
                             <a href="" title="Đăng ký">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="afterLogin">
-
+                    <div class="afterLogin flex pr">
+                        <div class="get_nf pr">
+                            <a href="javascript:void(0)"><ion-icon ios="ios-notifications" md="md-notifications"></ion-icon></a>
+                            <span class="nf">9</span>
+                            <ul class="list-nf">
+                                <li>
+                                    <p>abc xyz</p>
+                                    <p>lfc</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="infoUser flex pr">
+                            <img src="assets/images/mask.jpg" alt="">
+                            <p>
+                                <span class="name">Nguyễn Minh Hải <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></span>
+                                <span class="address">Hà Nội</span>
+                            </p>
+                            <ul class="option_user">
+                                <li>
+                                    <a href="" title="Tài khoản"><ion-icon ios="ios-person" md="md-person"></ion-icon>Tài khoản</a>
+                                </li>
+                                <li>
+                                    <a href="" title="Đăng xuất"><ion-icon ios="ios-exit" md="md-exit"></ion-icon>Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,158 +81,167 @@
            <div class="profile">
                <div class="bg-white">
                    <div class="author_info">
-                       <img src="assets/images/468662696.png" alt="">
+                       <div class="avatar pr">
+                           <img src="assets/images/468662696.png" alt="">
+                           <a href="" class="change-img"><ion-icon ios="ios-camera" md="md-camera"></ion-icon></a>
+                       </div>
                        <h4 class="name">Long Kaido</h4>
-                       <span class="job">Nhiếp ảnh gia</span>
+                       <span class="email">longkaido@gmail.com</span>
                        <p class="address">Sô 3, Ngõ 89, Nguyễn Văn Cừ, Long biên, Hà Nội</p>
+                       <p class="phone">024 6969 669</p>
                    </div>
                    <div class="logout">
-                       <a href="javascript:void(0)"><ion-icon ios="ios-exit" md="md-exit"></ion-icon></a>
-                   </div>
-               </div>
-               <div class="book">
-                   <a href="" title="Đặt lịch"><span>+ Đặt Lịch</span></a>
-               </div>
-               <div class="rate">
-                   <p>Đánh giá của bạn cho nhiếp ảnh gia</p>
-                   <div class="rate-starting">
-                       <input type="radio" name="rating" value="1">
-                       <i></i>
-                       <input type="radio" name="rating" value="2">
-                       <i></i>
-                       <input type="radio" name="rating" value="3">
-                       <i></i>
-                       <input type="radio" name="rating" value="4">
-                       <i></i>
-                       <input type="radio" name="rating" value="5">
-                       <i></i>
+                       <a href="javascript:void(0)"><ion-icon ios="ios-exit" md="md-exit"></ion-icon> Đăng xuất</a>
                    </div>
                </div>
            </div>
-           <div class="package_photo">
-               <ul class="tab_photo tab_line flex">
-                   <li><a href="javascript:void(0)" title="Album ảnh">Album ảnh</a></li>
-                   <li><a href="javascript:void(0)" title="Các gói chụp">Các gói chụp</a></li>
-               </ul>
-               <div class="tab_photo_content flex">
-                   <article class="post">
-                       <a href="" class="thumb"><img src="assets/images/rectangle-3.jpg" alt=""></a>
-                       <div class="body">
-                           <span class="category">Ảnh cưới</span>
-                           <h3><a href="" title="Đà Lạt hoàng hôn">Lan và Điệp - Thung Nai</a></h3>
-                           <div class="statistical flex">
-                               <p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p>
-                               <p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p>
-                               <p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p>
-                               <p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p>
-                           </div>
-                       </div>
-                   </article>
-                   <article class="post">
-                       <a href="" class="thumb"><img src="assets/images/mask.jpg" alt=""></a>
-                       <div class="body">
-                           <span class="category">Ảnh cưới</span>
-                           <h3><a href="" title="Đà Lạt hoàng hôn">Lan và Điệp - Thung Nai</a></h3>
-                           <div class="statistical flex">
-                               <p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p>
-                               <p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p>
-                               <p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p>
-                               <p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p>
-                           </div>
-                       </div>
-                   </article>
-                   <article class="post">
-                       <a href="" class="thumb"><img src="assets/images/rectangle-3.jpg" alt=""></a>
-                       <div class="body">
-                           <span class="category">Ảnh cưới</span>
-                           <h3><a href="" title="Đà Lạt hoàng hôn">Lan và Điệp - Thung Nai</a></h3>
-                           <div class="statistical flex">
-                               <p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p>
-                               <p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p>
-                               <p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p>
-                               <p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p>
-                           </div>
-                       </div>
-                   </article>
-                   <article class="post">
-                       <a href="" class="thumb"><img src="assets/images/mask.jpg" alt=""></a>
-                       <div class="body">
-                           <span class="category">Ảnh cưới</span>
-                           <h3><a href="" title="Đà Lạt hoàng hôn">Lan và Điệp - Thung Nai</a></h3>
-                           <div class="statistical flex">
-                               <p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p>
-                               <p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p>
-                               <p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p>
-                               <p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p>
-                           </div>
-                       </div>
-                   </article>
+           <div class="user_profile r_m">
+               <div class="header_pr flex">
+                   <div class="tab_profile tab_line flex">
+                       <li><a href="javascript:void(0)" title="Lịch sử đặt lịch">Lịch sử đặt lịch</a></li>
+                       <li><a href="javascript:void(0)" title="Yêu thích">Yêu thích</a></li>
+                       <li><a href="javascript:void(0)" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
+                   </div>
+                   <div class="select">
+                       <select>
+                           <option>Nhiếp ảnh gia</option>
+                       </select>
+                   </div>
+                   <div class="filter flex">
+                       <span>Sắp xếp theo:</span>
+                       <select name="" id="">
+                           <option>Yêu thích nhiều nhất</option>
+                       </select>
+                   </div>
                </div>
-               <div class="tab_photo_content package-list flex">
-                   <div class="package">
-                       <h4>Ảnh cưới - nội thành Hà Nội</h4>
-                       <a href="" class="view-detail">Xem chi tiết</a>
-                       <ul class="list-item">
-                           <li>
-                               <p>Số lượng điểm chụp: <span>5</span></p>
-                           </li>
-                           <li>
-                               <p>Album in + Ảnh lớn: <span>có</span></p>
-                           </li>
-                           <li>
-                               <p>Video ảnh: <span>không</span></p>
-                           </li>
-                       </ul>
-                       <div class="price">
-                           <span>2.000.000 vnđ</span>
+               <div class="content_profile">
+                   <table class="history">
+                       <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Dịch vụ</th>
+                                <th>Người cung cấp</th>
+                                <th>Gói dịch vụ</th>
+                                <th>Giá</th>
+                                <th>Thời Gian</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                       </thead>
+                       <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Chụp ảnh</td>
+                                <td>
+                                    <div class="author flex">
+                                        <img src="images/thumb_clothes.jpg" alt="">
+                                        <p>
+                                            <span class="name">Long Kaido</span>
+                                            <span class="address">Hà Nội</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Ảnh cưới nội thành</p>
+                                </td>
+                                <td>
+                                    <p class="price">2.000.000 vnđ</p>
+                                </td>
+                                <td>
+                                    <p class="time">14:32 11/5/2018</p>
+                                </td>
+                                <td>
+                                    <p class="status_fail">Chưa hoàn thành</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Chụp ảnh</td>
+                                <td>
+                                    <div class="author flex">
+                                        <img src="images/thumb_clothes.jpg" alt="">
+                                        <p>
+                                            <span class="name">Long Kaido</span>
+                                            <span class="address">Hà Nội</span>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Ảnh cưới nội thành</p>
+                                </td>
+                                <td>
+                                    <p class="price">2.000.000 vnđ</p>
+                                </td>
+                                <td>
+                                    <p class="time">14:32 11/5/2018</p>
+                                </td>
+                                <td>
+                                    <p class="status_finish">Đã hoàn thành</p>
+                                </td>
+                            </tr>
+                       </tbody>
+                   </table>
+               </div>
+               <div class="content_profile">
+                   <div class="pr_item flex pr">
+                       <div class="s_author flex">
+                           <img class="avatar" src="assets/images/thumb_make1.jpg" alt="">
+                           <div class="info">
+                               <h4>
+                                   Long Kaido
+                                   <span class="love flex"><ion-icon ios="ios-heart" md="md-heart"></ion-icon> 69</span>
+                               </h4>
+                               <p>Sô 3, Ngõ 89, Nguyễn Văn Cừ, Long biên, Hà…</p>
+                               <p>0169 409 0203</p>
+                           </div>
                        </div>
-                       <div class="book pr">
-                           <ion-icon ios="ios-add" md="md-add"></ion-icon>
-                           <a href="" class="book-link" title="Đặt gói này">Đặt gói này</a>
+                       <div class="slide-profile pr">
+                           <div class="item">
+                               <img src="assets/images/mask.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/thumb-makeup.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/rectangle-3.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/thumb-makeup.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/mask.jpg" alt="">
+                           </div>
+
                        </div>
                    </div>
-                   <div class="package">
-                       <h4>Ảnh cưới - nội thành Hà Nội</h4>
-                       <a href="" class="view-detail">Xem chi tiết</a>
-                       <ul class="list-item">
-                           <li>
-                               <p>Số lượng điểm chụp: <span>5-7</span></p>
-                           </li>
-                           <li>
-                               <p>Album in + Ảnh lớn: <span>có</span></p>
-                           </li>
-                           <li>
-                               <p>Video ảnh: <span>có</span></p>
-                           </li>
-                       </ul>
-                       <div class="price">
-                           <span>4.000.000 vnđ</span>
+                   <div class="pr_item flex pr">
+                       <div class="s_author flex">
+                           <img class="avatar" src="assets/images/thumb_bst.jpg" alt="">
+                           <div class="info">
+                               <h4>
+                                   Long Kaido
+                                   <span class="love flex"><ion-icon ios="ios-heart" md="md-heart"></ion-icon> 69</span>
+                               </h4>
+                               <p>Sô 3, Ngõ 89, Nguyễn Văn Cừ, Long biên, Hà…</p>
+                               <p>0169 409 0203</p>
+                           </div>
                        </div>
-                       <div class="book pr">
-                           <ion-icon ios="ios-add" md="md-add"></ion-icon>
-                           <a href="" class="book-link" title="Đặt gói này">Đặt gói này</a>
-                       </div>
-                   </div>
-                   <div class="package">
-                       <h4>Ảnh kỷ yếu nhóm </h4>
-                       <a href="" class="view-detail">Xem chi tiết</a>
-                       <ul class="list-item">
-                           <li>
-                               <p>Số lượng điểm chụp: <span>3</span></p>
-                           </li>
-                           <li>
-                               <p>Album in + Ảnh lớn: <span>có</span></p>
-                           </li>
-                           <li>
-                               <p>Video ảnh: <span>Không</span></p>
-                           </li>
-                       </ul>
-                       <div class="price">
-                           <span>500.000vnđ/người</span>
-                       </div>
-                       <div class="book pr">
-                           <ion-icon ios="ios-add" md="md-add"></ion-icon>
-                           <a href="" class="book-link" title="Đặt gói này">Đặt gói này</a>
+                       <div class="slide-profile pr">
+                           <div class="item">
+                               <img src="assets/images/mask.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/thumb-makeup.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/rectangle-3.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/thumb-makeup.jpg" alt="">
+                           </div>
+                           <div class="item">
+                               <img src="assets/images/mask.jpg" alt="">
+                           </div>
+
                        </div>
                    </div>
                </div>
@@ -239,6 +272,25 @@
 <script>
     $(document).ready(function () {
         box_tab('.tab_photo li','.tab_photo_content',0,0);
+        $('.infoUser').click(function () {
+           $(this).addClass('active');
+            $('.get_nf').removeClass('active');
+        });
+        $('main').mouseenter(function () {
+            $('.infoUser,.get_nf').removeClass('active');
+        });
+        $('.slide-profile').slick({
+            centerMode: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerPadding: '0',
+            arrows: true
+        });
+        $('.get_nf').click(function () {
+           $(this).addClass('active');
+           $('.infoUser').removeClass('active');
+        });
+        box_tab('.tab_profile li','.content_profile',0,0);
     });
 
 </script>
