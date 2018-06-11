@@ -605,8 +605,7 @@ h2.title {
       height: 100%;
       display: block;
       object-fit: cover;
-      transition: linear 2s;
-      border-radius: 4px 4px 0 0; }
+      transition: linear 2s; }
     .post .thumb:hover img {
       transform: scale(1.1); }
   .post .header {
@@ -738,8 +737,8 @@ h2.title {
   .photography .slick-arrow, .collection .slick-arrow {
     width: 60px;
     height: 60px;
-    opacity: 0.3;
-    background: var(--black) url("../images/nav-post.png") no-repeat center center;
+    text-indent: -9999em;
+    background: rgba(0, 0, 0, 0.3);
     position: absolute;
     bottom: 0;
     border: none;
@@ -747,12 +746,24 @@ h2.title {
     cursor: pointer; }
     .photography .slick-arrow:focus, .collection .slick-arrow:focus {
       outline: none; }
+    .photography .slick-arrow:after, .collection .slick-arrow:after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 27px;
+      background: url(../images/icon_nav.png) no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1; }
   .photography .slick-slide, .collection .slick-slide {
     height: 225px;
     overflow: hidden; }
   .photography .slick-prev, .collection .slick-prev {
-    left: 0;
-    transform: rotate(180deg); }
+    left: 0; }
+    .photography .slick-prev:after, .collection .slick-prev:after {
+      transform: translate(-50%, -50%) rotate(180deg); }
   .photography .slick-next, .collection .slick-next {
     right: 0; }
 
@@ -779,75 +790,100 @@ h2.title {
 .collection .post .body .category {
   margin-bottom: 10px; }
 
-.service_around h2.title {
-  padding-bottom: 16px; }
-
-.service_around .link_service {
-  display: block;
-  padding-bottom: 40px;
-  text-align: center;
-  font-weight: 500;
-  color: #808080;
-  font-size: 14px; }
-
-.service_around iframe {
-  height: 500px;
-  width: 100%;
-  display: block;
-  margin-top: 16px; }
-
-.service_around .service_content {
-  width: 100%;
-  height: 500px;
-  position: absolute;
-  bottom: 0; }
-
-.service_around .service_info {
-  width: 328px;
-  border-radius: 4px;
-  background: #000;
-  box-shadow: 10px 20px 30px 0 rgba(0, 0, 0, 0.2); }
-  .service_around .service_info:after {
-    width: 38px;
-    height: 38px; }
-  .service_around .service_info .slider {
-    width: 255px;
-    height: 150px;
+.service_around {
+  width: 100%; }
+  .service_around h2.title {
+    padding-bottom: 16px; }
+  .service_around .link_service {
     display: block;
-    margin: 0 auto;
-    overflow: hidden; }
-    .service_around .service_info .slider img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-    .service_around .service_info .slider .item {
-      height: 150px; }
-  .service_around .service_info .slick-arrow {
+    padding-bottom: 40px;
+    text-align: center;
+    font-weight: 500;
+    color: #808080;
+    font-size: 14px; }
+  .service_around iframe {
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin-top: 16px; }
+  .service_around .service_content {
+    width: 100%;
+    height: 500px;
     position: absolute;
-    top: 0;
-    text-indent: -9999px;
-    border: none; }
-  .service_around .service_info .slick-prev {
-    left: 0; }
-  .service_around .service_info .slick-next {
-    right: 0; }
-  .service_around .service_info .info {
-    padding: 15px;
-    background-image: linear-gradient(75deg, #eb008b, #652d90);
-    z-index: 8; }
-    .service_around .service_info .info .author {
-      margin-right: 20px; }
-
-.service_around .phone_add {
-  color: #fff; }
-  .service_around .phone_add p {
-    display: flex;
-    align-items: center;
-    -webkit-align-items: center;
-    margin-bottom: 4px;
-    font-size: 12px; }
-  .service_around .phone_add ion-icon {
-    margin-right: 4px; }
+    bottom: 0; }
+  .service_around .service_info {
+    width: 328px;
+    background: #000;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 10px 20px 30px 0 rgba(0, 0, 0, 0.2); }
+    .service_around .service_info:after {
+      width: 38px;
+      height: 38px; }
+    .service_around .service_info .slider {
+      width: 255px;
+      height: 150px;
+      display: block;
+      margin: 0 auto;
+      overflow: hidden; }
+      .service_around .service_info .slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .service_around .service_info .slider .item {
+        height: 150px; }
+    .service_around .service_info .slick-arrow {
+      position: absolute;
+      top: 0;
+      text-indent: -9999px;
+      border: none; }
+    .service_around .service_info .slick-prev {
+      left: 0; }
+    .service_around .service_info .slick-next {
+      right: 0; }
+    .service_around .service_info .info {
+      padding: 15px;
+      background-image: linear-gradient(75deg, #eb008b, #652d90);
+      border-radius: 0 0 4px 4px;
+      z-index: 8; }
+      .service_around .service_info .info .author {
+        margin-right: 20px; }
+  .service_around .phone_add {
+    color: #fff; }
+    .service_around .phone_add p {
+      display: flex;
+      align-items: center;
+      -webkit-align-items: center;
+      margin-bottom: 4px;
+      font-size: 12px; }
+    .service_around .phone_add ion-icon {
+      margin-right: 4px; }
+  .service_around .bgservice {
+    margin-top: 16px; }
+    .service_around .bgservice img {
+      max-width: 100%; }
+  .service_around .place-icon {
+    width: 40px; }
+  .service_around a.fs {
+    width: 40px;
+    height: 38.4px;
+    background-image: linear-gradient(63deg, #eb008b, #652d90);
+    box-shadow: 10px 20px 30px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    z-index: 9; }
+  .service_around i.trigular {
+    background-image: linear-gradient(0deg, #eb008b, #ba17ce);
+    width: 28px;
+    height: 28px;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 6px;
+    bottom: -14px;
+    border-radius: 0 0 4px 0; }
+  .service_around ion-icon {
+    font-size: 24px;
+    color: #fff; }
 
 /*service*/
 .filter {
@@ -1249,7 +1285,204 @@ table.history {
     transform: translateX(-50%); }
 
 /*end*/
+/*register*/
+.header-main {
+  height: 88px;
+  width: 100%;
+  background: #fff; }
+  .header-main .container {
+    height: 100%;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center; }
+  .header-main .acc_ex {
+    font-weight: 500;
+    color: var(--barney); }
+    .header-main .acc_ex:hover {
+      text-decoration: underline; }
+  .header-main h2 {
+    padding: 0; }
+  .header-main a.logo {
+    width: 100px;
+    height: 40px;
+    display: block;
+    background: url("../images/logo-1-4-x.png") no-repeat;
+    background-size: 100px 40px; }
+
+.register {
+  width: 640px;
+  background: #fff;
+  margin: 32px auto 0;
+  padding: 40px 90px 56px;
+  border-radius: 8px; }
+  .register form ::-webkit-input-placeholder {
+    color: var(--greyish); }
+  .register .rules {
+    display: flex;
+    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--greyish-brown); }
+    .register .rules input {
+      display: block;
+      width: 14px;
+      height: 14px;
+      float: left;
+      -webkit-appearance: none;
+      opacity: 0;
+      margin-right: 8px;
+      flex-basis: auto;
+      -webkit-flex-basis: auto;
+      position: relative;
+      z-index: 4; }
+    .register .rules a {
+      white-space: nowrap;
+      color: var(--barney); }
+    .register .rules span.checked {
+      width: 14px;
+      height: 14px;
+      border: 1px solid var(--greyish);
+      border-radius: 2px;
+      position: absolute;
+      top: 0; }
+      .register .rules span.checked ion-icon {
+        display: none;
+        font-size: 12px;
+        color: #fff; }
+    .register .rules input:checked ~ span.checked {
+      background: var(--barney);
+      border: none; }
+    .register .rules input:checked ~ span.checked ion-icon {
+      display: block; }
+    .register .rules label {
+      font-weight: 500; }
+    .register .rules p {
+      padding-left: 26px; }
+  .register button:focus, .register textarea:focus {
+    outline: none; }
+
+.register_service {
+  width: 1170px; }
+  .register_service form {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+  .register_service fieldset {
+    width: 460px;
+    padding: 0; }
+  .register_service h4 {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a; }
+  .register_service textarea {
+    width: 100%;
+    height: 155px;
+    padding: 10px;
+    border: 1px solid var(--white-three);
+    border-radius: 4px; }
+  .register_service .info_pay {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .register_service .info_pay h4 {
+      flex-basis: 100%;
+      -webkit-flex-basis: 100%; }
+    .register_service .info_pay .group {
+      width: 46%; }
+  .register_service select {
+    color: var(--greyish) !important; }
+  .register_service button[type="submit"] {
+    width: 460px !important;
+    margin: 16px auto 0; }
+  .register_service .group {
+    margin: 0 auto; }
+  .register_service .rules {
+    width: 460px;
+    margin: -5px auto 0; }
+
+/*end*/
 /*modal*/
+.register .group, .popup-login .popup-content .group {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-bottom: 24px; }
+
+.register .forget_pass, .popup-login .popup-content .forget_pass {
+  font-weight: 500;
+  color: var(--greyish); }
+  .register .forget_pass:hover, .popup-login .popup-content .forget_pass:hover {
+    color: var(--greyish-brown); }
+
+.register label, .popup-login .popup-content label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--greyish-brown);
+  font-weight: bold; }
+
+.register .error, .popup-login .popup-content .error {
+  font-weight: 500;
+  font-size: 12px;
+  color: #d8473c;
+  margin-top: 5px; }
+
+.register input, .popup-login .popup-content input, .register select, .popup-login .popup-content select {
+  width: 100%;
+  height: 54px;
+  padding-left: 16px;
+  flex-basis: 100%;
+  font-weight: 500;
+  -webkit-flex-basis: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--white-three);
+  color: var(--greyish-brown); }
+
+.register ::-webkit-input-placeholder, .popup-login .popup-content ::-webkit-input-placeholder {
+  color: var(--white-three); }
+
+.register button[type="submit"], .popup-login .popup-content button[type="submit"] {
+  width: 100%;
+  height: 55px;
+  background: var(--white-three);
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--greyish);
+  font-size: 18px;
+  border: none;
+  cursor: pointer; }
+
+.register .login_facebook, .popup-login .popup-content .login_facebook, .register .register_facebook, .popup-login .popup-content .register_facebook {
+  text-align: center; }
+  .register .login_facebook p, .popup-login .popup-content .login_facebook p, .register .register_facebook p, .popup-login .popup-content .register_facebook p {
+    color: var(--greyish-brown);
+    line-height: 22px;
+    font-weight: 500; }
+  .register .login_facebook .btn_login, .popup-login .popup-content .login_facebook .btn_login, .register .register_facebook .btn_login, .popup-login .popup-content .register_facebook .btn_login {
+    width: 371px;
+    height: 48px;
+    margin: 16px auto 0;
+    border: solid 2px #284983;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #284983; }
+  .register .login_facebook .icon, .popup-login .popup-content .login_facebook .icon, .register .register_facebook .icon, .popup-login .popup-content .register_facebook .icon {
+    width: 12px;
+    height: 26px;
+    margin-right: 24px;
+    background: url("../images/icon_face.png") no-repeat;
+    background-size: 12px 26px; }
+
 .popup_photo_detail {
   width: 1260px;
   height: 90%;
@@ -1471,72 +1704,6 @@ table.history {
     border-width: 2px; }
   .popup-login .popup-content .content_login {
     padding: 32.5px 90px 32px; }
-  .popup-login .popup-content .group {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
-    -webkit-justify-content: space-between;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    margin-bottom: 24px; }
-  .popup-login .popup-content .forget_pass {
-    font-weight: 500;
-    color: var(--greyish); }
-    .popup-login .popup-content .forget_pass:hover {
-      color: var(--greyish-brown); }
-  .popup-login .popup-content label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--greyish-brown);
-    font-weight: bold; }
-  .popup-login .popup-content .error {
-    font-weight: 500;
-    font-size: 12px;
-    color: #d8473c;
-    margin-top: 5px; }
-  .popup-login .popup-content input {
-    width: 100%;
-    height: 54px;
-    padding-left: 16px;
-    flex-basis: 100%;
-    font-weight: 500;
-    -webkit-flex-basis: 100%;
-    border-radius: 4px;
-    border: 1px solid var(--white-three);
-    color: var(--greyish-brown); }
-  .popup-login .popup-content ::-webkit-input-placeholder {
-    color: var(--white-three); }
-  .popup-login .popup-content button[type="submit"] {
-    width: 100%;
-    height: 55px;
-    background: var(--white-three);
-    border-radius: 4px;
-    font-weight: bold;
-    color: var(--greyish);
-    font-size: 18px;
-    border: none;
-    cursor: pointer; }
-  .popup-login .popup-content .login_facebook {
-    text-align: center; }
-    .popup-login .popup-content .login_facebook p {
-      color: var(--greyish-brown);
-      line-height: 22px;
-      font-weight: 500; }
-    .popup-login .popup-content .login_facebook .btn_login {
-      width: 371px;
-      height: 48px;
-      margin: 16px auto 0;
-      border: solid 2px #284983;
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 18px;
-      color: #284983; }
-    .popup-login .popup-content .login_facebook .icon {
-      width: 12px;
-      height: 26px;
-      margin-right: 24px;
-      background: url("../images/icon_face.png") no-repeat;
-      background-size: 12px 26px; }
   .popup-login .popup-content a.rs_new {
     display: block;
     text-align: center;
@@ -1969,6 +2136,9 @@ table.history {
 .r_m {
   width: 872px;
   margin-left: 30px; }
+
+.pb {
+  padding-bottom: 60px; }
 
 .popup_photo_detail .col-right h4, .popup_photo_detail .wirte_comment h4, .package_photo .package h4, .package_makeup .package h4 {
   font-weight: bold;
