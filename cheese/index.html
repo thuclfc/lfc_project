@@ -12,7 +12,7 @@
 <body>
 <div class="wrapper">
     <header>
-        <div class="container">
+        <div class="container pr">
             <div class="headerTop">
                 <div class="hotline">
                     <p>Hotline <a href="tel:024 6969 996">024 6969 996</a></p>
@@ -41,8 +41,8 @@
                 <div class="loginResgiter">
                     <div class="beforeLogin">
                         <div class="buttons flex">
-                            <a href="" title="Đăng nhập">Đăng nhập</a>
-                            <a href="" title="Đăng ký">Đăng ký</a>
+                            <a href="javascript:void(0)" title="Đăng nhập" id="login">Đăng nhập</a>
+                            <a href="javascript:void(0)" title="Đăng ký" id="register">Đăng ký</a>
                         </div>
                     </div>
                     <div class="afterLogin">
@@ -803,32 +803,91 @@
             </ul>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.137420191163!2d105.83652241535903!3d21.0271867932069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9999f60321%3A0xdf76915d97469a42!2zTmfDtCBTxKkgTGnDqm4sIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1528528760851" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             <div class="service_content">
-                <div class="service_info">
-                    <div class="slider">
-                        <div class="item">
-                            <img src="assets/images/mask.jpg" alt="">
+                <div class="container">
+                    <div class="service_info pr">
+                        <div class="slider">
+                            <div class="item">
+                                <img src="assets/images/mask.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/rectangle-3.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="item">
-                            <img src="assets/images/rectangle-3.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="info flex pr">
-                        <div class="author flex">
-                            <img src="assets/images/mask.jpg" alt="">
-                            <p>
-                                <span class="name">Cheese Bridal</span>
-                                <span class="address">Hà Nội</span>
-                            </p>
-                        </div>
-                        <div class="phone_add">
-                            <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
-                            <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                        <div class="info flex pr">
+                            <div class="author flex">
+                                <img src="assets/images/mask.jpg" alt="">
+                                <p>
+                                    <span class="name">Cheese Bridal</span>
+                                    <span class="address">Hà Nội</span>
+                                </p>
+                            </div>
+                            <div class="phone_add">
+                                <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
+                                <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <div class="modal popup-login" id="popup-login popup">
+        <div class="popup-content popup">
+            <div class="header flex">
+                <a href="javascript:void(0)" class="close_popup"><ion-icon name="close"></ion-icon></a>
+                <h2>Đăng nhập<ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon></h2>
+                <ul class="tab_login tab_line flex">
+                    <li><a href="javascript:void(0)" title="Khách hàng">Khách hàng</a></li>
+                    <li><a href="javascript:void(0)" title="Nhà cung cấp">Nhà cung cấp</a></li>
+                </ul>
+            </div>
+            <div class="body">
+                <div class="content_login">
+                    <form method="" action="">
+                        <div class="group">
+                            <label for="">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Địa chỉ email" required="">
+                        </div>
+                        <div class="group">
+                            <label for="">Mật khẩu</label>
+                            <a class="forget_pass" href="" title="Quên mật khẩu?">Quên mật khẩu?</a>
+                            <input type="password" id="password" name="password" placeholder="Mật khẩu Cheese" required>
+                            <label for="" class="error">Mật khẩu chưa đúng quy chuẩn</label>
+                        </div>
+                        <div class="group">
+                            <button type="submit" class="submit flex_center">Đăng nhập</button>
+                        </div>
+                    </form>
+                    <div class="login_facebook">
+                        <p>hoặc đăng nhập bằng</p>
+                        <a href="" class="btn_login flex_center" title="Đăng nhập Facebook"><i class="icon"></i>Facebook</a>
+                    </div>
+                    <a class="rs_new" href="" title="Đăng ký mới">Đăng ký mới</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal popup-register">
+        <div class="popup-content popup">
+            <a href="javascript:void(0)" class="close_popup"><ion-icon name="close"></ion-icon></a>
+            <h2>Đăng ký tài khoản</h2>
+            <div class="select_register">
+                <div class="select flex_center">
+                    <label>
+                        <input type="radio" name="select" value="" />Tài khoản khách hàng
+                        <span class="checked"></span>
+                    </label>
+                </div>
+                <div class="select flex_center">
+                    <label>
+                        <input type="radio" name="select" value="" />Nhà cung cấp dịch vụ
+                        <span class="checked"></span>
+                    </label>
+                </div>
+                <a href="" class="continue flex_center" title="Tiếp tục">Tiếp tục <ion-icon name="arrow-round-forward"></ion-icon></a>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container flex">
             <div class="logo">
@@ -879,11 +938,20 @@
                 $('.slick-active').removeClass('blur');
                 $('.slick-active').prev().addClass('blur');
             }
-
         },1000);
+
+        var select=$('.select_register .select');
+        $(select).click(function () {
+           $('.select_register .select').removeClass('active');
+           $(this).addClass('active');
+        });
+
         box_tab('.album_tab li','.album_post',0,0);
         box_tab('.collection_tab li','.collection_post',0,0);
         box_tab('.service_tab li','.service_content',0,0);
+        box_tab('.tab_login li','.content_login',0,0);
+        open_popup('#login','.popup-login');
+        open_popup('#register','.popup-register');
     });
 
 </script>
