@@ -28,11 +28,16 @@
                 </ul>
             </div>
             <div class="headerBody flex">
-                <ul class="menu flex">
-                    <li><a href="" title="Chụp hình">Chụp hình</a></li>
-                    <li><a href="" title="Trang điểm">Trang điểm</a></li>
-                    <li><a href="" title="Trang phục">Trang phục</a></li>
-                </ul>
+                <button class="toggle-menu navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="menu flex">
+                        <li><a href="" title="Chụp hình">Chụp hình</a></li>
+                        <li><a href="" title="Trang điểm">Trang điểm</a></li>
+                        <li><a href="" title="Trang phục">Trang phục</a></li>
+                    </ul>
+                </div>
                 <div class="logo">
                     <h1>
                         <a href="" title=""><img src="assets/images/logo-1-4-x.png" srcset="assets/images/logo-1-4-x@2x.png 2x" alt=""></a>
@@ -45,8 +50,32 @@
                             <a href="javascript:void(0)" title="Đăng ký" id="register" data-toggle="modal" data-target="#popup-register">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="afterLogin">
-
+                    <div style="display: none" class="afterLogin flex pr">
+                        <div class="get_nf pr">
+                            <a href="javascript:void(0)"><ion-icon ios="ios-notifications" md="md-notifications"></ion-icon></a>
+                            <span class="nf">9</span>
+                            <ul class="list-nf">
+                                <li>
+                                    <p>abc xyz</p>
+                                    <p>lfc</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="infoUser flex pr">
+                            <img src="assets/images/mask.jpg" alt="">
+                            <p>
+                                <span class="name">Nguyễn Minh Hải <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></span>
+                                <span class="address">Hà Nội</span>
+                            </p>
+                            <ul class="option_user">
+                                <li>
+                                    <a href="" title="Tài khoản"><ion-icon ios="ios-person" md="md-person"></ion-icon>Tài khoản</a>
+                                </li>
+                                <li>
+                                    <a href="" title="Đăng xuất"><ion-icon ios="ios-exit" md="md-exit"></ion-icon>Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -885,7 +914,6 @@
             </div>
         </div>
     </main>
-
     <div class="modal fade" id="popup-login">
         <div class="modal-dialog popup-login popup">
             <div class="header flex">
@@ -988,13 +1016,24 @@
 <script src="assets/js/page.js"></script>
 <script>
     $(document).ready(function () {
-        $('.slider_album_week .sliders').slick({
-            centerMode: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            centerPadding: '76px',
-            arrows: false
-        });
+        var width_view=$(window).width();
+        if(width_view >= 320 && width_view <=768){
+            $('.slider_album_week .sliders').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: '30px',
+                arrows: false
+            });
+        }else if(width_view >=1024){
+            $('.slider_album_week .sliders').slick({
+                centerMode: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                centerPadding: '76px',
+                arrows: false
+            });
+        }
 
         $('.slider-image').slick({
             slidesToShow: 1,
