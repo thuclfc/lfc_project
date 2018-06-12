@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery e-calendar Plugin Demo</title>
+    <style>
+        .clear{
+            padding: 46px 4px 7px 5px;
+        }
+        .cld_inner{
+            width: 100%;
+            height: 100%;
+        }
+        .cld_curent{
+            width: 100%;
+            height: 30px;
+        }
+        .month_year{text-align: center; display: block; margin-top: 12px;
+            color: #b00101;
+            font-size: 17px;
+            font-weight: bold;}
+        .cld_head{
+            width: 100%;
+            height: 25px;
+        }
+        .cld_head li,.cld_body li{
+            display: block;
+            float: left;
+            width: 48px;
+            height: 24px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 25px;
+            color: #000;
+            font-family: Tahoma;
+            font-size: 13px;
+        }
+        .cld_body li.active,.cld_body li.active a{
+            color: #b00101;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="clear">
+    <div class="cld_inner">
+        <div class="cld_curent">
+            <button type="button" class="prevl"></button>
+            <span class="month_year"></span>
+            <button type="button" class="nextnss"></button>
+        </div>
+        <div class="cld_head">
+            <li>CN</li>
+            <li>Hai</li>
+            <li>Ba</li>
+            <li>Tư</li>
+            <li>Năm</li>
+            <li>Sáu</li>
+            <li>Bẩy</li>
+        </div>
+        <div class="cld_body">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li class="active"></li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li role="button"  class="active"  data-toggle="popover" data-trigger="focus" title=""  data-content="" data-html="true">16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li role="button"  class="active"  data-toggle="popover" data-trigger="focus" title="<a href='#kiep-nan-33'>Kiếp nạn 33</a>"  data-content="(19/09/2016) - (16/10/2017)" data-html="true">22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+        </div>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+    $("[data-toggle=popover]").click(function(e){e.preventDefault();}).popover({html:true});
+    var prev = $('.prevl');
+    next = $('.nextnss');
+    inner = $('.month_year');
+    datetime = $('.cld_body');
+
+    function getDataOfMonth(month,year){
+        //var datas = null;
+        $.ajax({
+            url: "http://"+window.location.hostname+"/get-data-event",
+            type:'post',
+            data:{'month':month,'year':year},
+            beforeSend: function(){
+                prev.attr('disabled','disabled');
+                next.attr('disabled','disabled');
+            },
+            success: function(data){
+
+                for(i = 0; i<data.length; i++){
+
+
+                    $('.cld_body li').each(function(){
+                        if($(this).text() != null || $(this).text != ''){
+                            if(parseInt(data[i].date) == parseInt($(this).text()) ){
+                                $(this).addClass('active').html("<a tabindex='0'  role='button' data-toggle='popover' data-trigger='hover' title='"+data[i].title+"' data-content='"+data[i].content+"'>"+data[i].date+"</a>");
+                            }
+                        }
+                    });
+                    $('.cld_body li.active a').popover({
+                        trigger : 'hover',
+                        placement : 'right',
+                        html: 'true'
+                    });
+
+                }
+            },
+            error:function(){
+                alert('error');
+            }
+        }).done(function() {
+            prev.removeAttr('disabled');
+            next.removeAttr('disabled');
+        });
+
+
+    }
+
+
+
+    $('.cld_body li.active a').popover();
+
+
+    function renderCalendar(month,year){
+        var c_month = month;
+        c_year = year;
+        html="";
+        day_of_month = 0;
+        flagy = false;//false la ko ket thuc = 00; true la ket thuc bang 00
+        flagm = false;//false la sai thang, true la dung thang
+        nhuan = false;// false la ko nhuan, true la nhuan
+        dowen = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        if(c_year.length == 4 && c_year.toString().substring(0,2) != "00"){
+            flagy = false;
+            if( parseInt(c_year) % 4 == 0 ){
+                nhuan = true;
+            }else{
+                nhuan = false;
+            }
+        }else{
+            flagy = true;
+            if(parseInt(c_year.toString().substring(0, 2)) % 4 == 0){
+                nhuan = true;
+            }else{
+                nhuan = false;
+            }
+        }
+
+        if(c_month >0 && c_month<=12){
+            flagm = true;
+        }else{
+            flagm = false;
+        }
+
+        switch (c_month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                day_of_month = 31;
+                break;
+            case 2:
+                if(nhuan){
+                    day_of_month = 29;
+                }else{
+                    day_of_month = 28;
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                day_of_month = 30;
+                break;
+        }
+
+        if(flagm){
+            li = "";
+            for(var i=1; i<=day_of_month; i++){
+                if(i==1){
+                    datetmp = new Date(c_year+"-"+c_month+"-"+i);
+                    num_start = datetmp.getDay();
+                    if(num_start == 0){
+                        for(var j = 0; j<num_start;j++){
+                            li+="<li></li>";
+                        }
+                    }else{
+                        for(var j = 0; j<num_start;j++){
+                            li+="<li></li>";
+                        }
+                    }
+                }
+                li+="<li>"+i+"</li>";
+                if(i == day_of_month){
+                    datetmp = new Date(c_year+"-"+c_month+"-"+i);
+                    num_start = datetmp.getDay();
+                    for(j = 0; j<6-num_start;j++){
+                        li+="<li></li>";
+                    }
+                }
+            }
+            datetime.html(li);
+        }
+    }
+
+    jQuery(document).ready(function($j){
+        setDateTimeButton();
+
+        prev.click(function(e){
+            e.preventDefault();
+
+            month = parseInt($(this).attr('month'));
+            year = parseInt($(this).attr('year'));
+            setDateTimeButton(month,year);
+        });
+        next.click(function(e){
+            e.preventDefault();
+
+            month = parseInt($(this).attr('month'));
+            year = parseInt($(this).attr('year'));
+            setDateTimeButton(month,year);
+        });
+    });
+    function setDateTimeButton(month,year){
+        if(typeof month === 'undefined' || typeof year === 'undefined'){
+            var now = new Date();
+            current_month = now.getMonth();
+            current_month = parseInt(current_month)+1;
+            current_month = (current_month.toString().length <2) ? '0'+current_month : current_month;
+            current_year = now.getFullYear();
+            CalTime(current_month,current_year,next,prev);
+        }else{
+            CalTime(month,year,next,prev);
+        }
+    }
+
+    function CalTime(month,year,c_next,c_prev){
+        month = parseInt(month);
+        year = parseInt(year);
+        if(month>0 && month<=12){
+            if(month == 1){
+                c_prev.attr({
+                    month:12,
+                    year:parseInt(year)-1
+                });
+                c_next.attr({
+                    month:parseInt(month)+1,
+                    year:year
+                })
+            }else if(month == 12){
+                c_prev.attr({
+                    month:11,
+                    year:year
+                });
+                c_next.attr({
+                    month:01,
+                    year:parseInt(year)+1
+                })
+            }else{
+                c_prev.attr({
+                    month:(month.toString().length <2) ? '0'+(month-1) : month-1,
+                    year:year
+                });
+                c_next.attr({
+                    month:(month.toString().length <2) ? '0'+(month+1) : month+1,
+                    year:year
+                })
+            }
+
+            m = (month.toString().length <2) ? '0'+month : month;
+            inner.text('Tháng '+m+' - '+year);
+            renderCalendar(month,year);
+            getDataOfMonth(m,year);
+        }
+    }
+    $(document).ready(function(){
+        getSevers();
+        getTOPMANCHESTER();
+    });
+    function getSevers(){
+        $.ajax({
+            url:"/severList",
+            type:"GET",
+            success:function(data){
+                data = JSON.parse(data);
+                var html = data.html;
+                //$.each(data, function(k, v) {
+                //    html += "<option value="+k+">"+v+"</option>";
+                //});
+                $("#severList").html(html);
+                getTOPMANCHESTER();
+            }
+        });
+    };
+    $("#top").on('change',function(){
+        getTOPMANCHESTER();
+        //var topType =  parseInt($("#top").val());
+        //var severID = $("#severList").val();
+        //var content_nc = '';
+        //$.ajax({
+        //    url:"/topList",
+        //    type:"GET",
+        //    data:{severID:severID,topType:topType},
+        //    success:function(data){
+        //        data = JSON.parse(data);
+        //        $.each(data, function(k, v) {
+        //            var obj = v[topType];
+        //            $.each(obj,function(obj_k,obj_v){
+        //                var nguoichoi = obj_v;
+        //                console.log('người chơi '+nguoichoi.name+' xếp hạng: '+nguoichoi.rank);
+        //                content_nc += '<tr>';
+        //                content_nc += "<td>"+nguoichoi.name+"</td>";
+        //                content_nc += "<td>"+nguoichoi.rank+"</td>";
+        //                content_nc += "<td>"+nguoichoi.topValue_one+"</td>";
+        //                content_nc += '</tr>';
+        //            });
+        //        });
+        //
+        //        $("#content").html(content_nc);
+        //        console.log(content_nc);
+        //
+        //
+        //    }
+        //});
+    });
+    $("#severList").on('change',function(){
+        getTOPMANCHESTER();
+    });
+    function getTOPMANCHESTER(){
+        var topType = parseInt($("#top").val());
+        var severID = $("#severList").val();
+        var content_nc = '';
+        $.ajax({
+            url:"/topList",
+            type:"GET",
+            data:{severID:severID,topType:topType},
+            success:function(data){
+                data = JSON.parse(data);
+                $.each(data, function(k, v) {
+                    var obj = v[topType];
+                    if(k==severID){
+                        $.each(obj,function(obj_k,obj_v){
+                            var nguoichoi = obj_v;
+                            //console.log('người chơi '+nguoichoi.name+' xếp hạng: '+nguoichoi.rank);
+                            content_nc += '<tr>';
+                            content_nc += "<td>"+nguoichoi.name+"</td>";
+                            content_nc += "<td>"+nguoichoi.rank+"</td>";
+                            content_nc += "<td>"+nguoichoi.topValue_one+"</td>";
+                            content_nc += '</tr>';
+                        });
+                    }
+                });
+                $("#content").html(content_nc);
+                //console.log(content_nc);
+
+
+            }
+        });
+    }
+</script>
+</body>
+</html>

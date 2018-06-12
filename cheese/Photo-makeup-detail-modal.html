@@ -12,14 +12,14 @@
 <body>
 <div class="wrapper">
     <header>
-        <div class="container">
+        <div class="container pr">
             <div class="headerTop">
                 <div class="hotline">
                     <p>Hotline <a href="tel:024 6969 996">024 6969 996</a></p>
                 </div>
                 <ul class="social flex">
                     <li><a href="" title=""><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></a></li>
-                    <li><a href="" title="">  <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></a></li>
                     <li><a href="" title=""><ion-icon name="logo-youtube"></ion-icon></a></li>
                 </ul>
                 <ul class="headerLink flex">
@@ -41,8 +41,8 @@
                 <div class="loginResgiter">
                     <div class="beforeLogin">
                         <div class="buttons flex">
-                            <a href="" title="Đăng nhập">Đăng nhập</a>
-                            <a href="" title="Đăng ký">Đăng ký</a>
+                            <a href="javascript:void(0)" title="Đăng nhập" id="login" data-toggle="modal" data-target="#popup-login">Đăng nhập</a>
+                            <a href="javascript:void(0)" title="Đăng ký" id="register" data-toggle="modal" data-target="#popup-register">Đăng ký</a>
                         </div>
                     </div>
                     <div class="afterLogin">
@@ -138,7 +138,7 @@
                     <li><a class="" href="javascript:void(0)" title="Ảnh kỷ yếu"><span>Ảnh kỷ yếu</span></a></li>
                 </ul>
                 <div class="album_post flex">
-                    <article class="post">
+                    <article class="post" data-toggle="modal" data-target="#popup_photo_detail">
                         <div class="header flex">
                             <div class="author flex">
                                 <img src="assets/images/mask.jpg" alt="">
@@ -149,7 +149,7 @@
                             </div>
                             <a class="book" href="" title="Đặt lịch"><ion-icon ios="ios-add" md="md-add"></ion-icon>Đặt lịch</a>
                         </div>
-                        <a href="" class="thumb"><img src="assets/images/thumb_pt1.jpg" alt=""></a>
+                        <a href="javascript:void(0)" class="thumb"><img src="assets/images/thumb_pt1.jpg" alt=""></a>
                         <div class="body">
                             <span class="category">Ảnh cưới</span>
                             <h3><a href="" title="Đà Lạt hoàng hôn">Đà Lạt hoàng hôn</a></h3>
@@ -801,156 +801,169 @@
                 <li><a href="javascript:void(0)" title="Chụp ảnh"><span>Chụp ảnh</span></a></li>
                 <li><a href="javascript:void(0)" title="Trang điểm"><span>Trang điểm</span></a></li>
             </ul>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.137420191163!2d105.83652241535903!3d21.0271867932069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9999f60321%3A0xdf76915d97469a42!2zTmfDtCBTxKkgTGnDqm4sIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1528528760851" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="bgservice">
+                <img src="assets/images/bg-map.jpg" alt="">
+            </div>
             <div class="service_content">
-                <div class="service_info">
-                    <div class="slider">
-                        <div class="item">
-                            <img src="assets/images/mask.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/rectangle-3.jpg" alt="">
+                <div class="container">
+                    <div class="place">
+                        <div class="place-icon pr">
+                            <a href="javascript:void(0)" class="place1"></a>
+                            <a href="javascript:void(0)" class="place2"></a>
+                            <a href="javascript:void(0)" class="place3"></a>
+                            <a href="javascript:void(0)" class="place4"></a>
                         </div>
                     </div>
-                    <div class="info flex pr">
-                        <div class="author flex">
-                            <img src="assets/images/mask.jpg" alt="">
-                            <p>
-                                <span class="name">Cheese Bridal</span>
-                                <span class="address">Hà Nội</span>
-                            </p>
+                    <div class="service_info service1 pr">
+                        <div class="slider">
+                            <div class="item">
+                                <img src="assets/images/mask.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/rectangle-3.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="phone_add">
-                            <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
-                            <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                        <div class="info flex pr">
+                            <div class="author flex">
+                                <img src="assets/images/mask.jpg" alt="">
+                                <p>
+                                    <span class="name">Cheese Bridal</span>
+                                    <span class="address">Hà Nội</span>
+                                </p>
+                            </div>
+                            <div class="phone_add">
+                                <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
+                                <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <div class="popup_photo_detail">
-        <div class="box_slider">
-            <div class="sliders slider_popup">
-                <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
-                <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
-                <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
-                <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
-                <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
-            </div>
-            <div class="slider slider-nav">
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">3</div>
-                <div class="item">4</div>
-                <div class="item">5</div>
-            </div>
-        </div>
-        <div class="detail flex">
-            <div class="col-left">
-                <h2 class="title">Ảnh cưới Thung Nai Hoà Bình</h2>
-                <div class="cat_time flex">
-                    <span class="cat">Ảnh cưới</span>
-                    <time>Ngày đăng: 01/05/2018</time>
+    <div class="modal fade" id="popup_photo_detail">
+        <div class="modal-dialog popup_photo_detail popup">
+            <div class="box_slider">
+                <div class="sliders slider_popup">
+                    <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                    <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                    <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                    <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                    <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
                 </div>
-                <div class="author flex">
-                    <img src="assets/images/thumb_make1.jpg" alt="">
-                    <p>
-                        <span class="name">Long Kaido</span>
-                        <span class="address">Hà Nội</span>
-                    </p>
-                    <a href="" class="book" title="Đặt Lịch">
-                        <ion-icon ios="ios-add" md="md-add"></ion-icon>
-                        <span>Đặt Lịch</span>
-                    </a>
-                </div>
-                <article>
-                    <p>Beauty expert and renowned makeup artist Sonia Kashuk, who has worked with the world’s top models, answers your questions and offers tips, tricks and tools to help you look your best.</p>
-                    <p>Q: My makeup always looks great right after I’ve applied it but after a few hours it fades. How do you make your makeup last throughout the day?</p>
-                </article>
-                <div class="list-comment">
-                    <div class="comment flex">
-                        <div class="author flex">
-                            <img src="assets/images/thumb_make1.jpg" alt="">
-                            <p>
-                                <span class="name">Long Kaido</span>
-                                <span class="address">Hà Nội</span>
-                            </p>
-                            <span class="time_comment">2 giờ trước</span>
-                        </div>
-                        <div class="des">
-                            <p>Hello I am really excited for the book and thank you so much for giving it away for free , I cant imagine how much efforts you might have put into it , Really Appreciate !!</p>
-                        </div>
-                    </div>
-                    <div class="comment flex">
-                        <div class="author flex">
-                            <img src="assets/images/thumb_bst.jpg" alt="">
-                            <p>
-                                <span class="name">Long Kaido</span>
-                                <span class="address">Hà Nội</span>
-                            </p>
-                            <span class="time_comment">2 giờ trước</span>
-                        </div>
-                        <div class="des">
-                            <p>Hello I am really excited for the book and thank you so much for giving it away for free , I cant imagine how much efforts you might have put into it , Really Appreciate !!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="wirte_comment">
-                    <h4>Viết bình luận</h4>
-                    <div class="comment_form">
-                        <textarea></textarea>
-                        <button type="button" value="Đăng bình luận"><span>Đăng bình luận</span></button>
-                    </div>
+                <div class="slider slider-nav">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
                 </div>
             </div>
-            <div class="col-right">
-                <ul class="statistical">
-                    <li>
-                        <p><ion-icon ios="ios-heart" md="ios-heart"></ion-icon> Yêu thích?</p>
-                        <span class="tol">696</span>
-                    </li>
-                    <li>
-                        <p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>Lượt xem</p>
-                        <span class="tol">696</span>
-                    </li>
-                    <li>
-                        <p><ion-icon ios="ios-text" md="md-text"></ion-icon>Bình luận</p>
-                        <span>2</span>
-                    </li>
-                    <li>
-                        <p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>Chia sẻ</p>
-                        <span class="tol">609</span>
-                    </li>
-                </ul>
-                <div class="social flex">
-                    <a href="" title="Facebook"></a>
-                    <a href="" title="google+"></a>
-                    <a href="" title="linkedin"></a>
-                    <a href="" title=""></a>
-                </div>
-                <div class="tags">
-                    <h4>Tags</h4>
-                    <div class="list-tags">
-                        <a href="" title="Ảnh cưới">Ảnh cưới</a>
-                        <a href="" title="Áo dài">Áo dài</a>
-                        <a href="" title="Đường lâm">Đường lâm</a>
-                        <a href="" title="truyền thống">truyền thống</a>
+            <div class="detail flex">
+                <div class="col-left">
+                    <h2 class="title">Ảnh cưới Thung Nai Hoà Bình</h2>
+                    <div class="cat_time flex">
+                        <span class="cat">Ảnh cưới</span>
+                        <time>Ngày đăng: 01/05/2018</time>
+                    </div>
+                    <div class="author flex">
+                        <img src="assets/images/thumb_make1.jpg" alt="">
+                        <p>
+                            <span class="name">Long Kaido</span>
+                            <span class="address">Hà Nội</span>
+                        </p>
+                        <a href="" class="book" title="Đặt Lịch">
+                            <ion-icon ios="ios-add" md="md-add"></ion-icon>
+                            <span>Đặt Lịch</span>
+                        </a>
+                    </div>
+                    <article>
+                        <p>Beauty expert and renowned makeup artist Sonia Kashuk, who has worked with the world’s top models, answers your questions and offers tips, tricks and tools to help you look your best.</p>
+                        <p>Q: My makeup always looks great right after I’ve applied it but after a few hours it fades. How do you make your makeup last throughout the day?</p>
+                    </article>
+                    <div class="list-comment">
+                        <div class="comment flex">
+                            <div class="author flex">
+                                <img src="assets/images/thumb_make1.jpg" alt="">
+                                <p>
+                                    <span class="name">Long Kaido</span>
+                                    <span class="address">Hà Nội</span>
+                                </p>
+                                <span class="time_comment">2 giờ trước</span>
+                            </div>
+                            <div class="des">
+                                <p>Hello I am really excited for the book and thank you so much for giving it away for free , I cant imagine how much efforts you might have put into it , Really Appreciate !!</p>
+                            </div>
+                        </div>
+                        <div class="comment flex">
+                            <div class="author flex">
+                                <img src="assets/images/thumb_bst.jpg" alt="">
+                                <p>
+                                    <span class="name">Long Kaido</span>
+                                    <span class="address">Hà Nội</span>
+                                </p>
+                                <span class="time_comment">2 giờ trước</span>
+                            </div>
+                            <div class="des">
+                                <p>Hello I am really excited for the book and thank you so much for giving it away for free , I cant imagine how much efforts you might have put into it , Really Appreciate !!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wirte_comment">
+                        <h4>Viết bình luận</h4>
+                        <div class="comment_form">
+                            <textarea></textarea>
+                            <button type="button" value="Đăng bình luận"><span>Đăng bình luận</span></button>
+                        </div>
                     </div>
                 </div>
-                <div class="album_another">
-                    <h4>Album khác từ Long Kaido</h4>
-                    <ul class="list-album flex">
-                        <li><a href="" title=""><img src="assets/images/thumb_pt1.jpg" alt=""></a></li>
-                        <li><a href="" title=""><img src="assets/images/rectangle-31.jpg" alt=""></a></li>
-                        <li><a href="" title=""><img src="assets/images/makeup.jpg" alt=""></a></li>
-                        <li><a href="" title=""><img src="assets/images/thumb_pt1.jpg" alt=""></a></li>
+                <div class="col-right">
+                    <ul class="statistical">
+                        <li>
+                            <p><ion-icon ios="ios-heart" md="ios-heart"></ion-icon> Yêu thích?</p>
+                            <span class="tol">696</span>
+                        </li>
+                        <li>
+                            <p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>Lượt xem</p>
+                            <span class="tol">696</span>
+                        </li>
+                        <li>
+                            <p><ion-icon ios="ios-text" md="md-text"></ion-icon>Bình luận</p>
+                            <span>2</span>
+                        </li>
+                        <li>
+                            <p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>Chia sẻ</p>
+                            <span class="tol">609</span>
+                        </li>
                     </ul>
+                    <div class="social flex">
+                        <a href="" title="Facebook"></a>
+                        <a href="" title="google+"></a>
+                        <a href="" title="linkedin">  <ion-icon ios="logo-linkedin" md="logo-linkedin"></ion-icon></a>
+                        <a href="" title=""><ion-icon ios="logo-pinterest" md="logo-pinterest"></ion-icon></a>
+                    </div>
+                    <div class="tags">
+                        <h4>Tags</h4>
+                        <div class="list-tags">
+                            <a href="" title="Ảnh cưới">Ảnh cưới</a>
+                            <a href="" title="Áo dài">Áo dài</a>
+                            <a href="" title="Đường lâm">Đường lâm</a>
+                            <a href="" title="truyền thống">truyền thống</a>
+                        </div>
+                    </div>
+                    <div class="album_another">
+                        <h4>Album khác từ Long Kaido</h4>
+                        <ul class="list-album flex">
+                            <li><a href="" title=""><img src="assets/images/thumb_pt1.jpg" alt=""></a></li>
+                            <li><a href="" title=""><img src="assets/images/rectangle-31.jpg" alt=""></a></li>
+                            <li><a href="" title=""><img src="assets/images/makeup.jpg" alt=""></a></li>
+                            <li><a href="" title=""><img src="assets/images/thumb_pt1.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal"></div>
     <footer>
         <div class="container flex">
             <div class="logo">

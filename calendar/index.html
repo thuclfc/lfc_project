@@ -27,8 +27,11 @@
         txt +='<div class="choosen">',
             txt +='<input type="radio" name="book">',
             txt +='</div>';
-        $('.c-day').on('click',function () {
-            $(this).append(txt);
+        $('.c-day').click(function () {
+           $(this).addClass('active');
+        });
+        $(window).load(function () {
+            $('.c-day').append(txt);
         });
     });
 
