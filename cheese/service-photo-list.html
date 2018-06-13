@@ -12,14 +12,14 @@
 <body>
 <div class="wrapper">
     <header>
-        <div class="container">
+        <div class="container pr">
             <div class="headerTop">
                 <div class="hotline">
                     <p>Hotline <a href="tel:024 6969 996">024 6969 996</a></p>
                 </div>
                 <ul class="social flex">
                     <li><a href="" title=""><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></a></li>
-                    <li><a href="" title="">  <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></a></li>
                     <li><a href="" title=""><ion-icon name="logo-youtube"></ion-icon></a></li>
                 </ul>
                 <ul class="headerLink flex">
@@ -28,11 +28,16 @@
                 </ul>
             </div>
             <div class="headerBody flex">
-                <ul class="menu flex">
-                    <li><a href="" title="Chụp hình">Chụp hình</a></li>
-                    <li><a href="" title="Trang điểm">Trang điểm</a></li>
-                    <li><a href="" title="Trang phục">Trang phục</a></li>
-                </ul>
+                <button class="toggle-menu navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="menu flex">
+                        <li><a href="" title="Chụp hình">Chụp hình</a></li>
+                        <li><a href="" title="Trang điểm">Trang điểm</a></li>
+                        <li><a href="" title="Trang phục">Trang phục</a></li>
+                    </ul>
+                </div>
                 <div class="logo">
                     <h1>
                         <a href="" title=""><img src="assets/images/logo-1-4-x.png" srcset="assets/images/logo-1-4-x@2x.png 2x" alt=""></a>
@@ -41,12 +46,36 @@
                 <div class="loginResgiter">
                     <div class="beforeLogin">
                         <div class="buttons flex">
-                            <a href="" title="Đăng nhập">Đăng nhập</a>
-                            <a href="" title="Đăng ký">Đăng ký</a>
+                            <a href="javascript:void(0)" title="Đăng nhập" id="login" data-toggle="modal" data-target="#popup-login">Đăng nhập</a>
+                            <a href="javascript:void(0)" title="Đăng ký" id="register" data-toggle="modal" data-target="#popup-register">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="afterLogin">
-
+                    <div style="display: none;" class="afterLogin flex pr">
+                        <div class="get_nf pr">
+                            <a href="javascript:void(0)"><ion-icon ios="ios-notifications" md="md-notifications"></ion-icon></a>
+                            <span class="nf">9</span>
+                            <ul class="list-nf">
+                                <li>
+                                    <p>abc xyz</p>
+                                    <p>lfc</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="infoUser flex pr">
+                            <img src="assets/images/mask.jpg" alt="">
+                            <p>
+                                <span class="name">Nguyễn Minh Hải <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></span>
+                                <span class="address">Hà Nội</span>
+                            </p>
+                            <ul class="option_user">
+                                <li>
+                                    <a href="" title="Tài khoản"><ion-icon ios="ios-person" md="md-person"></ion-icon>Tài khoản</a>
+                                </li>
+                                <li>
+                                    <a href="" title="Đăng xuất"><ion-icon ios="ios-exit" md="md-exit"></ion-icon>Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -306,44 +335,25 @@
 <script src="assets/js/page.js"></script>
 <script>
     $(document).ready(function () {
-        $('.slider_album_week .sliders').slick({
-            centerMode: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            centerPadding: '76px',
-            arrows: false
-        });
 
-        $('.slider-image').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerPadding: '0',
-            arrows: true
-        });
-
-        $('.service_info .slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerPadding: '0',
-            arrows: true
-        });
-        $('.slide-service').slick({
-            centerMode: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            centerPadding: '0',
-            arrows: true
-        });
-        setInterval(function () {
-            if($('.slider_album_week .item').hasClass('slick-active')){
-                $('.slick-active').removeClass('blur');
-                $('.slick-active').prev().addClass('blur');
-            }
-
-        },1000);
-        box_tab('.album_tab li','.album_post',0,0);
-        box_tab('.collection_tab li','.collection_post',0,0);
-        box_tab('.service_tab li','.service_content',0,0);
+        var width_view=$(window).width();
+        if(width_view >= 320 && width_view <=767){
+            $('.slide-service').slick({
+                centerMode: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                centerPadding: '0',
+                arrows: true
+            });
+        }else if(width_view >=768){
+            $('.slide-service').slick({
+                centerMode: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                centerPadding: '0',
+                arrows: true
+            });
+        }
         box_tab('.s_tab li','.service_list',0,0);
     });
 

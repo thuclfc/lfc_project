@@ -661,6 +661,7 @@ h2.title{
     background: #000;
     border-radius: 0 0 5px 5px;
     box-shadow: 10px 20px 30px 0 rgba(0, 0, 0, 0.2);
+    z-index: 9;
     &:after{
       @extend %triangular;
       width: 38px; height: 38px;
@@ -697,18 +698,21 @@ h2.title{
     margin-top: 16px;
     img{max-width: 100%;}
   }
-  .place-icon{
+  .list-place{
     a{position: absolute; width: 100px; height: 110px;}
-    .place1{background: url("../images/icon-clothes.png") no-repeat; left: 142px; top: 160px;}
-    .place2{background: url("../images/icon-photo.png") no-repeat; top: 352px; left: 180px;}
-    .place3{background: url("../images/you.png") no-repeat; top: 190px; left: 485px;}
-    .place4{background: url("../images/icon-make.png") no-repeat; top: 340px;left: 590px;}
+    .icon-place1{background: url("../images/icon-clothes.png") no-repeat; left: 20%; top: 32%;}
+    .icon-place2{background: url("../images/icon-photo.png") no-repeat; top: 71%; left: 22%;}
+    .icon-place3{background: url("../images/you.png") no-repeat; left: 43%; top: 41%;}
+    .icon-place4{background: url("../images/icon-make.png") no-repeat;    top: 69%;
+      left: 50%;}
   }
-  .service1{
-    position: absolute;
-    left: 60%;
-    top: 100px;
-  }
+  .service_info{position: absolute;}
+  .service1{top: -14%; left: 11%;}
+  .service2{top: 24%; left: 12%;}
+  .service4{top: 22%; left: 40%;}
+  .service3{top: -7%; left: 32%;}
+  .list-place .service_info{ opacity: 0; visibility: hidden; transform: translateY(40px); transition: 0.5s;}
+  .place.active .service_info{opacity: 1; visibility: visible; transform: translateY(0);}
   ion-icon{font-size: 14px; color: #fff;}
 }
 
@@ -967,7 +971,7 @@ table.history{
 
 /*tab*/
 .hidden_tab{opacity: 0; height: 0;}
-.show_tab{opacity: 1; height: auto;}
+.show_tab{opacity: 1; height: auto; z-index: 90; position: relative;}
 /*end*/
 
 
@@ -1003,6 +1007,7 @@ table.history{
     p{color: #606060; line-height: 19.6px;}
     .item-name{
       display: flex; display: -webkit-flex;
+      flex-wrap: wrap; -webkit-flex-wrap: wrap;
       font-size: 18px; font-weight: bold; color: var(--greyish-brown);
       span{margin-left: 5px; color: #652d90; font-size: 14px; font-weight: bold; line-height: 22px;}
       span.no{color: #d0021b;}
@@ -1606,6 +1611,8 @@ table.history{
     &:focus{outline: none;}
   }
   .header-popup{
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     padding: 0 55px;
     justify-content: space-between;
     -webkit-justify-content: space-between;
@@ -1775,7 +1782,6 @@ table.history{
 }
 .package_photo,.package_makeup{
   .tab_photo_content,.tab_makeup_content{
-    margin-top: 25px;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     .post{width: 270px; margin: 15px;}
@@ -1789,6 +1795,7 @@ table.history{
   .package{
     width: 274px;
     padding: 26px 0 16px 0;
+    margin-top: 15px;
     background: #fff;
     border-radius: 4px;
     border: solid 1px #e5e5e5;
@@ -1850,6 +1857,7 @@ table.history{
     }
     &.active .book-link{transform: translateY(0) translateX(-50%); opacity: 1; visibility: visible;}
   }
+  .tab_makeup,.tab_photo{margin-bottom: 17px;}
 }
 .tab_makeup_content{
   .check-list{
@@ -2232,8 +2240,8 @@ footer{
   #book_calendar .modal-dialog, #booking_process .modal-dialog{max-width: 96%;}
   #book_calendar a.close, #booking_process a.close{right: 0;}
   .booking_process{
-    h2{padding-left: 0;}
     padding: 20px 10px 20px;
+    h2{padding-left: 0;}
     .bottom{
       a.next{margin-right: 0; width: 150px; height: 50px;}
       a.back{margin-left: 0;}
@@ -2262,6 +2270,18 @@ footer{
       margin-top: 20px;
       .group{margin-bottom: 15px;}
       input,select{overflow: hidden; text-overflow: ellipsis; padding-left: 10px;}
+    }
+  }
+  .popup-book{
+    padding: 20px 10px 20px;
+    .shop{width: 40%;}
+    .select_time{width: 55%;}
+  }
+  .popup{
+    .header-popup{
+      padding: 0;
+      select{width: 100%;}
+      .name{font-size: 14px;}
     }
   }
   #popup_photo_detail .modal-dialog {
@@ -2339,10 +2359,28 @@ footer{
     }
   }
 
-  .package_makeup{
+  .package_makeup,.package_photo{
     margin-top: 15px;
     .tab_line a{font-size: 14px;}
   }
+  .tab_makeup_content{
+    .check-list{
+      padding: 25px 15px 10px;
+      li{justify-content: space-between; -webkit-justify-content: space-between; align-items: flex-start; -webkit-align-items: flex-start;}
+      span.price{font-size: 20px;}
+      .area,span.lf{font-size: 14px;}
+      span.lf{width: 30%;}
+      span.price,span.area,.des{width: 65%;}
+    }
+  }
+
+  .package_photo{
+    .tab_photo_content{
+      margin-top: 0; justify-content: center; -webkit-justify-content: center;
+      article:first-child,article:last-child{margin: 15px;}
+    }
+  }
+  .note{margin: 10px 0 0 0 !important;}
   /*end*/
   footer{
     height: auto; padding: 15px 0;
@@ -2391,7 +2429,9 @@ footer{
     h2{margin-bottom: 0;}
   }
   .service_clothes .service_list{justify-content: center; -webkit-justify-content: center;}
-
+  .package_photo{
+    .package{width: 32%; margin: 15px auto 0;}
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -2431,11 +2471,32 @@ footer{
   }
   .popup .close,#booking_process a.close{right: 0;}
   .package_makeup{
-    .tab_makeup{margin-bottom: 25px;}
     .tab_makeup_content{
       margin-top: 0; justify-content: center; -webkit-justify-content: center;
       article:first-child,article:last-child{margin: 15px;}
     }
+  }
+  .package_photo{
+    .package h4{font-size: 14px;}
+  }
+  .package_photo_detail{
+    .header_package{height: 50px; padding: 0 15px;}
+    .header_photo{
+      justify-content:space-between; -webkit-justify-content: space-between;
+      .title-detail{font-size: 16px; transform: translateX(0); position: relative; left: 0;}
+    }
+    .list_service_package{
+      .item{padding: 24px 15px;}
+      .check_list{flex-wrap: wrap;-webkit-flex-wrap: wrap;}
+      li{margin-bottom: 10px;}
+      .item-name{
+        font-size: 14px; align-items: center; -webkit-align-items: center;
+        .price{margin-right: 12px;}
+      }
+
+    }
+    h2{font-size: 16px;}
+    .select{font-size: 16px; white-space: nowrap; margin-left: 20px;}
   }
 }
 
