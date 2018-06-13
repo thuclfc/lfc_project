@@ -2338,6 +2338,11 @@ footer{
       li{padding: 0 10px; height: 45px;}
     }
   }
+
+  .package_makeup{
+    margin-top: 15px;
+    .tab_line a{font-size: 14px;}
+  }
   /*end*/
   footer{
     height: auto; padding: 15px 0;
@@ -2425,6 +2430,13 @@ footer{
     article:last-child,article:nth-child(3n+0), article:first-child{margin: 15px;}
   }
   .popup .close,#booking_process a.close{right: 0;}
+  .package_makeup{
+    .tab_makeup{margin-bottom: 25px;}
+    .tab_makeup_content{
+      margin-top: 0; justify-content: center; -webkit-justify-content: center;
+      article:first-child,article:last-child{margin: 15px;}
+    }
+  }
 }
 
 @media (max-width: 375px) {
