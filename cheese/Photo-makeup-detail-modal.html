@@ -834,35 +834,108 @@
                 <img src="assets/images/bg-map.jpg" alt="">
             </div>
             <div class="service_content">
-                <div class="container">
-                    <div class="place">
-                        <div class="place-icon pr">
-                            <a href="javascript:void(0)" class="place1"></a>
-                            <a href="javascript:void(0)" class="place2"></a>
-                            <a href="javascript:void(0)" class="place3"></a>
-                            <a href="javascript:void(0)" class="place4"></a>
+                <div class="container list-place">
+                    <div class="place place1">
+                        <a href="javascript:void(0)" class="icon-place1 icon-place"></a>
+                        <div class="service_info service1 pr">
+                            <div class="slider">
+                                <div class="item">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/rectangle-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="info flex pr">
+                                <div class="author flex">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                    <p>
+                                        <span class="name">Cheese Bridal</span>
+                                        <span class="address">Hà Nội</span>
+                                    </p>
+                                </div>
+                                <div class="phone_add">
+                                    <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
+                                    <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="service_info service1 pr">
-                        <div class="slider">
-                            <div class="item">
-                                <img src="assets/images/mask.jpg" alt="">
+                    <div class="place place2">
+                        <a href="javascript:void(0)" class="icon-place2 icon-place"></a>
+                        <div class="service_info service2 pr">
+                            <div class="slider">
+                                <div class="item">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/rectangle-3.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src="assets/images/rectangle-3.jpg" alt="">
+                            <div class="info flex pr">
+                                <div class="author flex">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                    <p>
+                                        <span class="name">Cheese Bridal</span>
+                                        <span class="address">Hà Nội</span>
+                                    </p>
+                                </div>
+                                <div class="phone_add">
+                                    <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
+                                    <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="info flex pr">
-                            <div class="author flex">
-                                <img src="assets/images/mask.jpg" alt="">
-                                <p>
-                                    <span class="name">Cheese Bridal</span>
-                                    <span class="address">Hà Nội</span>
-                                </p>
+                    </div>
+                    <div class="place place3">
+                        <a href="javascript:void(0)" class="icon-place3 icon-place"></a>
+                        <div class="service_info service3 pr">
+                            <div class="slider">
+                                <div class="item">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/rectangle-3.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="phone_add">
-                                <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
-                                <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                            <div class="info flex pr">
+                                <div class="author flex">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                    <p>
+                                        <span class="name">Cheese Bridal</span>
+                                        <span class="address">Hà Nội</span>
+                                    </p>
+                                </div>
+                                <div class="phone_add">
+                                    <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
+                                    <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place place4">
+                        <a href="javascript:void(0)" class="icon-place4 icon-place"></a>
+                        <div class="service_info service4 pr">
+                            <div class="slider">
+                                <div class="item">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/rectangle-3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="info flex pr">
+                                <div class="author flex">
+                                    <img src="assets/images/mask.jpg" alt="">
+                                    <p>
+                                        <span class="name">Cheese Bridal</span>
+                                        <span class="address">Hà Nội</span>
+                                    </p>
+                                </div>
+                                <div class="phone_add">
+                                    <p><ion-icon ios="ios-home" md="md-home"></ion-icon>Sô 142 Nguyễn Sĩ Liên</p>
+                                    <p><ion-icon ios="ios-call" md="md-call"></ion-icon>096 123 4444</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1145,6 +1218,12 @@
             centerMode: true,
             focusOnSelect: true
         });
+        $('.service_info .slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerPadding: '0',
+            arrows: true
+        });
         /*$('.slider_popup').bxSlider({
             pagerCustom: '.bx-pager',
             mode: 'fade'
@@ -1161,7 +1240,15 @@
 
         $('.modal').on('shown.bs.modal', function (e) {
             $('.slider-for').resize();
-        })
+        });
+
+        $('.icon-place').hover(function () {
+            $(this).parent('.place').addClass('active');
+        });
+
+        $('.place').mouseleave(function () {
+            $(this).removeClass('active');
+        });
     });
 
 </script>
