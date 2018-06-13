@@ -12,14 +12,14 @@
 <body>
 <div class="wrapper">
     <header>
-        <div class="container">
+        <div class="container pr">
             <div class="headerTop">
                 <div class="hotline">
                     <p>Hotline <a href="tel:024 6969 996">024 6969 996</a></p>
                 </div>
                 <ul class="social flex">
                     <li><a href="" title=""><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></a></li>
-                    <li><a href="" title="">  <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon></a></li>
                     <li><a href="" title=""><ion-icon name="logo-youtube"></ion-icon></a></li>
                 </ul>
                 <ul class="headerLink flex">
@@ -28,24 +28,29 @@
                 </ul>
             </div>
             <div class="headerBody flex">
-                <ul class="menu flex">
-                    <li><a href="" title="Chụp hình">Chụp hình</a></li>
-                    <li><a href="" title="Trang điểm">Trang điểm</a></li>
-                    <li><a href="" title="Trang phục">Trang phục</a></li>
-                </ul>
+                <button class="toggle-menu navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="menu flex">
+                        <li><a href="" title="Chụp hình">Chụp hình</a></li>
+                        <li><a href="" title="Trang điểm">Trang điểm</a></li>
+                        <li><a href="" title="Trang phục">Trang phục</a></li>
+                    </ul>
+                </div>
                 <div class="logo">
                     <h1>
                         <a href="" title=""><img src="assets/images/logo-1-4-x.png" srcset="assets/images/logo-1-4-x@2x.png 2x" alt=""></a>
                     </h1>
                 </div>
                 <div class="loginResgiter">
-                    <div class="beforeLogin" style="display: none;">
+                    <div class="beforeLogin" style="display: none">
                         <div class="buttons flex">
-                            <a href="" title="Đăng nhập">Đăng nhập</a>
-                            <a href="" title="Đăng ký">Đăng ký</a>
+                            <a href="javascript:void(0)" title="Đăng nhập" id="login" data-toggle="modal" data-target="#popup-login">Đăng nhập</a>
+                            <a href="javascript:void(0)" title="Đăng ký" id="register" data-toggle="modal" data-target="#popup-register">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="afterLogin flex pr">
+                    <div style="" class="afterLogin flex pr">
                         <div class="get_nf pr">
                             <a href="javascript:void(0)"><ion-icon ios="ios-notifications" md="md-notifications"></ion-icon></a>
                             <span class="nf">9</span>
@@ -97,22 +102,11 @@
            </div>
            <div class="user_profile r_m">
                <div class="header_pr flex">
-                   <div class="tab_profile tab_line flex">
+                   <ul class="tab_profile tab_line flex">
                        <li><a href="javascript:void(0)" title="Lịch sử đặt lịch">Lịch sử đặt lịch</a></li>
                        <li><a href="javascript:void(0)" title="Yêu thích">Yêu thích</a></li>
                        <li><a href="javascript:void(0)" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
-                   </div>
-                   <div class="select">
-                       <select>
-                           <option>Nhiếp ảnh gia</option>
-                       </select>
-                   </div>
-                   <div class="filter flex">
-                       <span>Sắp xếp theo:</span>
-                       <select name="" id="">
-                           <option>Yêu thích nhiều nhất</option>
-                       </select>
-                   </div>
+                   </ul>
                </div>
                <div class="content_profile">
                    <table class="history">
@@ -182,6 +176,19 @@
                    </table>
                </div>
                <div class="content_profile">
+                   <div class="header_pr flex">
+                       <div class="select">
+                           <select>
+                               <option>Nhiếp ảnh gia</option>
+                           </select>
+                       </div>
+                       <div class="filter flex">
+                           <span>Sắp xếp theo:</span>
+                           <select name="" id="">
+                               <option>Yêu thích nhiều nhất</option>
+                           </select>
+                       </div>
+                   </div>
                    <div class="pr_item flex pr">
                        <div class="s_author flex">
                            <img class="avatar" src="assets/images/thumb_make1.jpg" alt="">
@@ -271,28 +278,43 @@
 <script src="assets/js/page.js"></script>
 <script>
     $(document).ready(function () {
+        var width_view=$(window).width();
         box_tab('.tab_photo li','.tab_photo_content',0,0);
         $('.infoUser').click(function () {
            $(this).addClass('active');
             $('.get_nf').removeClass('active');
         });
+        $('.get_nf').click(function () {
+            $(this).addClass('active');
+            $('.infoUser').removeClass('active');
+        });
         $('main').mouseenter(function () {
             $('.infoUser,.get_nf').removeClass('active');
         });
-        $('.slide-profile').slick({
-            centerMode: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            centerPadding: '0',
-            arrows: true
+        if(width_view >= 320 && width_view <768){
+            $('.slide-profile').slick({
+                centerMode: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                centerPadding: '0',
+                arrows: true
+            });
+        }else if(width_view >= 768){
+            $('.slide-profile').slick({
+                centerMode: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerPadding: '0',
+                arrows: true
+            });
+        }
+
+        $('.tab_line li,.tab li').on('click', function (e) {
+            $('.slide-profile').resize();
         });
-        $('.get_nf').click(function () {
-           $(this).addClass('active');
-           $('.infoUser').removeClass('active');
-        });
+
         box_tab('.tab_profile li','.content_profile',0,0);
     });
-
 </script>
 </body>
 </html>

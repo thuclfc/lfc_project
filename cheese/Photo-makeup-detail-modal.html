@@ -28,11 +28,16 @@
                 </ul>
             </div>
             <div class="headerBody flex">
-                <ul class="menu flex">
-                    <li><a href="" title="Chụp hình">Chụp hình</a></li>
-                    <li><a href="" title="Trang điểm">Trang điểm</a></li>
-                    <li><a href="" title="Trang phục">Trang phục</a></li>
-                </ul>
+                <button class="toggle-menu navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="menu flex">
+                        <li><a href="" title="Chụp hình">Chụp hình</a></li>
+                        <li><a href="" title="Trang điểm">Trang điểm</a></li>
+                        <li><a href="" title="Trang phục">Trang phục</a></li>
+                    </ul>
+                </div>
                 <div class="logo">
                     <h1>
                         <a href="" title=""><img src="assets/images/logo-1-4-x.png" srcset="assets/images/logo-1-4-x@2x.png 2x" alt=""></a>
@@ -45,8 +50,32 @@
                             <a href="javascript:void(0)" title="Đăng ký" id="register" data-toggle="modal" data-target="#popup-register">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="afterLogin">
-
+                    <div style="display: none;" class="afterLogin flex pr">
+                        <div class="get_nf pr">
+                            <a href="javascript:void(0)"><ion-icon ios="ios-notifications" md="md-notifications"></ion-icon></a>
+                            <span class="nf">9</span>
+                            <ul class="list-nf">
+                                <li>
+                                    <p>abc xyz</p>
+                                    <p>lfc</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="infoUser flex pr">
+                            <img src="assets/images/mask.jpg" alt="">
+                            <p>
+                                <span class="name">Nguyễn Minh Hải <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></span>
+                                <span class="address">Hà Nội</span>
+                            </p>
+                            <ul class="option_user">
+                                <li>
+                                    <a href="" title="Tài khoản"><ion-icon ios="ios-person" md="md-person"></ion-icon>Tài khoản</a>
+                                </li>
+                                <li>
+                                    <a href="" title="Đăng xuất"><ion-icon ios="ios-exit" md="md-exit"></ion-icon>Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -841,23 +870,112 @@
             </div>
         </div>
     </main>
+    <div class="modal fade" id="popup-login">
+        <div class="modal-dialog popup-login popup">
+            <div class="header flex">
+                <a href="javascript:void(0)" class="close" data-dismiss="modal"><ion-icon name="close"></ion-icon></a>
+                <h2>Đăng nhập<ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon></h2>
+                <ul class="tab_login tab_line flex">
+                    <li><a href="javascript:void(0)" title="Khách hàng">Khách hàng</a></li>
+                    <li><a href="javascript:void(0)" title="Nhà cung cấp">Nhà cung cấp</a></li>
+                </ul>
+            </div>
+            <div class="body">
+                <div class="content_login">
+                    <form method="" action="">
+                        <div class="group">
+                            <label for="">Email</label>
+                            <input type="email" id="" name="email" placeholder="Địa chỉ email" required="">
+                        </div>
+                        <div class="group">
+                            <label for="">Mật khẩu</label>
+                            <a class="forget_pass" href="" title="Quên mật khẩu?">Quên mật khẩu?</a>
+                            <input type="password" id="" name="password" placeholder="Mật khẩu Cheese" required>
+                            <label for="" class="error">Mật khẩu chưa đúng quy chuẩn</label>
+                        </div>
+                        <div class="group">
+                            <button type="submit" class="submit flex_center">Đăng nhập</button>
+                        </div>
+                    </form>
+                    <div class="login_facebook">
+                        <p>hoặc đăng nhập bằng</p>
+                        <a href="" class="btn_login flex_center" title="Đăng nhập Facebook"><i class="icon"></i>Facebook</a>
+                    </div>
+                    <a class="rs_new" href="" title="Đăng ký mới">Đăng ký mới</a>
+                </div>
+                <div class="content_login">
+                    <form method="" action="">
+                        <div class="group">
+                            <label for="">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Địa chỉ email" required="">
+                        </div>
+                        <div class="group">
+                            <label for="">Mật khẩu</label>
+                            <a class="forget_pass" href="" title="Quên mật khẩu?">Quên mật khẩu?</a>
+                            <input type="password" id="password" name="password" placeholder="Mật khẩu Cheese" required>
+                            <label for="" class="error">Mật khẩu chưa đúng quy chuẩn</label>
+                        </div>
+                        <div class="group">
+                            <button type="submit" class="submit flex_center">Đăng nhập</button>
+                        </div>
+                    </form>
+                    <div class="login_facebook">
+                        <p>hoặc đăng nhập bằng</p>
+                        <a href="" class="btn_login flex_center" title="Đăng nhập Facebook"><i class="icon"></i>Facebook</a>
+                    </div>
+                    <a class="rs_new" href="" title="Đăng ký mới">Đăng ký mới</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="popup-register">
+        <div class="modal-dialog popup-register popup">
+            <a href="javascript:void(0)" class="close" data-dismiss="modal"><ion-icon name="close"></ion-icon></a>
+            <h2>Đăng ký tài khoản</h2>
+            <div class="select_register">
+                <div class="select flex_center">
+                    <label>
+                        <input type="radio" name="select" value="" />Tài khoản khách hàng
+                        <span class="checked"></span>
+                    </label>
+                </div>
+                <div class="select flex_center">
+                    <label>
+                        <input type="radio" name="select" value="" />Nhà cung cấp dịch vụ
+                        <span class="checked"></span>
+                    </label>
+                </div>
+                <a href="" class="continue flex_center" title="Tiếp tục">Tiếp tục <ion-icon name="arrow-round-forward"></ion-icon></a>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="popup_photo_detail">
         <div class="modal-dialog popup_photo_detail popup">
+            <a href="javascript:void(0)" class="close" data-dismiss="modal"><ion-icon name="close"></ion-icon></a>
             <div class="box_slider">
-                <div class="sliders slider_popup">
+                <div class="sliders slider-for slider_popup">
                     <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
-                    <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                    <div class="item"><img src="assets/images/thumb_bst.jpg" alt=""></div>
                     <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
                     <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
                     <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
                 </div>
-                <div class="slider slider-nav">
-                    <div class="item">1</div>
-                    <div class="item">2</div>
-                    <div class="item">3</div>
-                    <div class="item">4</div>
-                    <div class="item">5</div>
+                <div class="thumb_nav">
+                    <div class="slider-nav flex">
+                        <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                        <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                        <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                        <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                        <div class="item"><img src="assets/images/slider-photo-detail.jpg" alt=""></div>
+                    </div>
                 </div>
+                <!--<div class="bx-pager flex">
+                    <a data-slide-index="0" href=""><img src="assets/images/slider-photo-detail.jpg" /></a>
+                    <a data-slide-index="1" href=""><img src="assets/images/thumb_bst.jpg" /></a>
+                    <a data-slide-index="2" href=""><img src="assets/images/slider-photo-detail.jpg" /></a>
+                    <a data-slide-index="3" href=""><img src="assets/images/slider-photo-detail.jpg" /></a>
+                    <a data-slide-index="4" href=""><img src="assets/images/slider-photo-detail.jpg" /></a>
+                </div>-->
             </div>
             <div class="detail flex">
                 <div class="col-left">
@@ -987,50 +1105,63 @@
 <script src="assets/js/page.js"></script>
 <script>
     $(document).ready(function () {
-        $('.slider_album_week .sliders').slick({
-            centerMode: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            centerPadding: '76px',
-            arrows: false
-        });
+        var width_view=$(window).width();
+        if(width_view >= 320 && width_view <=768){
+            $('.slider_album_week .sliders').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: '30px',
+                arrows: false
+            });
+        }else if(width_view >=1024){
+            $('.slider_album_week .sliders').slick({
+                centerMode: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                centerPadding: '76px',
+                arrows: false
+            });
+        }
         $('.slider-image').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             centerPadding: '0',
             arrows: true
         });
-        $('.service_info .slider').slick({
+
+        $('.slider-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            centerPadding: '0',
-            arrows: true
-        });
-        $('.slider_popup').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             fade: true,
             asNavFor: '.slider-nav'
         });
         $('.slider-nav').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
-            asNavFor: '.slider_popup',
+            asNavFor: '.slider-for',
             dots: false,
             centerMode: true,
             focusOnSelect: true
         });
+        /*$('.slider_popup').bxSlider({
+            pagerCustom: '.bx-pager',
+            mode: 'fade'
+        });*/
         setInterval(function () {
             if($('.slider_album_week .item').hasClass('slick-active')){
                 $('.slider_album_week .slick-active').removeClass('blur');
                 $('.slider_album_week .slick-active').prev().addClass('blur');
             }
-
         },1000);
         box_tab('.album_tab li','.album_post',0,0);
         box_tab('.collection_tab li','.collection_post',0,0);
         box_tab('.service_tab li','.service_content',0,0);
+
+        $('.modal').on('shown.bs.modal', function (e) {
+            $('.slider-for').resize();
+        })
     });
 
 </script>
