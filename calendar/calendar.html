@@ -4,38 +4,98 @@
     <meta charset="UTF-8">
     <title>jQuery e-calendar Plugin Demo</title>
     <style>
-        .clear{
-            padding: 46px 4px 7px 5px;
-        }
+        *{box-sizing: border-box;}
+        li{list-style: none;}
+        .clear{width: 912px; display: block; margin-top: 15px;}
         .cld_inner{
             width: 100%;
-            height: 100%;
+            margin: 0 auto;
         }
         .cld_curent{
-            width: 100%;
+            display: flex;
             height: 30px;
+            align-items: center;
+            -webkit-align-items: center;
         }
-        .month_year{text-align: center; display: block; margin-top: 12px;
-            color: #b00101;
-            font-size: 17px;
-            font-weight: bold;}
+
+        .cld_curent button{
+            width: 16px; height: 27px;
+            display: block;
+            background: url("icon_nav.png") no-repeat;
+            border: none;
+        }
+        .cld_curent .prevl{transform: rotate(180deg);}
+
+        .month_year{
+            display: block;
+            padding: 0 16px;
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: bold;
+        }
         .cld_head{
             width: 100%;
-            height: 25px;
+            height: 40px;
         }
-        .cld_head li,.cld_body li{
+        .cld_body{border-top: 1px solid #e5e5e5;}
+        .cld_head,.cld_body{
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+        }
+        .cld_head > li{background: #fff}
+        .cld_head > li,.cld_body > li{
             display: block;
-            float: left;
-            width: 48px;
-            height: 24px;
-            text-align: center;
+            width: 129px;
+            text-align: right;
             font-weight: bold;
-            line-height: 25px;
+            line-height: 35px;
             color: #000;
-            font-family: Tahoma;
             font-size: 13px;
         }
-        .cld_body li.active,.cld_body li.active a{
+        .cld_body > li{
+            height: 90px;
+            border-bottom: 1px solid #e5e5e5;
+            border-right: 1px solid #e5e5e5;
+            position: relative;
+        }
+        .cld_body .half_day,.cld_body .full_day{
+            width: 100%; height: 100%;
+            position: absolute; top: 0;
+            left: 0;
+            padding: 0;
+            margin: 0;
+        }
+        .cld_body .half_day > li{
+            display: flex; align-items: center; height: 50%; position: absolute; width: 100%;
+        }
+        .cld_body .half_day  .afternoon{align-items: flex-end;}
+        .cld_body .half_day > li:hover{background: #e5e5e5;}
+        .cld_body .half_day li.active,.cld_body .full_day li.active{
+            border: solid 2px transparent;
+            background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(82deg, #eb008b, #652d90);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+        .cld_body .full_day li{width: 100%; height: 100%; display: block;}
+        .cld_body .half_day li.active h4{color: #d71b96;}
+        .cld_body .half_day > li h4{margin: 0; text-align: left; color: #b2b2b2; padding-left: 10px;}
+        .cld_body .half_day > li input,.cld_body .full_day > li input[type="checkbox"]{opacity: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 9;}
+        .cld_body .half_day .morning{top: 0;}
+        .cld_body .half_day .afternoon{top: 50%;}
+        .cld_body .half_day{display: none;}
+        .cld_body .full_day{display: block;}
+        .cld_body .active .time{background: #d71b96; color: #fff;}
+        .cld_body .time{width: 24px; height: 24px; display: block; background: transparent; border-radius: 50%; position: absolute; right: 5px; top: 5px; text-align: center; line-height: 24px; z-index: 9;}
+        .cld_body .half_day input:checked + span{width: 20px; height: 18px; display: block; background: url("check_small.png") no-repeat; margin: 0 0 10px 10px;}
+        .cld_body .full_day input:checked + span{
+            width: 30px; height: 27px; display: block; background: url("check_fulll.png") no-repeat;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+        }
+
+        .cld_body > li.active,.cld_body > li.active a{
             color: #b00101;
             cursor: pointer;
         }
@@ -47,106 +107,129 @@
     <div class="cld_inner">
         <div class="cld_curent">
             <button type="button" class="prevl"></button>
-            <span class="month_year"></span>
+            <p class="month_year"></p>
             <button type="button" class="nextnss"></button>
         </div>
-        <div class="cld_head">
-            <li>CN</li>
-            <li>Hai</li>
-            <li>Ba</li>
-            <li>Tư</li>
-            <li>Năm</li>
-            <li>Sáu</li>
-            <li>Bẩy</li>
+        <div class="cld_head cf">
+            <li>Chủ nhật</li>
+            <li>Thứ 2</li>
+            <li>Thứ 3</li>
+            <li>Thứ 4</li>
+            <li>Thứ 5</li>
+            <li>Thứ 6</li>
+            <li>Thứ 7</li>
         </div>
-        <div class="cld_body">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li class="active"></li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li role="button"  class="active"  data-toggle="popover" data-trigger="focus" title=""  data-content="" data-html="true">16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li role="button"  class="active"  data-toggle="popover" data-trigger="focus" title="<a href='#kiep-nan-33'>Kiếp nạn 33</a>"  data-content="(19/09/2016) - (16/10/2017)" data-html="true">22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
+        <div class="cld_body cf">
+
         </div>
     </div>
 </div>
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
-    $("[data-toggle=popover]").click(function(e){e.preventDefault();}).popover({html:true});
     var prev = $('.prevl');
     next = $('.nextnss');
     inner = $('.month_year');
     datetime = $('.cld_body');
+    /*var html = '';
+    var cld_body = $('.cld_body');
+    $(document).ready(function(){
+        var d = new Date();
+        var firstDay = new Date(d.getFullYear(), d.getMonth(), 1);
+        firstDay = firstDay.getDay();
+        for(i=0;i<firstDay;i++){
+            html+= '<li></li>';
+        }
 
-    function getDataOfMonth(month,year){
-        //var datas = null;
-        $.ajax({
-            url: "http://"+window.location.hostname+"/get-data-event",
-            type:'post',
-            data:{'month':month,'year':year},
-            beforeSend: function(){
-                prev.attr('disabled','disabled');
-                next.attr('disabled','disabled');
-            },
-            success: function(data){
+        m = d.getMonth(); //current month
+        y = d.getFullYear(); //current year
+        var d2 = new Date(y,m+1,0);
+        var last_day = d2.getDate();
+        for(i=1;i<=last_day;i++){
+            html+= '<li class="day_'+i+'">'+i+'</li>';
+        }
+        cld_body.html(html);
+        inner.html(m +'/'+ y);
+    });
 
-                for(i = 0; i<data.length; i++){
-
-
-                    $('.cld_body li').each(function(){
-                        if($(this).text() != null || $(this).text != ''){
-                            if(parseInt(data[i].date) == parseInt($(this).text()) ){
-                                $(this).addClass('active').html("<a tabindex='0'  role='button' data-toggle='popover' data-trigger='hover' title='"+data[i].title+"' data-content='"+data[i].content+"'>"+data[i].date+"</a>");
-                            }
-                        }
-                    });
-                    $('.cld_body li.active a').popover({
-                        trigger : 'hover',
-                        placement : 'right',
-                        html: 'true'
-                    });
-
-                }
-            },
-            error:function(){
-                alert('error');
+    function callbackGetLogs(o_respone){
+        if(o_respone.state == 1){
+            if(o_respone.a_gifts != null){
+                var html2 = '';
+                $.each(o_respone.a_gifts, function(idx, value){
+                    html2+='<li style="padding-top: 10px;;">Ngày '+value.type+': '+value.title+'</li>';
+                });
+                $('#logs_code ul').html(html2);
             }
-        }).done(function() {
-            prev.removeAttr('disabled');
-            next.removeAttr('disabled');
-        });
 
+            if(o_respone.a_logs_checked != null){
+                var html2 = '';
+                $.each(o_respone.a_logs_checked, function(idx, value){
+                    if(idx == 0){
+                        $('#txt_countc').text(value.count);
+                    }
+                    myDate = new Date(1000*value.created_time);
+                    var day = myDate.getDate();
+                    var monthIndex = myDate.getMonth() + 1;
+                    var year = myDate.getFullYear();
+                    var str_date = day + ' - ' + monthIndex + ' - ' + year;
+                    html2+='<li style="padding-top: 10px">Ngày '+value.count+': '+str_date+'</li>';
+                });
+                $('#logs_checked ul').html(html2);
+            }
+        }else{
+
+        }
+    }
+
+    function callbackAuto(data){
+        var a_checked = [];
+        if(data.state > 0){
+            a_checked = data.a_checked;
+            $.each(a_checked, function(idx, value){
+                $('.day_'+value).addClass( "active" );
+            });
+        }
+
+        if(data.b_is_check_today === true){
+            $('.bt_nhanqua').hide();
+        }
 
     }
 
-
-
-    $('.cld_body li.active a').popover();
-
+    function callbackChecked(data){
+        if(data.state > 0){
+            $('.day_'+data.day).addClass( "active" );
+            if(data.gift != null){
+                $('#txt_giftcode').text(data.gift);
+                $('.popup_giftcode,.modal_popup').addClass('open_popup');
+            }
+            $('.bt_nhanqua').hide();
+        }else{
+            alert(data.msg);
+        }
+    }*/
+    var html_custom_date=""
+        html_custom_date +='<div class="custom_date">',
+            html_custom_date +='<ul class="half_day">',
+            html_custom_date +='<li class="morning">',
+            html_custom_date +='<h4>Sáng</h4>',
+            html_custom_date +='<input type="radio" name="check">',
+            html_custom_date +='<span class="checked"></span>',
+            html_custom_date +='</li>',
+            html_custom_date +='<li class="afternoon">',
+            html_custom_date +='<h4>Chiều</h4>',
+            html_custom_date +='<input type="radio" name="check">',
+            html_custom_date +='<span class="checked"></span>',
+            html_custom_date +='</li>',
+            html_custom_date +='</ul>',
+            html_custom_date +='<ul class="full_day">',
+            html_custom_date +='<li>',
+            html_custom_date +='<input type="checkbox">',
+            html_custom_date +='<span class="checked"></span>',
+            html_custom_date +='</li>',
+            html_custom_date +='</ul>',
+        html_custom_date +='</div>';
 
     function renderCalendar(month,year){
         var c_month = month;
@@ -203,6 +286,10 @@
                 day_of_month = 30;
                 break;
         }
+        var nToday = new Date();
+        var dNow = nToday.getDate();
+        var mNow = nToday.getMonth()+1; //January is 0!
+        var yNow = nToday.getFullYear();
 
         if(flagm){
             li = "";
@@ -220,7 +307,12 @@
                         }
                     }
                 }
-                li+="<li>"+i+"</li>";
+                var classActive = '';
+                if(yNow == c_year && mNow == c_month && dNow  == i){
+                    classActive = 'active';
+                }
+
+                li+='<li class="day_'+i+' '+classActive+'"><span class="time">'+i+'</span>'+html_custom_date+'</li>';
                 if(i == day_of_month){
                     datetmp = new Date(c_year+"-"+c_month+"-"+i);
                     num_start = datetmp.getDay();
@@ -228,29 +320,28 @@
                         li+="<li></li>";
                     }
                 }
+
             }
             datetime.html(li);
         }
     }
 
-    jQuery(document).ready(function($j){
-        setDateTimeButton();
+    setDateTimeButton();
+    prev.click(function(e){
+        e.preventDefault();
 
-        prev.click(function(e){
-            e.preventDefault();
-
-            month = parseInt($(this).attr('month'));
-            year = parseInt($(this).attr('year'));
-            setDateTimeButton(month,year);
-        });
-        next.click(function(e){
-            e.preventDefault();
-
-            month = parseInt($(this).attr('month'));
-            year = parseInt($(this).attr('year'));
-            setDateTimeButton(month,year);
-        });
+        month = parseInt($(this).attr('month'));
+        year = parseInt($(this).attr('year'));
+        setDateTimeButton(month,year);
     });
+    next.click(function(e){
+        e.preventDefault();
+
+        month = parseInt($(this).attr('month'));
+        year = parseInt($(this).attr('year'));
+        setDateTimeButton(month,year);
+    });
+
     function setDateTimeButton(month,year){
         if(typeof month === 'undefined' || typeof year === 'undefined'){
             var now = new Date();
@@ -296,95 +387,26 @@
                     year:year
                 })
             }
-
             m = (month.toString().length <2) ? '0'+month : month;
-            inner.text('Tháng '+m+' - '+year);
+            inner.text('Tháng '+m+' '+year+'');
             renderCalendar(month,year);
-            getDataOfMonth(m,year);
         }
-    }
-    $(document).ready(function(){
-        getSevers();
-        getTOPMANCHESTER();
-    });
-    function getSevers(){
-        $.ajax({
-            url:"/severList",
-            type:"GET",
-            success:function(data){
-                data = JSON.parse(data);
-                var html = data.html;
-                //$.each(data, function(k, v) {
-                //    html += "<option value="+k+">"+v+"</option>";
-                //});
-                $("#severList").html(html);
-                getTOPMANCHESTER();
-            }
-        });
-    };
-    $("#top").on('change',function(){
-        getTOPMANCHESTER();
-        //var topType =  parseInt($("#top").val());
-        //var severID = $("#severList").val();
-        //var content_nc = '';
-        //$.ajax({
-        //    url:"/topList",
-        //    type:"GET",
-        //    data:{severID:severID,topType:topType},
-        //    success:function(data){
-        //        data = JSON.parse(data);
-        //        $.each(data, function(k, v) {
-        //            var obj = v[topType];
-        //            $.each(obj,function(obj_k,obj_v){
-        //                var nguoichoi = obj_v;
-        //                console.log('người chơi '+nguoichoi.name+' xếp hạng: '+nguoichoi.rank);
-        //                content_nc += '<tr>';
-        //                content_nc += "<td>"+nguoichoi.name+"</td>";
-        //                content_nc += "<td>"+nguoichoi.rank+"</td>";
-        //                content_nc += "<td>"+nguoichoi.topValue_one+"</td>";
-        //                content_nc += '</tr>';
-        //            });
-        //        });
-        //
-        //        $("#content").html(content_nc);
-        //        console.log(content_nc);
-        //
-        //
-        //    }
-        //});
-    });
-    $("#severList").on('change',function(){
-        getTOPMANCHESTER();
-    });
-    function getTOPMANCHESTER(){
-        var topType = parseInt($("#top").val());
-        var severID = $("#severList").val();
-        var content_nc = '';
-        $.ajax({
-            url:"/topList",
-            type:"GET",
-            data:{severID:severID,topType:topType},
-            success:function(data){
-                data = JSON.parse(data);
-                $.each(data, function(k, v) {
-                    var obj = v[topType];
-                    if(k==severID){
-                        $.each(obj,function(obj_k,obj_v){
-                            var nguoichoi = obj_v;
-                            //console.log('người chơi '+nguoichoi.name+' xếp hạng: '+nguoichoi.rank);
-                            content_nc += '<tr>';
-                            content_nc += "<td>"+nguoichoi.name+"</td>";
-                            content_nc += "<td>"+nguoichoi.rank+"</td>";
-                            content_nc += "<td>"+nguoichoi.topValue_one+"</td>";
-                            content_nc += '</tr>';
-                        });
-                    }
-                });
-                $("#content").html(content_nc);
-                //console.log(content_nc);
+        $(document).ready(function () {
+            /*var d = new Date();
+            var n = d.getDate();
+            var m=d.getMonth()+1;
+            if(m == d.getMonth()+1){
+                $('.day_'+n+'').addClass('active');
+            }*/
 
-
-            }
+            var item_c=$('.half_day li');
+            $(item_c).click(function () {
+               $('.half_day li').removeClass('active');
+               $(this).addClass('active');
+            });
+            $('.full_day li').click(function () {
+               $(this).toggleClass('active');
+            });
         });
     }
 </script>

@@ -1170,12 +1170,17 @@ table.history{
 }
 .popup_photo_detail{
   width: 1260px;
+  position: fixed;
   background: #fff;
   left: 0;
   right: 0;
-  top: 42px;
+  top: 5%;
   margin: 0 auto;
-  z-index: 99;
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+
   .col-left{width: 770px;}
   .col-right{
     width: 370px; margin-left: 30px;
@@ -1188,28 +1193,14 @@ table.history{
     .bx-wrapper{min-height: 300px; position: relative;}
     .item img{max-width: 100%; display: block; margin: 0 auto;}
   }
-  .thumb_nav{}
   .bx-pager,.slider-nav{
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
     height: 83px;
     img{width: 40px; height: 40px; display: block; object-fit: cover;}
     .item{width: 40px !important; margin: 0 5px;}
     .slick-current{
-      width: 50px !important;
       img{width: 50px; height: 50px; border: 1px solid #fff;}
     }
-    .slick-track{
-      display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      -webkit-align-items: center;
-      transform: translate3d(0, 0px, 0px) !important; width: 100% !important;
-     .item{display: inline-block;}
-    }
+    .slick-track{display: flex; justify-content: center}
   }
   .slider_popup{width: 968px; margin: 0 auto;}
   .slick-arrow{
@@ -2537,4 +2528,14 @@ footer{
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+
+.modal-popup{
+  width: 100%; height: 100%;
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
 }

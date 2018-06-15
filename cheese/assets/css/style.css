@@ -1601,12 +1601,16 @@ table.history {
 
 .popup_photo_detail {
   width: 1260px;
+  position: fixed;
   background: #fff;
   left: 0;
   right: 0;
-  top: 42px;
+  top: 5%;
   margin: 0 auto;
-  z-index: 99; }
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999; }
   .popup_photo_detail .col-left {
     width: 770px; }
   .popup_photo_detail .col-right {
@@ -1624,11 +1628,6 @@ table.history {
       display: block;
       margin: 0 auto; }
   .popup_photo_detail .bx-pager, .popup_photo_detail .slider-nav {
-    display: -webkit-flex;
-    align-items: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
     height: 83px; }
     .popup_photo_detail .bx-pager img, .popup_photo_detail .slider-nav img {
       width: 40px;
@@ -1638,21 +1637,13 @@ table.history {
     .popup_photo_detail .bx-pager .item, .popup_photo_detail .slider-nav .item {
       width: 40px !important;
       margin: 0 5px; }
-    .popup_photo_detail .bx-pager .slick-current, .popup_photo_detail .slider-nav .slick-current {
-      width: 50px !important; }
-      .popup_photo_detail .bx-pager .slick-current img, .popup_photo_detail .slider-nav .slick-current img {
-        width: 50px;
-        height: 50px;
-        border: 1px solid #fff; }
+    .popup_photo_detail .bx-pager .slick-current img, .popup_photo_detail .slider-nav .slick-current img {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #fff; }
     .popup_photo_detail .bx-pager .slick-track, .popup_photo_detail .slider-nav .slick-track {
       display: flex;
-      display: -webkit-flex;
-      align-items: center;
-      -webkit-align-items: center;
-      transform: translate3d(0, 0px, 0px) !important;
-      width: 100% !important; }
-      .popup_photo_detail .bx-pager .slick-track .item, .popup_photo_detail .slider-nav .slick-track .item {
-        display: inline-block; }
+      justify-content: center; }
   .popup_photo_detail .slider_popup {
     width: 968px;
     margin: 0 auto; }
@@ -3336,3 +3327,13 @@ footer {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
+
+.modal-popup {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99; }

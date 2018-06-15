@@ -12,6 +12,7 @@ function box_tab(tab,tab_content,tab_active,index_active) {
 }
 
 function open_popup(btn,popup) {
+
     $(btn).click(function (e) {
         e.preventDefault();
         $(popup).addClass('show');
