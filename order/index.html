@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 <body>
 <div class="wrapper home">
@@ -215,7 +214,87 @@
                         </div>
                     </div>
                 </div>
+                <div class="view-more">
+                    <a href="" title="Xem thêm">Xem thêm <i class="fas fa-angle-double-down"></i></a>
 
+                </div>
+            </div>
+            <div class="video">
+                <div class="head flex">
+                    <h2>
+                        30Shine TV &nbsp;
+                        <script src="https://apis.google.com/js/platform.js"></script>
+                        <div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="default"></div>
+                    </h2>
+                    <select name="">
+                        <option value="1">Sắp xếp</option>
+                        <option value="2">Mới nhất</option>
+                        <option value="3">Xem nhiều nhất</option>
+                        <option value="4">Yêu thích nhất</option>
+                    </select>
+                </div>
+                <div class="list-video">
+                    <div class="item-video">
+                        <a href="javascript:void(0)">
+                            <div class="play-video pr">
+                                <i class="icon_play"></i>
+                                <img src="assets/images/hqdefault%20(1).jpg" alt="">
+                            </div>
+                            <article>
+                                <h4>Triển Ngay Kiểu Tóc Của Coutinho - Ngôi Sao Tuyển</h4>
+                                <p>Lượt xem 19264</p>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-video">
+                        <a href="javascript:void(0)">
+                            <div class="play-video pr">
+                                <i class="icon_play"></i>
+                                <img src="assets/images/hqdefault.jpg" alt="">
+                            </div>
+                            <article>
+                                <h4>Cắt tạo kiểu Side Part</h4>
+                                <p>Lượt xem 19264</p>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-video">
+                        <a href="javascript:void(0)">
+                            <div class="play-video pr">
+                                <i class="icon_play"></i>
+                                <img src="assets/images/hqdefault%20(1).jpg" alt="">
+                            </div>
+                            <article>
+                                <h4>Triển Ngay Kiểu Tóc Của Coutinho - Ngôi Sao Tuyển</h4>
+                                <p>Lượt xem 19264</p>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-video">
+                        <a href="javascript:void(0)">
+                            <div class="play-video pr">
+                                <i class="icon_play"></i>
+                                <img src="assets/images/hqdefault.jpg" alt="">
+                            </div>
+                            <article>
+                                <h4>Kiểu Tóc Hot Trend Hè 2018 - Side Part</h4>
+                                <p>Lượt xem 19264</p>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-video">
+                        <a href="javascript:void(0)">
+                            <div class="play-video pr">
+                                <i class="icon_play"></i>
+                                <img src="assets/images/hqdefault.jpg" alt="">
+                            </div>
+                            <article>
+                                <h4>Kiểu Tóc Hot Trend Hè 2018 - Side Part</h4>
+                                <p>Lượt xem 19264</p>
+                            </article>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -244,6 +323,14 @@
         $('.slider_customer').slick({
             auto: false,
             slidesToShow: 2,
+            slidesToScroll: 1,
+            centerPadding: '0',
+            arrows: true
+        });
+
+        $('.list-video').slick({
+            auto: false,
+            slidesToShow: 4,
             slidesToScroll: 1,
             centerPadding: '0',
             arrows: true
