@@ -655,6 +655,7 @@ main {
   .camket .col-right .box-tab {
     border: none; }
   .camket .content_tab_store {
+    height: 277px;
     border: 1px solid #dfdfdf;
     border-top: none; }
   .camket .list-store {
@@ -968,6 +969,19 @@ main {
     width: 100%;
     padding: 0; }
   /*end*/ }
+
+.content_tab_store::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 0 4px 4px 0; }
+
+.content_tab_store::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+.content_tab_store::-webkit-scrollbar-thumb {
+  background: #888; }
+
+.content_tab_store::-webkit-scrollbar-thumb:hover {
+  background: #555; }
 
 /*slick js*/
 .slick-slider {

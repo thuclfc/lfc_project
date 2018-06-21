@@ -422,7 +422,7 @@ main{
     p{color: #2a2a2a; line-height: 22px; font-size: 16px;}
   }
   .col-right .box-tab{border: none;}
-  .content_tab_store{border: 1px solid #dfdfdf; border-top: none;}
+  .content_tab_store{height: 277px; border: 1px solid #dfdfdf; border-top: none;}
   .list-store{
     padding: 10px;
     height: 100%;
@@ -645,6 +645,21 @@ main{
 
 }
 
+
+.content_tab_store::-webkit-scrollbar{
+  width: 5px; border-radius: 0 4px 4px 0;
+}
+.content_tab_store::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+
+.content_tab_store::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.content_tab_store::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
 
 
 /*slick js*/
