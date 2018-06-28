@@ -226,7 +226,7 @@ li {
   .login .buttons .btn-register:hover:after, .popup-detail-post a.book:hover:after, .popup-detail-post .write_comment input[type="submit"]:hover:after, .booking_process .bottom a.next:hover:after, .booking_process .step3 .btn_view:hover:after, .popup-book-calendar .bottom .next:hover:after {
     opacity: 1;
     visibility: visible; }
-  .login .buttons .btn-register:hover span, .popup-detail-post a.book:hover span, .popup-detail-post .write_comment input[type="submit"]:hover span, .booking_process .bottom a.next:hover span, .booking_process .step3 .btn_view:hover span, .popup-book-calendar .bottom .next:hover span, .login .buttons .btn-register:hover ion-icon, .popup-detail-post a.book:hover ion-icon, .popup-detail-post .write_comment input[type="submit"]:hover ion-icon, .booking_process .bottom a.next:hover ion-icon, .booking_process .step3 .btn_view:hover ion-icon, .popup-book-calendar .bottom .next:hover ion-icon {
+  .login .buttons .btn-register:hover span, .popup-detail-post a.book:hover span, .popup-detail-post .write_comment input:hover[type="submit"] span, .booking_process .bottom a.next:hover span, .booking_process .step3 .btn_view:hover span, .popup-book-calendar .bottom .next:hover span, .login .buttons .btn-register:hover ion-icon, .popup-detail-post a.book:hover ion-icon, .popup-detail-post .write_comment input:hover[type="submit"] ion-icon, .booking_process .bottom a.next:hover ion-icon, .booking_process .step3 .btn_view:hover ion-icon, .popup-book-calendar .bottom .next:hover ion-icon {
     color: #fff !important; }
   .login .buttons .btn-register span, .popup-detail-post a.book span, .popup-detail-post .write_comment input[type="submit"] span, .booking_process .bottom a.next span, .booking_process .step3 .btn_view span, .popup-book-calendar .bottom .next span {
     display: flex;
@@ -846,7 +846,7 @@ h2 {
       position: absolute;
       top: 0;
       left: 0;
-      background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.1), transparent 18%, rgba(9, 9, 9, 0) 81%, rgba(26, 26, 26, 0.1)); }
+      background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.1), rgba(0, 0, 0, 0) 18%, rgba(9, 9, 9, 0) 81%, rgba(26, 26, 26, 0.1)); }
     .service_around .service-inner img.bg {
       width: 100%;
       height: 100%;
@@ -2262,4 +2262,9 @@ footer {
   .container {
     max-width: 1170px;
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+  .navbar-toggler {
+    display: none; }
+  .collapse {
+    display: block;
+    flex-basis: auto; } }

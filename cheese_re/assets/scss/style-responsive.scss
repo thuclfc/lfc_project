@@ -1,0 +1,104 @@
+@mixin block($display,$width,$height){
+  display: $display;
+  width: $width;
+  height: $height;
+}
+.top-body .navbar-toggler{display: block;}
+@media (min-width: 320px) and (max-width: 768px) {
+  .container{max-width: 100%;}
+  h2{font-size: 22px; margin-bottom: 25px;}
+  //header
+  .bar-link{display: none;}
+  .top-bar .social,.top-body .logo{
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+  }
+  .top-bar .social{
+      margin-right: 40px;
+      li{margin: 0 8px;}
+    }
+  .navbar-toggler{
+    position: absolute; top: -2px; right: 0;
+    ion-icon{font-size: 30px; color: var(--greyish);}
+  }
+  .top-body{
+    height: 75px;
+    .logo a{@include block(block,90px,36px); background-size: 90px 36px;}
+    .navbar-collapse{
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      background: #fff;
+      margin-left: -15px;
+      z-index: 90;
+    }
+    .menu{
+      padding-bottom: 15px; flex-direction: column; -webkit-flex-direction: column;
+      li:first-child{margin-left: 16px;}
+      li a{
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 14px;
+        border-bottom: 1px solid var(--white-two);
+      }
+    }
+  }
+  .login .buttons{
+    a:after{display: none;}
+    .btn-register{
+      width: auto;
+      height: 35px;
+      margin-left: 10px;
+      font-weight: bold;
+      border: none;
+      &:hover span{color: var(--barney) !important;}
+    }
+    .btn-login{
+      width: auto; height: 35px;
+      &:hover{border: none; background-image: none;}
+    }
+  }
+
+  //main
+  .td_dev{margin: 25px 0 25px 0;}
+  .tab{
+    margin-bottom: 25px;
+    margin-top: 0;
+    li{margin: 0 5px;}
+    span{padding:  0 8px;}
+  }
+
+  // slider album week
+  .slider_album_week{
+    .slick-track{display: flex; align-items: center;}
+    .item-slide{height: 195px;}
+    .statistical{margin: 10px 0 0 0;}
+    .post{
+      .category{margin-bottom: 8px;}
+      h3{width: 85%; margin-bottom: 5px;}
+    }
+  }
+  .service_around{display: none;}
+  .clothes .thumb{height: 400px;}
+}
+@media (orientation: landscape) {
+  .slider_album_week{
+    .item-slide{height: 300px;}
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slider_album_week{
+    .item-slide{height: 300px;}
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .slider_album_week{
+    .item-slide{height: 315px;} 
+  }
+  .navbar-toggler{display: none !important;}
+  .collapse{flex-basis: auto; display: block;}
+}
