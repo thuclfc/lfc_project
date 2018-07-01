@@ -100,19 +100,17 @@
                                     <span class="tol">9.6</span>
                                 </li>
                             </ul>
+                            <div class="logout">
+                                <a href="" title="Đăng xuất" class="align-center">
+                                    <ion-icon ios="ios-exit" md="md-exit"></ion-icon>Đăng xuất
+                                </a>
+                            </div>
                         </div>
                         <div class="book">
-                            <a href="javascript:void(0)" title="Đặt lịch" data-toggle="modal" data-target="#book_calendar_clothes"><span>+ Đặt lịch chụp hình</span></a>
-                        </div>
-                        <div class="rating">
-                            <p>Đánh giá của bạn cho nhiếp ảnh gia</p>
-                            <div class="star-rating">
-                                <input type="radio" name="rating" value="1"><i></i>
-                                <input type="radio" name="rating" value="2"><i></i>
-                                <input type="radio" name="rating" value="3"><i></i>
-                                <input type="radio" name="rating" value="4"><i></i>
-                                <input type="radio" name="rating" value="5"><i></i>
-                            </div>
+                            <a href="javascript:void(0)" title="Đăng album mới"><span>+ Đăng album mới</span></a>
+                            <a href="javascript:void(0)" class="edit_info" title="Chỉnh sửa thông tin" data-toggle="modal" data-target="#popup-edit-info">
+                                <span><ion-icon name="create"></ion-icon>Chỉnh sửa thông tin</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -120,6 +118,9 @@
                     <ul class="tab_category tab_line flex">
                         <li><a href="javascript:void(0)" title="Album ảnh">Album ảnh</a></li>
                         <li><a href="javascript:void(0)" title="Các gói chụp">Các gói chụp</a></li>
+                        <li><a href="javascript:void(0)" title="Lịch chụp">Lịch chụp</a></li>
+                        <li><a href="javascript:void(0)" title="Lịch sử đơn">Lịch sử đơn</a></li>
+                        <li><a href="javascript:void(0)" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
                     </ul>
                     <div class="tab_content_category">
                         <div class="list-post row flex">
@@ -129,6 +130,10 @@
                                         <img src="assets/images/thumb-album.jpg">
                                     </a>
                                     <div class="body">
+                                        <a href="" class="edit-post">
+                                            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                                            <span>Chỉnh sửa</span>
+                                        </a>
                                         <h6 class="category flex">Ảnh cưới</h6>
                                         <h3><a href="javascript:void(0)" class="post-title detail-popup" data-id="popup-detail-photo">Lan và Điệp - Thung Nai</a></h3>
                                         <ul class="statistical flex">
@@ -146,6 +151,10 @@
                                         <img src="assets/images/thumb-album1.png">
                                     </a>
                                     <div class="body">
+                                        <a href="" class="edit-post">
+                                            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                                            <span>Chỉnh sửa</span>
+                                        </a>
                                         <h6 class="category flex">Ảnh cưới</h6>
                                         <h3><a href="" class="post-title">Lan và Điệp - Thung Nai</a></h3>
                                         <ul class="statistical flex">
@@ -163,6 +172,10 @@
                                         <img src="assets/images/rectangle-3.jpg">
                                     </a>
                                     <div class="body">
+                                        <a href="" class="edit-post">
+                                            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                                            <span>Chỉnh sửa</span>
+                                        </a>
                                         <h6 class="category flex">Ảnh cưới</h6>
                                         <h3><a href="" class="post-title">Lan và Điệp - Thung Nai</a></h3>
                                         <ul class="statistical flex">
@@ -180,6 +193,10 @@
                                         <img src="assets/images/mask.jpg">
                                     </a>
                                     <div class="body">
+                                        <a href="" class="edit-post">
+                                            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                                            <span>Chỉnh sửa</span>
+                                        </a>
                                         <h6 class="category flex">Ảnh cưới</h6>
                                         <h3><a href="" class="post-title">Lan và Điệp - Thung Nai</a></h3>
                                         <ul class="statistical flex">
@@ -195,9 +212,15 @@
                     </div>
                     <div class="tab_content_category">
                         <div class="list-package flex-between">
+                            <div class="setting">
+                                <a href="" title="Cài Đặt">
+                                    <span><ion-icon ios="ios-settings" md="md-settings"></ion-icon>Cài đặt</span>
+                                </a>
+                            </div>
                             <div class="package-photo">
                                 <h4>Ảnh cưới - nội thành Hà Nội</h4>
                                 <a href="service-photo-detail-combo.html" class="view-detail">Xem chi tiết</a>
+                                <a href="" class="edit_package"><ion-icon ios="ios-create" md="md-create"></ion-icon></a>
                                 <ul class="list-item">
                                     <li>
                                         <p>Số lượng điểm chụp: <span>5</span></p>
@@ -222,6 +245,7 @@
                             <div class="package-photo">
                                 <h4>Ảnh cưới - nội thành Hà Nội</h4>
                                 <a href="service-photo-detail-combo.html" class="view-detail">Xem chi tiết</a>
+                                <a href="" class="edit_package"><ion-icon ios="ios-create" md="md-create"></ion-icon></a>
                                 <ul class="list-item">
                                     <li>
                                         <p>Số lượng điểm chụp: <span>5</span></p>
@@ -245,6 +269,105 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="tab_content_category">
+                        <div class="list_status flex">
+                            <p class="text_st not_receive"><ion-icon name="close"></ion-icon><span>Ngày không nhận đơn</span></p>
+                            <p class="text_st wait_pay"><ion-icon ios="ios-time" md="md-time"></ion-icon><span>Đơn chờ thanh toán</span></p>
+                            <p class="text_st date_order"><ion-icon name="checkmark"></ion-icon><span>Ngày có đơn</span></p>
+                        </div>
+                        <div class="clear">
+                            <div class="cld_inner">
+                                <div class="cld_curent">
+                                    <button type="button" class="prevl">  <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon></button>
+                                    <p class="month_year"></p>
+                                    <button type="button" class="nextnss"><ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></button>
+                                </div>
+                                <div class="cld_head cf">
+                                    <li>CN</li>
+                                    <li>Thứ 2</li>
+                                    <li>Thứ 3</li>
+                                    <li>Thứ 4</li>
+                                    <li>Thứ 5</li>
+                                    <li>Thứ 6</li>
+                                    <li>Thứ 7</li>
+                                </div>
+                                <div class="cld_body cf">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content_category">
+                        <div class="scroll_mobile">
+                            <table class="history">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Khách hàng</th>
+                                    <th>Gói dịch vụ</th>
+                                    <th>Thời gian</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="Service-view-Photo-detail-order.html">Nguyễn Long Lanh</a></td>
+                                    <td>Ảnh cưới nội thành</td>
+                                    <td>Sáng 11/5/2018</td>
+                                    <td><p class="no_de">Chưa đặt cọc</p></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="Service-view-Photo-detail-order.html">Lương Mạnh Hải</a></td>
+                                    <td>Ảnh cứoi ngoại thành</td>
+                                    <td>21/5/2018</td>
+                                    <td><p class="deposit">Đã đặt cọc</p></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="Service-view-Photo-detail-order.html">Lương Mạnh Hải</a></td>
+                                    <td>Ảnh cứoi ngoại thành</td>
+                                    <td>21/5/2018</td>
+                                    <td><p class="payed">Đã thanh toán</p></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="Service-view-Photo-detail-order.html">Lương Mạnh Hải</a></td>
+                                    <td>Ảnh cứoi ngoại thành</td>
+                                    <td>21/5/2018</td>
+                                    <td><p class="finish">Hoàn thành</p></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="Service-view-Photo-detail-order.html">Lương Mạnh Hải</a></td>
+                                    <td>Ảnh cứoi ngoại thành</td>
+                                    <td>21/5/2018</td>
+                                    <td><p class="cancel">Bị hủy</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab_content_category">
+                        <form action="" method="post" class="change-pass">
+                            <div class="frm_group">
+                                <label for="">Mật khẩu cũ</label>
+                                <input type="password" name="password" placeholder="Mật khẩu cũ" required>
+                            </div>
+                            <div class="frm_group">
+                                <label for="">Mật khẩu mới</label>
+                                <input type="password" name="new_password" placeholder="Mật khẩu mới" required>
+                            </div>
+                            <div class="frm_group">
+                                <label for="">Xác nhận mật khẩu mới</label>
+                                <input type="password" name="re_new_password" placeholder="Xác nhận mật khẩu mới" required>
+                            </div>
+                            <div class="frm_group group_submit">
+                                <input type="submit" value="Đổi mật khẩu">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -302,6 +425,7 @@
             }else{
                 $('.chatContact').css({'opacity':'0','bottom':'-20px'});
             }
+
         },100);
 
         box_tab('.tab_category li','.tab_content_category',0,0);
