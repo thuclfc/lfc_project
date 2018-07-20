@@ -594,6 +594,73 @@ h2 {
 .td_dev {
   margin: 40px 0 50px 0; }
 
+.skeleton {
+  width: 100%;
+  background: #fff;
+  overflow: hidden; }
+  .skeleton .header {
+    height: 45px;
+    padding: 0 15px; }
+  .skeleton .author {
+    width: 50%; }
+    .skeleton .author .avatar {
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      margin-right: 3px; }
+    .skeleton .author .name {
+      height: 10px;
+      width: 80px;
+      margin-bottom: 5px; }
+    .skeleton .author .address {
+      height: 10px;
+      width: 40%; }
+  .skeleton .book-calendar {
+    height: 10px;
+    width: 30%; }
+  .skeleton .bg-skeleton {
+    background: #ced4da; }
+  .skeleton .category, .skeleton .statistical, .skeleton .title {
+    height: 10px; }
+  .skeleton .category {
+    width: 30%;
+    margin-bottom: 5px; }
+  .skeleton .title, .skeleton .statistical {
+    width: 70%; }
+  .skeleton .title {
+    margin-bottom: 15px; }
+  .skeleton:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 500%;
+    margin-left: -250%;
+    -webkit-animation: phAnimation .8s linear infinite;
+    animation: phAnimation .8s linear infinite;
+    background: -webkit-gradient(linear, left top, right top, color-stop(46%, transparent), color-stop(50%, rgba(255, 255, 255, 0.35)), color-stop(54%, transparent)) 50% 50%;
+    background: linear-gradient(to right, transparent 46%, rgba(255, 255, 255, 0.35) 50%, transparent 54%) 50% 50%; }
+
+@-webkit-keyframes phAnimation {
+  0% {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); } }
+
+@keyframes phAnimation {
+  0% {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); } }
+
 .post .statistical {
   align-items: center;
   -webkit-align-items: center;
@@ -714,41 +781,44 @@ h2 {
   position: relative;
   z-index: 9; }
 
-.slider_album_week .item-slide {
+.slider_album_week .item-slide, .slider_album_skeleton .item-slide {
   height: 325px;
   padding: 0 5px;
   position: relative;
   transition: 0.3s; }
-  .slider_album_week .item-slide .thumb img {
+  .slider_album_week .item-slide .thumb, .slider_album_skeleton .item-slide .thumb {
+    display: none; }
+  .slider_album_week .item-slide .thumb img, .slider_album_skeleton .item-slide .thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 4px; }
 
-.slider_album_week .post {
+.slider_album_week .post, .slider_album_skeleton .post {
+  display: none;
   padding: 0 5px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%; }
-  .slider_album_week .post-detail {
+  .slider_album_week .post-detail, .slider_album_skeleton .post-detail {
     position: absolute;
     bottom: 20px;
     left: 20px; }
-  .slider_album_week .post .category {
+  .slider_album_week .post .category, .slider_album_skeleton .post .category {
     flex-basis: 100%;
     -webkit-flex-basis: 100%; }
-  .slider_album_week .post h3 {
+  .slider_album_week .post h3, .slider_album_skeleton .post h3 {
     width: 45%; }
-  .slider_album_week .post-title {
+  .slider_album_week .post-title, .slider_album_skeleton .post-title {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  .slider_album_week .post-title:hover {
+  .slider_album_week .post-title:hover, .slider_album_skeleton .post-title:hover {
     color: var(--greyish); }
-  .slider_album_week .post:before {
+  .slider_album_week .post:before, .slider_album_skeleton .post:before {
     content: "";
     display: block;
     width: 98.3%;
@@ -759,34 +829,51 @@ h2 {
     background-image: linear-gradient(to bottom, rgba(55, 55, 55, 0), rgba(26, 26, 26, 0.7));
     border-radius: 4px; }
 
-.slider_album_week .slick-slide {
+.slider_album_week .slick-slide, .slider_album_skeleton .slick-slide {
   opacity: 0.1; }
 
-.slider_album_week .slick-active {
+.slider_album_week .slick-active, .slider_album_skeleton .slick-active {
   opacity: 1;
   background-image: none; }
 
-.slider_album_week .blur {
+.slider_album_week .blur, .slider_album_skeleton .blur {
   opacity: 0.1;
   border-radius: 4px; }
 
-.slider_album_week .author {
+.slider_album_week .author, .slider_album_skeleton .author {
   position: absolute;
   right: 30px;
   bottom: 20px; }
 
-.slider_album_week .slick-arrow {
+.slider_album_week .slick-arrow, .slider_album_skeleton .slick-arrow {
   height: 100%;
   width: 76px;
   position: absolute;
   top: 0;
   opacity: 0; }
 
-.slider_album_week .slick-next {
+.slider_album_week .slick-next, .slider_album_skeleton .slick-next {
   right: 0; }
 
-.slider_album_week .slick-prev {
+.slider_album_week .slick-prev, .slider_album_skeleton .slick-prev {
   left: 0; }
+
+.slider_album_week .skeleton, .slider_album_skeleton .skeleton {
+  height: 100%; }
+  .slider_album_week .skeleton .thumb, .slider_album_skeleton .skeleton .thumb {
+    display: block;
+    background: #e7eef5; }
+  .slider_album_week .skeleton .author, .slider_album_skeleton .skeleton .author {
+    width: auto; }
+  .slider_album_week .skeleton .post-detail, .slider_album_skeleton .skeleton .post-detail {
+    width: 100%; }
+  .slider_album_week .skeleton .category, .slider_album_skeleton .skeleton .category {
+    margin-bottom: 10px; }
+  .slider_album_week .skeleton .title, .slider_album_week .skeleton .statistical, .slider_album_skeleton .skeleton .title, .slider_album_skeleton .skeleton .statistical {
+    width: 35%;
+    display: inline-block; }
+  .slider_album_week .skeleton .title, .slider_album_skeleton .skeleton .title {
+    margin-bottom: 0; }
 
 .slick-arrow {
   position: absolute;
@@ -797,6 +884,9 @@ h2 {
 
 .album .thumb {
   height: 165px; }
+
+.album .post {
+  display: none; }
 
 .photography .slick-arrow, .clothes .slick-arrow {
   display: block;
@@ -814,6 +904,9 @@ h2 {
 
 .photography .thumb {
   height: 225px; }
+
+.photography .post {
+  display: none; }
 
 .clothes .thumb {
   height: 490px; }

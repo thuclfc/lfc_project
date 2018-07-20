@@ -439,6 +439,58 @@ h2{display: block; margin-bottom: 40px; font-weight: bold; font-size: 30px; colo
 .td_dev{margin: 40px 0 50px 0;}
 
 // 2.1 main post
+.skeleton{
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  .header{height: 45px; padding: 0 15px;}
+  .author{
+    width: 50%;
+    .avatar{@include block(block,26px,26px); border-radius: 50%; margin-right: 3px;}
+    .name{height: 10px; width: 80px; margin-bottom: 5px;}
+    .address{height: 10px; width: 40%;}
+  }
+  .book-calendar{height: 10px; width: 30%;}
+  .bg-skeleton{background: #ced4da;}
+  .category,.statistical,.title{height: 10px;}
+  .category{width: 30%; margin-bottom: 5px;}
+  .title,.statistical{width: 70%;}
+  .title{margin-bottom: 15px;}
+  &:before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 500%;
+    margin-left: -250%;
+    -webkit-animation: phAnimation .8s linear infinite;
+    animation: phAnimation .8s linear infinite;
+    background: -webkit-gradient(linear, left top, right top, color-stop(46%, transparent), color-stop(50%, rgba(255, 255, 255, 0.35)), color-stop(54%, transparent)) 50% 50%;
+    background: linear-gradient(to right, transparent 46%, rgba(255, 255, 255, 0.35) 50%, transparent 54%) 50% 50%;
+  }
+}
+
+@-webkit-keyframes phAnimation {
+  0% {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); } }
+
+@keyframes phAnimation {
+  0% {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); }
+}
+
+
 .post{
   .statistical{
     align-items: center;
@@ -517,13 +569,14 @@ h2{display: block; margin-bottom: 40px; font-weight: bold; font-size: 30px; colo
 }
 
 // 2.2 main-slider-album-week
-.slider_album_week{
+.slider_album_week,.slider_album_skeleton{
   .item-slide{
     height: 325px; padding: 0 5px; position: relative; transition: 0.3s;
+    .thumb{display: none;}
     .thumb img{width: 100%; height: 100%; object-fit: cover; border-radius: 4px;}
   }
   .post{
-    padding: 0 5px; position: absolute; top: 0; left: 0;
+    display: none; padding: 0 5px; position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
     &-detail{position: absolute; bottom: 20px; left: 20px;}
     .category{flex-basis: 100%; -webkit-flex-basis: 100%;}
@@ -551,6 +604,15 @@ h2{display: block; margin-bottom: 40px; font-weight: bold; font-size: 30px; colo
   .slick-arrow{height: 100%; width: 76px; position: absolute; top: 0; opacity: 0;}
   .slick-next{right: 0;}
   .slick-prev{left: 0;}
+  .skeleton{
+    height: 100%;
+    .thumb{display: block; background: #e7eef5;}
+    .author{width: auto;}
+    .post-detail{width: 100%;}
+    .category{margin-bottom: 10px;}
+    .title,.statistical{width: 35%; display: inline-block;}
+    .title{margin-bottom: 0;}
+  }
 }
 
 // 2.3 sliders
@@ -568,6 +630,7 @@ h2{display: block; margin-bottom: 40px; font-weight: bold; font-size: 30px; colo
 }
 .album{
   .thumb{height: 165px;}
+  .post{display: none;}
 }
 .photography,.clothes{
   .slick-arrow{@include block(block,60px,60px); background: rgba(0,0,0,0.3) url("../images/icon_nav.png") no-repeat center center; bottom: 95px;}
@@ -576,6 +639,7 @@ h2{display: block; margin-bottom: 40px; font-weight: bold; font-size: 30px; colo
 }
 .photography{
   .thumb{height: 225px;}
+  .post{display: none;}
 }
 .clothes{
   .thumb{height: 490px;}
