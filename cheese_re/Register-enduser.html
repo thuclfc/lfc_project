@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 1200px)" href="assets/css/style-responsive.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container pr">
+            <div class="top-bar flex align-center">
+                <p class="hotline">Hotline <span>024 6969 996</span></p>
+                <ul class="social flex">
+                    <li><a href="" title=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon name="logo-youtube"></ion-icon></a></li>
+                </ul>
+                <ul class="bar-link flex">
+                    <li><a href="" title="Hỗ trợ khách hàng">Hỗ trợ khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="top-register flex-between">
+                <a href="" class="logo"><img src="assets/images/logo-1-4-x.png" alt=""></a>
+                <h2 class="title">Đăng ký tài khoản</h2>
+                <a href="" class="account">Bạn đã có tài khoản?</a>
+            </div>
+        </div>
+    </header>
+    <main class="category">
+        <div class="container">
+            <div class="register pr">
+                <form method="post" action="" class="register_user">
+                    <div class="group">
+                        <label for="">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email bạn sẽ sử dụng làm tài khoản Cheese">
+                    </div>
+                    <div class="group">
+                        <label for="">Mật khẩu</label>
+                        <input type="password" id="password" name="password" placeholder="Ít nhất 8 kí tự, bao gồm chữ cái và số">
+                        <label for="" class="error">Mật khẩu chưa đúng quy chuẩn</label>
+                    </div>
+                    <div class="group">
+                        <label for="">Nhập lại mật khẩu</label>
+                        <input type="password" id="re_password" name="re_password" placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <div class="group">
+                        <button onclick="location.href = 'Register-Enduser-otp.html'" type="submit" class="submit flex_center">Tạo tài khoản</button>
+                    </div>
+                </form>
+                <div class="rules pr">
+                    <label>
+                        <input type="checkbox" name="select" value="" />
+                        <p>Bằng việc tạo tài khoản nghĩa là bạn đã đông ý với các chinh sách <a href="" title="dịch vụ">dịch vụ</a>, <a href="" title="Bảo mật">bảo mật</a> của Cheese</p>
+                        <span class="checked flex_center"><ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon></span>
+                    </label>
+                </div>
+                <div class="register_facebook">
+                    <p>hoặc đăng ký bằng</p>
+                    <a href="" class="btn_login flex-center" title="Đăng nhập Facebook"><i class="icon"></i>Facebook</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container flex flex-between align-center">
+            <div class="logo">
+                <a href="" title=""><img src="assets/images/logo-1-4-x.png" alt=""></a>
+            </div>
+            <div class="text">
+                <p class="flex align-center">Build by FullStackTeam with <ion-icon ios="ios-heart" md="ios-heart"></ion-icon></p>
+            </div>
+            <ul class="menu-footer flex">
+                <li><a href="" title="Giới thiệu về Cheese">Giới thiệu về Cheese</a></li>
+                <li><a href="" title="Điều khoản & Chính sách">Điều khoản & Chính sách</a></li>
+                <li><a href="" title="Bảo mật">Bảo mật</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/calendar.js"></script>
+<script src="assets/js/page_all.js"></script>
+<script>
+    $(document).ready(function () {
+        // custom slider service clothes with monitor
+        var width_view=$(window).width();
+        if(width_view >= 320 && width_view <=767){
+            $('.slide-service').slick({
+                centerMode: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerPadding: '0',
+                arrows: true
+            });
+        }else if(width_view >=768){
+            $('.slide-service').slick({
+                centerMode: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerPadding: '0',
+                arrows: true
+            });
+        }
+        box_tab('.tab_service li','.list-service',0,0);
+    });
+
+</script>
+</body>
+</html>

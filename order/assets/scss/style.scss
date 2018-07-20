@@ -158,8 +158,8 @@ li{list-style: none;}
 }
 
 @font-face {
-  font-family: HelveticaNeueLTS;
-  src: url(../font/HelveticaNeueLTS.ttf);
+  font-family: HelveticaVn-LtCn;
+  src: url(../font/HelveticaVn-LtCn.ttf);
 }
 
 @mixin block($display,$width,$height){
@@ -281,13 +281,6 @@ main{
   background: #fff;
   margin-bottom: 5px;
   h2 a{color: #2e2d2d;}
-  .head{
-    padding: 20px 0;
-    justify-content: space-between;
-    -webkit-justify-content: space-between;
-    align-items: center; -webkit-align-items: center;
-    select{width: 129px; height: 30px; text-align: center; border: 1px solid #927ea6; text-align-last: center;}
-  }
   .post > div{padding: 0;}
 }
 .post{
@@ -301,6 +294,14 @@ main{
   h3 a{display: block; margin-bottom: 10px; color: #596723; font: 22px UTMCafeta; text-transform: uppercase;}
   h3 a:hover{color: #c00;}
   p.des{font-size: 15px; line-height: 20px;}
+}
+
+.head{
+  padding: 20px 0;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center; -webkit-align-items: center;
+  select{width: 129px; height: 30px; text-align: center; border: 1px solid #927ea6; text-align-last: center;}
 }
 
 .fashion_hair{
@@ -340,7 +341,159 @@ main{
     }
   }
 }
+
+.video{
+  margin-bottom: 5px; background: #fff; padding: 0 10px 30px;
+  h2{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding-top: 0;
+  }
+  .list-video{
+    margin: 0 -5px 0 -5px;
+    a{display: block; position: relative;}
+    img{display: block; width: 100%; height: 100%; object-fit: cover;}
+    .icon_play{
+      width: 40px; height: 40px; display: block;
+      background: url("../images/play.png") no-repeat;
+      background-size: 40px 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      transition: 0.4s linear;
+      z-index: 9;
+    }
+    .item-video{
+      &:hover img{opacity: 0.8;}
+      img{padding: 0 5px;}
+      &:hover .icon_play{width: 50px; height: 50px; background-size: 50px 50px; opacity: 1;}
+    }
+    article{
+      display: block; text-align: center; color: #2e2d2d;
+      h4{
+        display: block; padding: 0 10px;
+        font-weight: bold; font: 22px UTMCafeta;
+        padding-top: 10px; text-transform: uppercase;
+        line-height: 26px;
+      }
+      p{margin-top: 5px; font-size: 16px;}
+    }
+  }
+  .slick-arrow{
+    @include block(block, 28px, 46px); background: url("../images/next1.png") no-repeat;
+    top: 60px;
+  }
+}
+.hair{
+  display: block;
+  background: #ffff;
+  margin-bottom: 5px;
+  padding: 10px;
+  .slider-hair{
+    width: 90%; margin: 0 auto;
+    padding: 25px 0 20px 0;
+    .item{padding: 0 5px;}
+    .item{text-align: center;}
+    h4{
+      display: block; margin-top: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase; line-height: 27px;
+    }
+    p{font-size: 15px; margin-top: 2px;}
+    img{width: 100%; height: 100%; object-fit: cover;}
+  }
+  .slick-arrow{
+    @include block(bock,22px,37px); background: url("../images/next1.png") no-repeat; background-size: 22px 37px; top: 90px;
+  }
+  .slick-next{right: -45px;}
+  .slick-prev{left: -45px;}
+}
+
+.camket{
+  background: #fff; padding: 10px 0;
+  h2{padding-left: 10px;}
+  > div{padding: 0 5px;}
+  .box-tab{display: block; margin-top: 30px; border: 1px solid #dfdfdf;}
+  .content_tab_day{
+    padding: 25px 15px; background: #eae9e9;
+    border: 1px solid #dfdfdf;
+    p{color: #2a2a2a; line-height: 22px; font-size: 16px;}
+  }
+  .col-right .box-tab{border: none;}
+  .content_tab_store{height: 277px; border: 1px solid #dfdfdf; border-top: none;}
+  .list-store{
+    padding: 10px;
+    height: 100%;
+    overflow: auto;
+    li{display: flex; display: -webkit-flex; align-items: center; -webkit-align-items: center; padding: 10px 0;}
+    .num{width: 8.3%; padding: 5px; font: 25px UTMCafeta; color: #2e2d2d; text-align: center;}
+    .name,.hotline{width: 41.6%;}
+    .name{font: 18px HelveticaVn-LtCn, sans-serif; line-height: 22px;}
+    .hotline{
+      width: 161px; height: 37px; display: block; padding-left: 45px;
+      background: url("../images/btn-phone-yellow.png") no-repeat;
+      background-size: 161px 37px;
+      margin-left: 10px; font: 22px UTMCafeta, sans-serif;
+      line-height: 37px; color: #000;
+    }
+  }
+}
+.tab_day{
+  li{width: 25%; background: #fff; padding: 15px 0; min-height: 180px; text-align: center; cursor: pointer;}
+  li.active{
+    background: #eae9e9;
+    .cricle{background: #000; color: #fff;}
+  }
+  .cricle{
+    width: 100px; height: 100px;
+    margin: 0 auto 5px;
+    border-radius: 50%; border: 1px solid #525252;
+    color: #000;
+    font: 30px HelveticaVn-LtCn;
+    line-height: 32px;
+    text-align: center;
+  }
+  span{font: 18px HelveticaVn-LtCn, sans-serif; line-height: 22px;}
+}
+
+.tab_store{
+  li{
+    width: 50%; height: 46px; background: #fff;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    border-top: none;
+    border-right: none;
+  }
+  li a{display: block; color: rgb(142, 142, 142); font: 22px UTMCafeta; text-align: center; line-height: 46px;}
+  li:nth-child(1){    border-right: 1px solid #dfdfdf;}
+  li.active{
+    border-left: 1px solid rgb(223, 223, 223);
+    border-bottom: none;
+    border-top: 1px solid rgb(223, 223, 223);
+    a{color: rgb(12, 13, 13);}
+  }
+}
+
+.view-more{
+  display: block; padding: 15px 0; flex-basis: 100%; -webkit-flex-basis: 100%;
+  text-align: center;
+  a{color: #000;}
+  i{display: block; margin-top: 5px; font-size: 26px; color: #808080;}
+}
+.slick-arrow{border: none; position: absolute; text-indent: -9999em; z-index: 9; cursor: pointer;}
+.slick-next{right: 10px;}
+.slick-prev{left: 10px; transform: rotate(180deg);}
 /*end*/
+
+@media(max-width: 1600px) {
+  .bannerLink{
+    height: 50px;
+    h4{font-size: 30px;}
+    a{padding: 6px 12px;}
+    a span{font-size: 20px;}
+  }
+}
 
 @media (min-width: 320px) and (max-width: 768px) {
   .bannerLink{
@@ -492,6 +645,21 @@ main{
 
 }
 
+
+.list-store::-webkit-scrollbar{
+  width: 5px; border-radius: 0 4px 4px 0;
+}
+.list-store::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+
+.list-store::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.list-store::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
 
 
 /*slick js*/

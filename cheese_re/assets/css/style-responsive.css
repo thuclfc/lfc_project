@@ -1,0 +1,749 @@
+body {
+  font: 12px 'Quicksand', sans-serif;
+  font-weight: 500; }
+
+.container {
+  max-width: 100%; }
+
+main.category {
+  padding: 20px 0; }
+
+.top-body .navbar-toggler {
+  display: block; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    max-width: 100%; }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 25px; }
+  .bar-link {
+    display: none; }
+  .top-bar .social, .top-body .logo {
+    position: relative;
+    left: 0;
+    transform: translateX(0); }
+  .top-bar .social {
+    margin-right: 40px; }
+    .top-bar .social li {
+      margin: 0 8px; }
+  .navbar-toggler {
+    position: absolute;
+    top: -2px;
+    right: 0; }
+    .navbar-toggler ion-icon {
+      font-size: 30px;
+      color: var(--greyish); }
+  .top-body {
+    height: 75px; }
+    .top-body .logo a {
+      display: block;
+      width: 90px;
+      height: 36px;
+      background-size: 90px 36px; }
+    .top-body .navbar-collapse {
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      background: #fff;
+      margin-left: -15px;
+      z-index: 90; }
+    .top-body .menu {
+      padding-bottom: 15px;
+      flex-direction: column;
+      -webkit-flex-direction: column; }
+      .top-body .menu li:first-child {
+        margin-left: 16px; }
+      .top-body .menu li a {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        border-bottom: 1px solid var(--white-two); }
+  .login .buttons a:after {
+    display: none; }
+  .login .buttons a {
+    font-size: 14px;
+    font-weight: 700; }
+  .login .buttons .btn-register {
+    width: auto;
+    height: 35px;
+    margin-left: 10px;
+    font-weight: bold;
+    border: none; }
+    .login .buttons .btn-register:hover span {
+      color: var(--barney) !important; }
+  .login .buttons .btn-login {
+    width: auto;
+    height: 35px; }
+    .login .buttons .btn-login:hover {
+      border: none;
+      background-image: none; }
+  .top-register {
+    height: auto;
+    padding: 10px 0;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center; }
+    .top-register .logo img {
+      max-width: 100px; }
+    .top-register .title {
+      margin: 10px 0;
+      font-size: 15px; }
+  .login .get_nf {
+    margin-right: 15px; }
+  .td_dev {
+    margin: 25px 0 25px 0; }
+  .tab {
+    margin-bottom: 25px;
+    margin-top: 0; }
+    .tab li {
+      margin: 0 5px; }
+    .tab span {
+      padding: 0 8px; }
+  .slider_album_week .slick-track {
+    display: flex;
+    align-items: center; }
+  .slider_album_week .item-slide {
+    height: 195px; }
+  .slider_album_week .statistical {
+    margin: 10px 0 0 0; }
+  .slider_album_week .post .category {
+    margin-bottom: 8px; }
+  .slider_album_week .post h3 {
+    width: 85%;
+    margin-bottom: 5px; }
+  .slider_album_week .post-title {
+    font-size: 16px; }
+  .slider_album_week .post:before {
+    width: 97%; }
+  .slider_album_week .post-detail {
+    left: 15px; }
+  .slider_album_week .author {
+    right: 15px; }
+  .service_around {
+    display: none; }
+  .clothes .thumb {
+    height: 400px; }
+  .collection .slide-service .item {
+    margin: 0; }
+  .tab_category {
+    margin: 20px 0; }
+  .header-service .select {
+    margin-bottom: 15px; }
+  .header-service .tab_service {
+    margin-bottom: 15px; }
+    .header-service .tab_service li {
+      margin: 0 6px 6px; }
+    .header-service .tab_service span {
+      padding: 0 8px; }
+  .header-service .filter-item {
+    margin: 0 10px 10px 0 !important; }
+  .service_item {
+    padding: 15px 0; }
+    .service_item .avatar {
+      width: 80px;
+      height: 80px;
+      margin-right: 12px; }
+    .service_item .s_author {
+      margin-bottom: 15px; }
+      .service_item .s_author h4 {
+        margin-bottom: 6px;
+        font-size: 16px; }
+    .service_item .book {
+      width: 115px;
+      height: 35px; }
+    .service_item .package h4 {
+      margin-bottom: 10px; }
+    .service_item .package li {
+      height: 45px;
+      padding: 0 10px; }
+  .slide-service {
+    margin-right: 0; }
+    .slide-service .item {
+      margin: 0 2px; }
+    .slide-service .slick-arrow {
+      width: 26px; }
+    .slide-service .slick-next {
+      right: 2px; }
+    .slide-service .slick-prev {
+      left: 2px; }
+    .slide-service:after {
+      display: none; }
+  .detail-makeup {
+    padding: 15px 15px 0; }
+    .detail-makeup .item h5 {
+      width: 25%; }
+    .detail-makeup .item strong, .detail-makeup .item p {
+      width: 70%; }
+  .table_price tbod td {
+    padding: 15px 5px; }
+  .package-photo {
+    width: 100%;
+    margin-bottom: 25px; }
+  .register {
+    width: 100%;
+    padding: 20px 15px; }
+    .register input, .register select {
+      height: 45px; }
+    .register .login_facebook .btn_login, .register .register_facebook .btn_login {
+      width: 100%; }
+  .register_service h4 {
+    margin-bottom: 20px;
+    font-size: 20px; }
+  .register_service .info_pay .group {
+    width: 100%; }
+  .register_service .rules {
+    width: 100%; }
+  .register_service button[type="submit"] {
+    padding: 0 40px; }
+  .register.success h2.title-success {
+    font-size: 30px; }
+  .register.success p {
+    font-size: 14px; }
+  #book-canlendar-clothes .select_time {
+    width: 48%; }
+  .popup {
+    top: 6%; }
+    .popup h2 {
+      font-size: 22px; }
+  .close-popup {
+    right: -5px;
+    top: -30px; }
+  .popup-login h2 {
+    padding: 15px 0 15px 15px; }
+  .popup-login form {
+    padding: 25px 15px 5px; }
+  .popup-login .frm_group {
+    margin-bottom: 20px; }
+  .popup-login .frm_group input {
+    height: 45px; }
+  .popup-login .tab_login {
+    height: 50px; }
+    .popup-login .tab_login a {
+      line-height: 50px;
+      padding: 0 15px;
+      font-size: 16px; }
+  .popup-login .login_facebook {
+    padding: 0 15px; }
+    .popup-login .login_facebook .btn-login {
+      height: 45px; }
+  .popup-login a.rs_new {
+    margin-top: 25px; }
+  .popup-register {
+    padding: 30px 15px; }
+    .popup-register label {
+      height: 50px; }
+    .popup-register .select_register {
+      width: 90%;
+      margin: 0 auto; }
+  .popup-book-calendar {
+    padding: 20px 0 20px;
+    margin-bottom: 40px; }
+    .popup-book-calendar h2 {
+      margin-bottom: 20px; }
+    .popup-book-calendar .popup-content {
+      padding-bottom: 20px; }
+    .popup-book-calendar .header {
+      padding: 0 15px; }
+      .popup-book-calendar .header > div {
+        width: 48%;
+        margin-bottom: 15px; }
+      .popup-book-calendar .header select {
+        padding: 0 5px;
+        width: 100%;
+        height: 40px; }
+      .popup-book-calendar .header h5 {
+        margin-bottom: 8px; }
+      .popup-book-calendar .header .name {
+        font-size: 14px; }
+      .popup-book-calendar .header .price span {
+        font-size: 20px; }
+    .popup-book-calendar .box-select {
+      margin: 0;
+      position: relative;
+      right: 0;
+      top: 0;
+      justify-content: center;
+      -webkit-justify-content: center; }
+      .popup-book-calendar .box-select .select_hour {
+        margin: 0 0 10px 0;
+        min-width: 70%; }
+    .popup-book-calendar .list_status .text_st {
+      margin-bottom: 10px; }
+    .popup-book-calendar .bottom .next {
+      height: 45px;
+      margin-top: 10px; }
+    .popup-book-calendar .bottom .next span {
+      padding: 0 16px; }
+    .popup-book-calendar .close-popup {
+      right: 0;
+      top: -30px;
+      font-size: 16px; }
+      .popup-book-calendar .close-popup ion-icon {
+        font-size: 30px; }
+    .popup-book-calendar .info_day_makeup {
+      padding: 0 15px; }
+    .popup-book-calendar .select_number_day li {
+      border: 1px solid var(--greyish);
+      width: 28px;
+      height: 28px;
+      margin-bottom: 5px; }
+    .popup-book-calendar .select_number_day span {
+      font-size: 16px;
+      font-weight: 500; }
+  .booking_process {
+    margin-bottom: 40px;
+    padding: 25px 10px; }
+    .booking_process h2 {
+      margin-bottom: 25px; }
+    .booking_process .content_type_pay article {
+      padding: 15px; }
+    .booking_process .content_type_pay ion-icon {
+      margin: 0 14px; }
+    .booking_process .info_type_pay span.price {
+      font-size: 18px;
+      margin-top: 10px; }
+    .booking_process .info_type_pay span {
+      font-size: 13px; }
+    .booking_process .info_package {
+      flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
+      margin-bottom: 25px; }
+      .booking_process .info_package p {
+        margin: 0 10px; }
+      .booking_process .info_package span {
+        display: block;
+        margin-top: 4px;
+        font-size: 14px; }
+    .booking_process .tab_method_pay {
+      flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap; }
+      .booking_process .tab_method_pay li {
+        margin: 0 5px 10px; }
+      .booking_process .tab_method_pay span {
+        padding: 0 8px; }
+    .booking_process .content_method_pay article {
+      padding: 10px; }
+    .booking_process .pay_direct {
+      margin-left: 0; }
+      .booking_process .pay_direct h5 {
+        width: 30%; }
+      .booking_process .pay_direct p {
+        width: 65%; }
+    .booking_process .step3 .success {
+      margin-top: 25px;
+      width: 100px;
+      height: 98px;
+      background-size: 100px 98px; }
+    .booking_process .step3 .info_package {
+      margin: 25px 0; }
+    .booking_process .step3 .btn_view {
+      width: 280px;
+      font-size: 16px; }
+    .booking_process .step3 .note {
+      font-size: 16px; }
+  .popup-detail-post .slider-for {
+    width: 100%; }
+    .popup-detail-post .slider-for .slick-slide {
+      height: 400px; }
+    .popup-detail-post .slider-for .thumb img {
+      object-fit: cover; }
+  .popup-detail-post .detail-post {
+    padding: 20px 0; }
+  .popup-detail-post a.book {
+    margin-left: 20px;
+    height: 40px; }
+  .popup-detail-post a.book span {
+    padding: 0 15px; }
+  .popup-detail-post .author .name {
+    font-size: 16px; }
+  .popup-detail-post .social a {
+    margin-right: 20px;
+    margin-bottom: 5px; }
+  .tab_line {
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap; }
+    .tab_line li a {
+      font-size: 14px;
+      padding: 0 10px; }
+  .tab li {
+    margin-bottom: 5px; }
+  .scroll_mobile {
+    overflow-x: auto; }
+  table.history {
+    min-width: 700px; }
+  .change-pass, .popup-edit-info {
+    padding: 25px 15px; }
+    .change-pass input[type="password"], .change-pass input, .popup-edit-info input[type="password"], .popup-edit-info input {
+      width: 100%;
+      height: 45px; }
+  .tab_content_category .list_status {
+    position: relative; }
+    .tab_content_category .list_status p {
+      margin-bottom: 5px; }
+  .tab_content_category .cld_body .full_day input:checked + span {
+    width: 15px;
+    height: 14px;
+    background-size: 15px 14px; }
+  .month_year {
+    font-size: 20px;
+    padding: 0 8px; }
+  .cld_curent {
+    margin: 15px 0 10px 5px; }
+  .cld_body .time {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    right: 2px;
+    top: 2px;
+    line-height: 16px; }
+  .cld_body .half_day > li h4 {
+    font-size: 10px;
+    padding-left: 3px; }
+  .cld_body .half_day li.active {
+    border: 1px solid transparent; }
+  .cld_body .half_day input:checked + span {
+    width: 8px;
+    height: 7px;
+    background-size: 8px 7px;
+    margin: 0 0 0 3px; }
+  .cld_body .full_day li.active {
+    border: 1px solid transparent; }
+  .cld_body .full_day input:checked + span {
+    width: 15px;
+    height: 14px;
+    background-size: 15px 14px; }
+  .cld_body .day_selected ion-icon, .cld_body .wait_pay ion-icon {
+    font-size: 24px; }
+  .cld_body .wait_pay span {
+    top: -100%;
+    right: 0;
+    width: 300%;
+    padding: 5px;
+    white-space: normal;
+    line-height: 16px;
+    text-align: center; }
+  .cld_body .wait_pay span:after {
+    border-width: 8px;
+    bottom: -16px;
+    left: 80%;
+    border-color: #841c6f transparent transparent transparent; }
+  .cld_head > li {
+    font-size: 12px;
+    padding-right: 5px; }
+  .cld_body > li {
+    height: 50px; }
+  .cld_body .selected.sl_half_day .day_selected {
+    background: var(--white-three); }
+  .cld_body .wait.sl_half_day .wait_pay {
+    background: var(--greyish); }
+  .photo_create_album {
+    padding: 20px 0; }
+  .multiple {
+    height: 300px; }
+    .multiple .drag {
+      width: 270px;
+      height: 270px; }
+    .multiple .drag ion-icon {
+      font-size: 60px;
+      margin-bottom: 15px; }
+  .create_album .frm_group {
+    width: 100%;
+    margin-top: 15px; }
+  .create_album .fieldset {
+    padding: 0 15px 20px; }
+  .create_album .frm_group:nth-child(1) {
+    margin-top: 55px; }
+  .create_album .des {
+    position: relative;
+    top: 0;
+    right: 0; }
+  .create_album input[type="text"], .create_album select, .create_album textarea {
+    width: 100%; }
+  .create_album input[type="file"] {
+    height: 118%; }
+  .image-holder {
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 10px 0 0; }
+    .image-holder img {
+      margin: 0 5px 10px;
+      width: 100px;
+      height: 80px;
+      object-fit: contain; }
+  .file_input {
+    min-height: 300px; }
+    .file_input .add_image {
+      font-size: 16px;
+      width: 150px;
+      height: 45px;
+      bottom: -55px;
+      right: 15px; }
+  .header-detail {
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
+    .header-detail h4 {
+      position: relative;
+      left: 0;
+      transform: translateX(0);
+      font-size: 14px; }
+  .info-title {
+    height: auto;
+    padding: 10px 15px; }
+    .info-title h2 {
+      font-size: 16px;
+      padding: 5px 0; }
+    .info-title a.back {
+      padding: 5px 0; }
+    .info-title .date time {
+      font-size: 14px; }
+    .info-title .link-detail {
+      display: block;
+      text-align: left;
+      margin: 10px 0 0; }
+  .listInfo-photo {
+    padding: 15px 15px 0; }
+    .listInfo-photo p {
+      font-size: 14px; }
+    .listInfo-photo .price {
+      font-size: 18px; }
+  .detail_package .listInfo li {
+    padding: 15px; }
+  .detail_package .listInfo p {
+    font-size: 14px; }
+  .detail_package .listInfo .note {
+    margin: 10px 0 0; }
+  .detail_package .listInfo .price span {
+    font-size: 18px; }
+  .detail_package .listInfo .nt span {
+    font-size: 14px; }
+  .detail_package .info-package .listInfo-photo {
+    width: 100%; }
+  .info-book-canlendar .listInfo-photo {
+    width: 100%; }
+  .info-book-canlendar h5 {
+    width: 130px;
+    font-size: 14px; }
+  .change-calendar {
+    height: 45px;
+    font-size: 16px;
+    width: 200px; }
+  /*commbo setting*/
+  .combo_setting .list-item li {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; }
+  .combo_setting .list-item h5 {
+    font-size: 14px; }
+  .combo_setting .item-setting h4 {
+    font-size: 26px;
+    margin-bottom: 15px; }
+  footer {
+    height: auto;
+    padding: 10px 0;
+    text-align: center; }
+    footer .container {
+      justify-content: center; }
+    footer .container > div, footer .container > ul {
+      margin-bottom: 10px;
+      flex-basis: 100%; }
+    footer .text p {
+      display: block;
+      text-align: center; }
+    footer .menu-footer {
+      justify-content: center; }
+      footer .menu-footer li {
+        margin-bottom: 5px; } }
+
+@media (orientation: landscape) {
+  .slider_album_week .item-slide {
+    height: 300px; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .collapse {
+    display: block;
+    flex-basis: auto; }
+  .navbar-toggler {
+    display: none !important; }
+  .slider_album_week .item-slide {
+    height: 300px; }
+  .service_around {
+    display: none; }
+  .top-register .title {
+    font-size: 24px; }
+  .month_year {
+    font-size: 24px;
+    padding: 0 10px; }
+  .service_item {
+    padding: 15px 0; }
+    .service_item .s_author {
+      margin-bottom: 15px; }
+    .service_item .package h4 {
+      margin-bottom: 10px; }
+  .chatContact {
+    margin-top: 15px; }
+  .collection .slide-service .item {
+    margin: 0 3px; }
+  .collection .slick-next {
+    right: 3px !important; }
+  .collection .slick-prev {
+    left: 3px !important; }
+  .popup-book-calendar {
+    max-width: 94%; }
+    .popup-book-calendar .close-popup {
+      right: 0;
+      top: -40px; }
+    .popup-book-calendar .box-select .select_hour {
+      min-width: 205px;
+      margin-right: 60px; }
+  .booking_process {
+    margin: 30px;
+    padding: 40px; }
+    .booking_process .content_type_pay article {
+      padding: 30px; }
+  .popup-detail-post .social a {
+    margin: 0 20px 10px 0; }
+  .register .login_facebook .btn_login, .register .register_facebook .btn_login {
+    max-width: 300px; }
+  .register_service {
+    padding: 30px; }
+    .register_service fieldset {
+      width: 48%; }
+  .info-book-canlendar h5 {
+    width: 160px; } }
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .slider_album_week .item-slide {
+    height: 315px; }
+  .navbar-toggler {
+    display: none !important; }
+  .collapse {
+    flex-basis: auto;
+    display: block; }
+  .profile .book a, .profile .buttons a {
+    width: 200px; } }
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .login .list_nf, .login .option_user {
+    left: -20px; }
+  .top-bar .hotline {
+    font-weight: bold;
+    font-size: 14px; }
+  .booking_process .tab_type_pay {
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap; }
+  .booking_process .info_type_pay {
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
+    .booking_process .info_type_pay ion-icon {
+      margin: 0 15px; }
+  .booking_process .bottom a.next {
+    height: 45px;
+    margin-right: 0; }
+    .booking_process .bottom a.next span {
+      padding: 0 10px; }
+  .booking_process .bottom a.back {
+    margin-left: 0; }
+  .chatContact {
+    width: 100%;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    position: relative;
+    right: 15px;
+    bottom: 0 !important; }
+    .chatContact a {
+      width: 50px;
+      height: 50px; }
+    .chatContact a:after {
+      width: 20px;
+      height: 21px;
+      background-size: 20px 21px; }
+  .header-service {
+    height: auto;
+    margin-bottom: 5px; }
+    .header-service .filter {
+      margin-bottom: 15px; }
+    .header-service .tab_service {
+      margin-bottom: 10px; }
+  .slide-service {
+    margin-right: 0; }
+    .slide-service .item {
+      margin: 0 2px; }
+    .slide-service .slick-arrow {
+      width: 26px; }
+    .slide-service .slick-next {
+      right: 2px; }
+    .slide-service .slick-prev {
+      left: 2px; }
+    .slide-service:after {
+      display: none; }
+  .tab_line li:nth-child(1), .tab li:nth-child(1) {
+    margin-left: 0; }
+  .collection .slide-service {
+    height: 220px;
+    margin: 0 15px; }
+    .collection .slide-service .thumb, .collection .slide-service .item {
+      height: 220px; }
+    .collection .slide-service:after {
+      display: none; }
+    .collection .slide-service .slick-next {
+      right: 0; }
+  .collection .s_author {
+    margin: 0 0 30px 15px;
+    padding-right: 30px; }
+  .create_combo {
+    width: 100%;
+    margin: 15px auto; }
+    .create_combo label, .create_combo h5 {
+      font-size: 14px;
+      white-space: nowrap; }
+    .create_combo .price input {
+      width: 58%;
+      font-size: 18px; }
+    .create_combo .frm_group {
+      padding: 15px 10px; }
+    .create_combo .frm_group.des {
+      padding: 0 10px; }
+      .create_combo .frm_group.des textarea {
+        margin-bottom: 15px; }
+    .create_combo .group_submit {
+      padding: 15px; }
+    .create_combo p {
+      margin: 0 0 0 15px;
+      display: flex;
+      display: -webkit-flex; }
+    .create_combo input {
+      width: 80%; }
+    .create_combo .note {
+      font-size: 12px;
+      margin: 15px 0 0 0 !important; }
+  .header-detail {
+    margin-top: 15px; }
+  .listInfo-photo .thumb_avatar {
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap; }
+    .listInfo-photo .thumb_avatar .name {
+      font-size: 14px; }
+  .close-popup {
+    right: 0 !important;
+    top: -32px;
+    font-size: 16px;
+    opacity: 1; }
+    .close-popup ion-icon {
+      font-size: 30px; } }
+
+@media (max-width: 375px) {
+  .popup-book-calendar {
+    margin: .5rem 5px 40px; }
+  .cld_body .half_day > li h4 {
+    font-size: 9px; }
+  .cld_body .time {
+    top: 1px;
+    right: 1px; }
+  .popup-book-calendar .info_day_makeup .group {
+    width: 100%; } }

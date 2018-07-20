@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 1200px)" href="assets/css/style-responsive.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container pr">
+            <div class="top-bar flex align-center">
+                <p class="hotline">Hotline <span>024 6969 996</span></p>
+                <ul class="social flex">
+                    <li><a href="" title=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="" title=""><ion-icon name="logo-youtube"></ion-icon></a></li>
+                </ul>
+                <ul class="bar-link flex">
+                    <li><a href="" title="Tin khuyến mãi">Tin khuyến mãi</a></li>
+                    <li><a href="" title="Hỗ trợ khách hàng">Hỗ trợ khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="top-body flex align-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="menu flex">
+                        <li><a href="" title="Chụp hình">Chụp hình</a></li>
+                        <li><a href="" title="Trang điểm">Trang điểm</a></li>
+                        <li><a href="" title="Trang phục">Trang phục</a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <h1><a href="" title=""></a></h1>
+                </div>
+                <div class="login">
+                    <div class="before">
+                        <div class="buttons flex">
+                            <a href="javascript:void(0)" title="Đăng nhập" class="btn-login" data-toggle="modal" data-target="#popup-login"><span>Đăng nhập</span></a>
+                            <a href="javascript:void(0)" title="Đăng ký" class="btn-register" data-toggle="modal" data-target="#popup-register"><span>Đăng ký</span></a>
+                        </div>
+                    </div>
+                    <div style="display: none;" class="after flex align-center">
+                        <div class="get_nf pr">
+                            <div class="num_nf td_click pr">
+                                <ion-icon name="notifications"></ion-icon>
+                                <span>10</span>
+                            </div>
+                            <ul class="list_nf">
+                                <li><a href="" title="">Bạn có 2 lịch chụp ảnh</a></li>
+                                <li><a href="" title="">Bạn phải thanh toán trước ngày 12/6/2018</a></li>
+                            </ul>
+                        </div>
+                        <div class="info_user pr">
+                            <div class="info-detail td_click flex">
+                                <img src="assets/images/rectangle-3.jpg" alt="">
+                                <p>
+                                    <span class="name">Nguyễn Đắc Thực <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></span>
+                                    <span class="address">Hà Nội</span>
+                                </p>
+                            </div>
+                            <ul class="option_user">
+                                <li><a href="" title="Tài khoản"><ion-icon name="person"></ion-icon>Tài khoản</a></li>
+                                <li><a href="" title="Đăng xuất"><ion-icon name="exit"></ion-icon>Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="category">
+        <div class="container album_photo">
+            <div class="row">
+                <div class="col-lg-3 col-xs-12">
+                    <div class="profile">
+                        <div class="inner">
+                            <div class="author_info">
+                                <img src="assets/images/468662696.jpg" alt="">
+                                <h4 class="name">Long Kaido</h4>
+                                <span class="job">Nhiếp ảnh gia</span>
+                                <p class="address">Sô 3, Ngõ 89, Nguyễn Văn Cừ, Long biên, Hà Nội</p>
+                            </div>
+                            <ul class="statistical">
+                                <li>
+                                    <a href="javascript:void(0)" onclick="add_like()">
+                                        <p><ion-icon ios="ios-heart" md="md-heart"></ion-icon> Yêu thích?</p>
+                                        <span class="tol tol_like">0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <p><ion-icon ios="ios-star" md="md-star"></ion-icon>Chấm điểm</p>
+                                    <span class="tol">9.6</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="book">
+                            <a href="javascript:void(0)" title="Đặt lịch" data-toggle="modal" data-target="#book_calendar_clothes"><span>+ Đặt lịch chụp hình</span></a>
+                        </div>
+                        <div class="rating">
+                            <p>Đánh giá của bạn cho nhiếp ảnh gia</p>
+                            <div class="star-rating">
+                                <input type="radio" name="rating" value="1"><i></i>
+                                <input type="radio" name="rating" value="2"><i></i>
+                                <input type="radio" name="rating" value="3"><i></i>
+                                <input type="radio" name="rating" value="4"><i></i>
+                                <input type="radio" name="rating" value="5"><i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-xs-12">
+                    <ul class="tab_category tab_line flex">
+                        <li><a href="javascript:void(0)" title="Album ảnh">Album ảnh</a></li>
+                        <li><a href="javascript:void(0)" title="Các gói chụp">Các gói chụp</a></li>
+                    </ul>
+                    <div class="tab_content_category">
+                        <div class="list-post row flex">
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <article class="post">
+                                    <a href="javascript:void(0)" class="thumb">
+                                        <img src="assets/images/thumb-album.jpg">
+                                    </a>
+                                    <div class="body">
+                                        <h6 class="category flex">Ảnh cưới</h6>
+                                        <h3><a href="javascript:void(0)" class="post-title detail-popup" data-id="popup-detail-photo">Lan và Điệp - Thung Nai</a></h3>
+                                        <ul class="statistical flex">
+                                            <li><p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p></li>
+                                            <li><p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p></li>
+                                            <li><p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p></li>
+                                            <li><p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <article class="post">
+                                    <a href="javascript:void(0)" class="thumb">
+                                        <img src="assets/images/thumb-album1.png">
+                                    </a>
+                                    <div class="body">
+                                        <h6 class="category flex">Ảnh cưới</h6>
+                                        <h3><a href="" class="post-title">Lan và Điệp - Thung Nai</a></h3>
+                                        <ul class="statistical flex">
+                                            <li><p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p></li>
+                                            <li><p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p></li>
+                                            <li><p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p></li>
+                                            <li><p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <article class="post">
+                                    <a href="javascript:void(0)" class="thumb">
+                                        <img src="assets/images/rectangle-3.jpg">
+                                    </a>
+                                    <div class="body">
+                                        <h6 class="category flex">Ảnh cưới</h6>
+                                        <h3><a href="" class="post-title">Lan và Điệp - Thung Nai</a></h3>
+                                        <ul class="statistical flex">
+                                            <li><p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p></li>
+                                            <li><p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p></li>
+                                            <li><p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p></li>
+                                            <li><p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <article class="post">
+                                    <a href="javascript:void(0)" class="thumb">
+                                        <img src="assets/images/mask.jpg">
+                                    </a>
+                                    <div class="body">
+                                        <h6 class="category flex">Ảnh cưới</h6>
+                                        <h3><a href="" class="post-title">Lan và Điệp - Thung Nai</a></h3>
+                                        <ul class="statistical flex">
+                                            <li><p><ion-icon ios="ios-eye" md="md-eye"></ion-icon>696</p></li>
+                                            <li><p><ion-icon ios="ios-heart" md="md-heart"></ion-icon>69 </p></li>
+                                            <li><p><ion-icon ios="ios-text" md="md-text"></ion-icon>2</p></li>
+                                            <li><p><ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>3</p></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content_category">
+                        <div class="list-package flex-between">
+                            <div class="package-photo">
+                                <h4>Ảnh cưới - nội thành Hà Nội</h4>
+                                <a href="service-photo-detail-combo.html" class="view-detail">Xem chi tiết</a>
+                                <ul class="list-item">
+                                    <li>
+                                        <p>Số lượng điểm chụp: <span>5</span></p>
+                                    </li>
+                                    <li>
+                                        <p>1 phim trường + 4 điểm dã ngoại</p>
+                                    </li>
+                                    <li>
+                                        <p>Khuyễn mãi giảm 10% cho các lịch tháng 7</p>
+                                    </li>
+                                    <li>
+                                        <p class="price">2.000.000 vnđ</p>
+                                    </li>
+                                </ul>
+                                <div class="book pr">
+                                    <ion-icon ios="ios-add" md="md-add" data-toggle="modal" data-target="#book_calendar_photo"></ion-icon>
+                                    <a href="javascript:void(0)" class="book-link" title="Đặt gói này">
+                                        <span>Đặt gói này</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="package-photo">
+                                <h4>Ảnh cưới - nội thành Hà Nội</h4>
+                                <a href="service-photo-detail-combo.html" class="view-detail">Xem chi tiết</a>
+                                <ul class="list-item">
+                                    <li>
+                                        <p>Số lượng điểm chụp: <span>5</span></p>
+                                    </li>
+                                    <li>
+                                        <p>1 phim trường + 4 điểm dã ngoại</p>
+                                    </li>
+                                    <li>
+                                        <p>Khuyễn mãi giảm 10% cho các lịch tháng 7</p>
+                                    </li>
+                                    <li>
+                                        <p class="price">2.000.000 vnđ</p>
+                                    </li>
+                                </ul>
+                                <div class="book pr">
+                                    <ion-icon ios="ios-add" md="md-add" data-toggle="modal" data-target="#book_calendar_photo"></ion-icon>
+                                    <a href="javascript:void(0)" class="book-link" title="Đặt gói này">
+                                        <span>Đặt gói này</span>
+                                        <i class="trigular"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatContact flex">
+                <h5 class="align-center">Tư vấn viên <ion-icon name="arrow-forward"></ion-icon></h5>
+                <a href="javascript:void(0)" title=""></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container flex flex-between align-center">
+            <div class="logo">
+                <a href="" title=""><img src="assets/images/logo-1-4-x.png" alt=""></a>
+            </div>
+            <div class="text">
+                <p class="flex align-center">Build by FullStackTeam with <ion-icon ios="ios-heart" md="ios-heart"></ion-icon></p>
+            </div>
+            <ul class="menu-footer flex">
+                <li><a href="" title="Giới thiệu về Cheese">Giới thiệu về Cheese</a></li>
+                <li><a href="" title="Điều khoản & Chính sách">Điều khoản & Chính sách</a></li>
+                <li><a href="" title="Bảo mật">Bảo mật</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/calendar.js"></script>
+<script src="assets/js/page_all.js"></script>
+<script>
+    $(document).ready(function () {
+    // call slider-post
+        $('.slider-post').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: false,
+            centerPadding: '0',
+            arrows: true
+        });
+
+        // show hidden button book package
+        $('.package-photo .book').hover(function () {
+            $(this).addClass('active');
+        });
+        $('.package-photo').mouseleave(function () {
+            $('.package-photo .book').removeClass('active');
+        });
+
+        // show and hide button tư vấn
+        setInterval(function () {
+            if( $('.tab_category li:nth-child(2)').hasClass('active')){
+                $('.chatContact').css({'display':'flex','bottom':'123px','opacity':'1'});
+            }else{
+                $('.chatContact').css({'opacity':'0','bottom':'-20px'});
+            }
+        },100);
+
+        box_tab('.tab_category li','.tab_content_category',0,0);
+    });
+
+</script>
+</body>
+</html>
