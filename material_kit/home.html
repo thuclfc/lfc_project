@@ -470,33 +470,13 @@
 </div>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="assets/js/page_all.js"></script>
 <script>
     $(document).ready(function () {
-        $('.nav-link').click(function () {
-            $(this).parent().toggleClass('show');
-        });
-        $(document).mouseup(function(e){
-            var sub_menu=$('.sub-menu');
-            var navbar_collapse=$('.navbar-collapse,.navbar-toggler');
-            if (!sub_menu.is(e.target) && sub_menu.has(e.target).length === 0)
-            {
-                $('.nav-item').removeClass('show');
-            }
-            if (!navbar_collapse.is(e.target) && navbar_collapse.has(e.target).length === 0)
-            {
-                $('body').removeClass('nav-open');
-            }
-        });
         var img1_scroll=$('.section-content .image-container').offset().top - 500;
         var img2_scroll=$('.section-content .image-container').offset().top - 300;
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
-            if($(this).scrollTop() > 100){
-                $('header').removeClass('header-transparent');
-            }else{
-                $('header').addClass('header-transparent');
-            }
-
             if(scroll > img1_scroll){
                 $('.area-img').addClass('show-img');
             }else{
@@ -507,10 +487,6 @@
             }else{
                 $('.info-img').removeClass('show-img');
             }
-        });
-
-        $('.navbar-toggler').click(function () {
-            $('body').toggleClass('nav-open');
         });
 
     });
