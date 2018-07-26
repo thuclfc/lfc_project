@@ -1227,7 +1227,8 @@ header {
       width: 100%;
       height: 40px;
       margin: 10px 0;
-      border-radius: 0; }
+      border-radius: 0;
+      padding: 0; }
 
 .page-header.product {
   background: url("../images/bg6.jpg"); }
