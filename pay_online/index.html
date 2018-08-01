@@ -12,7 +12,84 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="section-slider">
+    <header>
+        <div class="topbar">
+            <div class="container">
+                <span class="label">Truy cập nhanh:</span>
+                <ul class="menu-top flex">
+                    <li><a href="" title="Nạp điện thoại">Nạp điện thoại</a></li>
+                    <li><a href="" title="Mua mã thẻ điện thoại">Mua mã thẻ điện thoại</a></li>
+                    <li><a href="" title="Nạp Game">Nạp Game</a></li>
+                    <li><a href="" title="Mua thẻ Visa trả trước">Mua thẻ Visa trả trước</a></li>
+                    <li><a href="" title="Thanh toán dịch vụ vay tiêu dùng">Thanh toán dịch vụ vay tiêu dùng</a></li>
+                    <li><a href="" title="Mua vé xe">Mua vé xe</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="brand">
+                    <a href="" title=""></a>
+                </div>
+                <ul class="menu flex">
+                    <li>
+                        <a href="" title="">Dịch vụ <i class="fas fa-sort-down"></i></a>
+                        <ul class="sub-menu flex">
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-tel"></i>
+                                    <span>Nạp điện thoại trả trước <br>Thanh toán hóa đơn trả sau</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-sim"></i>
+                                    <span>Mua mã thẻ điện thoại <br>(Để chơi game và mua sắm)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-game"></i>
+                                    <span>Nạp tài khoản Game <br>Mua mã thẻ game</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-visa"></i>
+                                    <span>Mua thẻ Visa ảo <br>thanh toán online an toàn và tiện lợi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-game"></i>
+                                    <span>Mua thẻ chơi game online nước ngoài</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-bill"></i>
+                                    <span>
+                                        Thanh toán hóa đơn <br>Điện nước, điện thoại cố định <br>truyền hình, internet
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <i class="icon icon-sim"></i>
+                                    <span>Mua thẻ nạp data</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="" title="Tin tức">Tin tức</a></li>
+                    <li><a href="" title="">Khuyến mại</a></li>
+                    <li><a href="" title="Hướng dẫn">Hướng dẫn</a></li>
+                    <li><a href="" title="Đại lý">Đại lý</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="section-slider pr">
         <div class="flexslider">
             <ul class="slides">
                 <li> <a target="_blank" href=""><img src="assets/images/slider1.jpg" alt=""/></a></li>
@@ -34,6 +111,12 @@
     $(document).ready(function () {
         $('.flexslider').flexslider({
             animation: "slide"
+        });
+        $('.sub-menu').mouseenter(function () {
+           $(this).parent().css('background','#022a4e');
+        });
+        $('.sub-menu').mouseleave(function () {
+            $(this).parent().css('background','none');
         });
     });
 </script>
