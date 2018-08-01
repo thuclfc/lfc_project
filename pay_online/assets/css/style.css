@@ -145,21 +145,25 @@ body {
     padding: 0; }
     .section-slider .flex-direction-nav a {
       display: block;
-      width: 31px;
-      height: 48px;
+      width: 24px;
+      height: 37px;
+      text-indent: -9999em;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: 3;
+      background: url("../images/arrow.png") no-repeat;
       opacity: 0.7;
       transition: all .3s ease; }
+    .section-slider .flex-direction-nav a:hover {
+      opacity: 1; }
     .section-slider .flex-direction-nav .flex-next {
-      right: 40px; }
+      right: -40px; }
     .section-slider .flex-direction-nav .flex-prev {
-      left: 40px;
-      transform: translateY(-50%); }
+      left: -40px;
+      transform: translateY(-50%) rotate(180deg); }
     .section-slider .flex-direction-nav .flex-prev:before, .section-slider .flex-direction-nav .flex-next:before {
-      display: block;
+      display: none;
       font-size: 40px;
       font-family: "Font Awesome 5 Brands"; }
     .section-slider .flex-direction-nav .flex-prev:before {
