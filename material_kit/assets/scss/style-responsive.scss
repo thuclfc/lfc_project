@@ -3,20 +3,17 @@
     h1{padding: 0 10px;}
     .pro-badge{right: auto; top: auto; margin-left: 15px;}
   }
-
   .features-1{
     padding-bottom: 0;
     .col-md-4{margin-bottom: 30px;}
   }
   .section{padding: 40px 0;}
-
   .section-cards{
     .image-container{
       height: auto; margin: -80px 0 0 -30px;
       img{position: relative; width: 100%;}
     }
   }
-
   .section-sections{
     padding-bottom: 0;
     .sections-img{
@@ -40,6 +37,17 @@
   }
   .our-clients{
     li{width: 50%;}
+  }
+  .card-connection{
+    .card-header{border: none; background: none; margin-left: 0;}
+    .img-avatar img{width: 130px;}
+    .card-body{padding: 0 15px 0 0;}
+  }
+  .profile-content{
+    .card-work{width: 100%;}
+    .profile-detail{
+      padding: 20px 15px 50px;
+    }
   }
   footer{
     .container{flex-direction: column; justify-content: center;}
@@ -112,4 +120,9 @@
       .info-img{width: auto; height: 41%;}
     }
   }
+}
+
+@media (min-height: 768px) and (max-width: 1023px) {
+  .card-connection .img-avatar img{width: 130px;}
+  .profile-content .card-work{width: 100%;}
 }

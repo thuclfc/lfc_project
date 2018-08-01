@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="section-slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li> <a target="_blank" href=""><img src="assets/images/slider1.jpg" alt=""/></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider2.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider3.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider4.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider5.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider6.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider7.png" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+<script src="assets/js/FlexSlider.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.flex-center {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+:root {
+  --blue: #003C71; }
+
+body {
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  font-size: 1rem;
+  background: #e5e5e5; }
+
+.wrapper {
+  width: 100%;
+  overflow: hidden; }
+
+.section-slider {
+  height: auto;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  position: relative; }
+  .section-slider .flex-control-nav {
+    display: none; }
+  .section-slider .flex-direction-nav {
+    position: absolute;
+    padding: 0; }
+
+.flexslider {
+  margin: 0 auto;
+  max-width: 1360px;
+  background: #fff;
+  position: relative; }
+  .flexslider img {
+    width: 100%; }
