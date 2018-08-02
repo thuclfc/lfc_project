@@ -151,5 +151,5 @@ input:focus{outline: none}
 .pr{position: relative;}
 a,a:hover{text-decoration: none;}
 a:hover{color: var(--barney);}
-a{transition: 0.3s;}
+/*a{transition: 0.3s;}*/
 li{list-style: none;}
