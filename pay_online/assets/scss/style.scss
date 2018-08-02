@@ -314,9 +314,62 @@ main{
   a{color: #333;}
   a:hover{text-decoration: underline;}
 }
-.main-left{
+.main-inner{
+  .header{width: 75%; padding: 0 15px; align-items: center; justify-content: space-between;}
   h2.title{font-size: 20px; font-weight: bold; margin: 15px 0;}
   .facebook{margin-top: 20px;}
+  .box-guide{
+    margin-top: 15px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    h4{display: block; padding: 12px 15px; font-size: 18px; font-weight: bold; color: #333; border-bottom: 1px solid #f7f7f7;}
+  }
+  .list-faq{
+    padding: 15px;
+    article{display: none; padding: 10px 18px;}
+    li{margin-bottom: 5px;}
+    li a{
+      padding-left: 18px; font-size: 14px;
+      color: var(--gray1); background: url("../images/item-bullet.png") no-repeat 0 2px;
+    }
+  }
+  .commits{
+    margin-bottom: 17px;
+    padding: 10px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e4e4e4;
+    li{padding: 5px 0; display: flex; align-items: center;}
+    .icon{@include block(block,48px,48px); padding-left: 48px; margin-right: 7px; background: url("../images/icons1.png") no-repeat;}
+    .icon-24h{background-position: 0 0;}
+    .icon-nl{background-position: 0 -96px;}
+    .icon-price{background-position: 0 -240px;}
+    p{color: #999; line-height: 16px;}
+  }
+  .item-service{
+    h4{padding: 5px; background: #e9e7e7; color: #333; font-weight: bold; font-size: 12px;}
+    li{
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 5px; color: #666; border-bottom: 1px solid #e9e7e7; font-size: 12px;
+      span{width: 50%; padding: 0 2px; text-align: center;}
+    }
+    li:nth-child(even){background: #f8f7f7;}
+  }
+  .news-hot{
+    margin: 0 0 17px;
+    background: rgba(255,255,255,0.5);
+    border: 1px dashed #c1c1c1;
+    .list-news{
+      padding: 5px 15px;
+      li{padding: 5px 0;}
+      a{display: block; color: #333; padding-left: 18px; background: url("../images/item-bullet.png") no-repeat 0 2px;}
+      a:hover{text-decoration: underline;}
+      span{color: #c00;}
+    }
+    h4{
+      padding: 10px 15px 10px 45px; border-bottom: 1px solid #f7f7f7;
+      background: url("../images/icon-hot.png") no-repeat 20px center;
+    }
+  }
 }
 .form_pay,.form_buy{
   border: 4px solid var(--blue); border-radius: 4px;
@@ -332,24 +385,8 @@ main{
     padding: 15px;
     .frm-group{display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 15px;}
     label{display: block; width: 100px; margin-bottom: 0; font-size: 13px; color: #666;}
-    input[type="text"],select,input[type="number"],input[type="email"]{height: 30px; width: calc(100% - 100px); padding: 0 6px; border-radius: 3px; border: 1px solid #b1b1b1;}
+    input[type="text"],select,input[type="number"],input[type="email"]{height: 35px; width: calc(100% - 100px); padding: 0 6px; border-radius: 3px; border: 1px solid #b1b1b1;}
     input.full{width: 100%; margin-top: 10px;}
-  }
-  .btn-submit{
-    display: block;
-    margin: 10px 0;
-    width: auto !important;
-    padding: 5px 15px !important;
-    background: linear-gradient(#f56531,#d54b19);
-    color: #fff;
-    text-align: center;
-    border: 1px solid #d54b19;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 2px;
-    line-height: 20px;
-    cursor: pointer;
-    &:hover{background: linear-gradient(#d54b19,#f56531);}
   }
   .multiple{
     select,input[type="email"]{width: auto; min-width: 200px; height: 35px; margin-right: 10px;}
@@ -365,7 +402,21 @@ main{
     input{margin-left: 10px; width: 15px; height: 15px;}
   }
 }
-.table_price{
+.form_card_game{
+  .form-body{
+    input[type="text"],input[type="email"],select{width: 100%;}
+  }
+}
+.form_half{
+  .form-body{
+    label{width: 20%;}
+    input[type="text"],input[type="number"],input[type="email"],select{width: 40%;}
+    .box-capcha{margin-left: 15px;}
+    .btn-submit{margin-left: 20%;}
+  }
+}
+
+.table_price,.box-service,.table_visa{
   margin: 0 0 17px;
   background: rgba(255,255,255,0.95);
   border: 1px solid #e4e4e4;
@@ -398,6 +449,13 @@ main{
     p{font-size: 11px; color: var(--gray1); display: block; padding: 5px;}
   }
 }
+.table_visa{
+  border-collapse: collapse;
+  td{border: 1px solid #e9e7e7;}
+  thead th{padding: 5px; background: #e9e7e7; font-weight: bold; font-size: 12px; text-align: center;}
+  tbody td{padding: 5px; color: #666;  text-align: center;}
+  table tbody tr:nth-child(even) td{background: none;}
+}
 .news-sidebar{
   padding: 10px;
   background: rgba(255,255,255,0.95);
@@ -410,11 +468,68 @@ main{
   a:hover{text-decoration: underline;}
 }
 
+// credit card
+.section-cards{justify-content: space-between;}
+.card-credit{
+  width: 49%;
+  margin-bottom: 30px;
+  position: relative;
+  .card-info{
+    align-items: center;
+    background: #e0e0e0;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    padding: 10px; cursor: pointer;
+    &:hover{
+      background: #a2a5a4;
+      .card-title{color: #fff;}
+    }
+  }
+  .card-thumb img{width: 150px; height: 95px; object-fit: cover;}
+  .card-title{margin: 0 0 0 5px; font-size: 16px;}
+  .sale{
+    @include block(block,60px,52px); background: url("../images/item-sale1.png") no-repeat;
+    padding: 10px 10px 0 0;
+    text-align: center;
+    position: absolute;
+    right: 0; top: -9px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px; font-weight: bold;
+  }
+  .form_credit{
+    display: none;
+    background: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    z-index: 90;
+    .box-capcha{margin-left: 10px;}
+    .frm-group{display: flex; align-items: center; margin: 10px 0;}
+    label{width: 100px; margin-bottom: 0; padding-right: 5px; color: #666;}
+    input,select{width: calc(100% - 100px); padding: 0 6px; height: 30px; border: 1px solid #ccc; border-radius: 4px;}
+
+  }
+  &.active{
+    .form_credit{display: block;}
+    .card-info{background: #a2a5a4;}
+    .card-info .card-title{color: #fff;}
+  }
+
+}
+
+
+
 .bg-mobile{
   background: url(../images/bg-mobile.jpg) no-repeat top center fixed #fff;
 }
 .bg-mobilecard {
   background: url(../images/bg-mobilecard.jpg) no-repeat top center fixed #b1dffd;
+}
+.bg-game{
+  background: url(../images/bg-game.jpg) no-repeat top center fixed #fff;
+}
+.bg-invoices{
+  background: url(../images/bg-invoices.jpg) no-repeat top center fixed #dededc;
 }
 // 4. general
 .buttons{
@@ -435,7 +550,24 @@ main{
     background: linear-gradient(#107cdc,#003C71); color: #fff;
   }
 }
-
+.btn-submit{
+  display: block;
+  margin: 10px 0;
+  width: auto !important;
+  height: auto !important;
+  padding: 5px 15px !important;
+  background: linear-gradient(#f56531,#d54b19);
+  color: #fff;
+  text-align: center;
+  border: 1px solid #d54b19;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+  line-height: 20px;
+  cursor: pointer;
+  &:hover{background: linear-gradient(#d54b19,#f56531);}
+}
+h4{font-weight: bold; font-size: 18px; color: var(--gray1);}
 // 5.footer
 footer{
   width: 100%; min-height: 100px;

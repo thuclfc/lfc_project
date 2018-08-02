@@ -114,205 +114,79 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="bg-game">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Mua thẻ trả trước</li>
+                    <li class="breadcrumb-item active" aria-current="page"> Nạp game</li>
                 </ol>
             </nav>
             <div class="main-inner">
-                <h2 class="title">Mua thẻ trả trước</h2>
                 <div class="row">
+                    <div class="header flex">
+                        <h2 class="title"> Nạp game</h2>
+                        <p>Giảm giá từ 5-10% mọi thẻ Gate, Oncash, Vinagame, Garena, VTC ..</p>
+                    </div>
                     <div class="col-md-9">
-                        <div class="news-hot">
-                            <h4>Hot</h4>
-                            <ul class="list-news">
-                                <li>
-                                    <a href="" title="">
-                                        <b>Thẻ visa ảo (thẻ mềm):</b> dùng thanh toán <span>Online</span>
-                                        các dịch vụ quốc tế (game, verify tài khoản, paypal, mua hàng
-                                        hóa….). Trừ thanh toán Google, Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" title="">
-                                        <b>Thẻ visa vật lý (giao thẻ cứng trong vòng 2- 5 ngày làm việc):</b>
-                                        Dùng thanh toán <b class="redFont">Online, Offline </b> các dịch vụ quốc tế (Google,
-                                        facebook, game, mua hàng hóa…).
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="section-cards flex">
-                            <div class="card-credit">
-                                <div class="card-info flex">
-                                    <div class="card-thumb">
-                                        <img src="assets/images/card/img-sacombank.png" alt="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form action="" method="" class="form_pay form_card_game fh">
+                                    <div class="form-title">
+                                        <h4>Nạp tài khoản game</h4>
+                                        <p>(Zing xu, Scoin, Oncash, Fpt Gate)</p>
                                     </div>
-                                    <h4 class="card-title">Thẻ Visa mềm <br> Sacombank</h4>
-                                    <h5 class="sale">New</h5>
-                                </div>
-                                <form action="" method="" class="form_credit">
-                                    <div class="frm-group">
-                                        <label>Mệnh giá thẻ:</label>
-                                        <input type="text" name="">
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Phí phát hành:</label>
-                                        <h6 class="text-danger">0đ</h6>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ và tên:</label>
-                                        <input type="text" name="full_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ:</label>
-                                        <input type="text" name="first_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Tên đệm:</label>
-                                        <input type="text" name="last_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Giới tính:</label>
-                                        <select name="sex" required>
-                                            <option value="0">Nam</option>
-                                            <option value="1">Nữ</option>
-                                            <option value="2">Chưa rõ</option>
-                                        </select>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Ngày sinh:</label>
-                                        <input type="date" name="birthday" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Email:</label>
-                                        <input type="email" name="email" placeholder="Email kích hoạt, nhận thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Xác nhận Email:</label>
-                                        <input type="email" name="re_email" placeholder="Xác nhận email kích hoạt" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số điện thoại:</label>
-                                        <input type="number" name="number" placeholder="01642546328" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Mã bảo mật:</label>
-                                        <input type="text" name="verify_image_card" maxlength="5" required>
-                                        <div class="box-capcha">
-                                            <img src="assets/images/captcha.gif" alt="">
+                                    <div class="form-body">
+                                        <div class="frm-group ">
+                                            <input name="" type="text" value="" placeholder="Bạn điền tài khoản game của bạn!" required>
                                         </div>
-                                    </div>
-                                    <div class="frm-group">
-                                        <input name="submit1" type="submit" class="btn-submit" value="Đặt mua">
+                                        <div class="frm-group">
+                                            <select name="game_item">
+                                                <option value="SCOIN">SohaCoin [SohaGame]</option>
+                                                <option value="" selected="">Chọn loại game</option>
+                                            </select>
+                                        </div>
+                                        <div class="frm-group">
+                                            <select name="card_value">
+                                                <option value="10000">10.000 đ</option>
+                                                <option value="0" selected="">Chọn mệnh giá thẻ</option>
+                                            </select>
+                                        </div>
+                                        <div class="frm-group">
+                                            <input name="submit1" type="submit" class="btn-submit" value="Nạp tiền nhanh">
+                                        </div>
                                     </div>
                                 </form>
                             </div>
-                            <div class="card-credit">
-                                <div class="card-info flex">
-                                    <div class="card-thumb">
-                                        <img src="assets/images/card/img-eximbank.png" alt="">
+                            <div class="col-md-6">
+                                <form action="" method="" class="form_pay form_card_game fh">
+                                    <div class="form-title">
+                                        <h4>Mua mã thẻ Game</h4>
+                                        <p>(Gate, Oncash, Zing, Garena, Vcoin , ...)</p>
                                     </div>
-                                    <h4 class="card-title">Thẻ VISA cứng <br>  EximBank (thẻ vật lý)</h4>
-                                    <h5 class="sale">New</h5>
-                                </div>
-                                <form action="" method="" class="form_credit">
-                                    <div class="frm-group">
-                                        <label>Mệnh giá thẻ:</label>
-                                        <select name="card_amount">
-                                            <option value="30000">30.000 đ</option>
-                                            <option value="50000">50.000 đ</option>
-                                        </select>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số lượng:</label>
-                                        <input type="number" name="amout" value="1">
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Phí phát hành:</label>
-                                        <h6 class="text-danger">0đ</h6>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ và tên:</label>
-                                        <input type="text" name="full_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ:</label>
-                                        <input type="text" name="first_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Tên đệm:</label>
-                                        <input type="text" name="last_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Email:</label>
-                                        <input type="email" name="email" placeholder="Email kích hoạt, nhận thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Xác nhận Email:</label>
-                                        <input type="email" name="re_email" placeholder="Xác nhận email kích hoạt" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số điện thoại:</label>
-                                        <input type="number" name="number" placeholder="01642546328" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Địa chỉ nhận thẻ:</label>
-                                        <input type="text" name="address" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Mã bảo mật:</label>
-                                        <input type="text" name="verify_image_card" maxlength="5" required>
-                                        <div class="box-capcha">
-                                            <img src="assets/images/captcha.gif" alt="">
+                                    <div class="form-body">
+                                        <div class="frm-group">
+                                            <select name="select_game">
+                                                <option value="FUNCARD">FUNCARD</option>
+                                                <option value="" selected="">Chọn loại game</option>
+                                            </select>
                                         </div>
-                                    </div>
-                                    <div class="frm-group">
-                                        <input name="submit1" type="submit" class="btn-submit" value="Đặt mua">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card-credit">
-                                <div class="card-info flex">
-                                    <div class="card-thumb">
-                                        <img src="assets/images/card/eximbank-visa.png" alt="">
-                                    </div>
-                                    <h4 class="card-title">Nạp tiền vào thẻ VISA <br> EximBank</h4>
-                                    <h5 class="sale">New</h5>
-                                </div>
-                                <form action="" method="" class="form_credit">
-                                    <div class="frm-group">
-                                        <label>Nhập số tài khoản thẻ:</label>
-                                        <input class="full" type="text" name="account_number" placeholder="Nhập số tài khoản in trên thẻ">
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số điện thoại:</label>
-                                        <input class="full" type="number" name="number" placeholder="01642546328" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Nhập số thẻ:</label>
-                                        <input class="full" type="number" name="card_number" placeholder="Nhập số thẻ 16 số in trên thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số tiền: </label>
-                                        <input type="number" name="card_amount" placeholder="Số tiền nạp vào thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Phí phát hành:</label>
-                                        <h6 class="text-danger">0đ</h6>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Mã bảo mật:</label>
-                                        <input type="text" name="verify_image_card" maxlength="5" required>
-                                        <div class="box-capcha">
-                                            <img src="assets/images/captcha.gif" alt="">
+                                        <div class="frm-group">
+                                            <select name="car_value1">
+                                                <option value="10000" selected="">10.000 đ</option>
+                                                <option value="20000">20.000 đ</option>
+                                            </select>
                                         </div>
-                                    </div>
-                                    <div class="frm-group">
-                                        <input name="submit1" type="submit" class="btn-submit" value="Đặt mua">
+                                        <div class="frm-group">
+                                            <label>Số lượng</label>
+                                            <input type="number" name="amount" value="1">
+                                        </div>
+                                        <div class="frm-group">
+                                            <input type="email" placeholder="Điền email của bạn để nhận mã thẻ!">
+                                        </div>
+                                        <div class="frm-group">
+                                            <input name="submit1" type="submit" class="btn-submit" value="Mua ngay">
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -322,39 +196,63 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="table_visa">
-                            <h2 class="title">Phí thẻ Visa trả trước</h2>
+                        <div class="table_price">
+                            <h2 class="title">Bảng giá</h2>
                             <table>
                                 <thead>
                                     <tr>
                                         <th>Loại thẻ</th>
-                                        <th>Mệnh giá</th>
-                                        <th>Phí</th>
+                                        <th>Giảm giá(*)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td rowspan="5"><b>Phí thẻ Visa ảo</b></td>
+                                        <td>Funcard</td>
+                                        <td>6.0</td>
                                     </tr>
                                     <tr>
-                                        <td>25.000đ - 100.000đ</td>
-                                        <td>15.000đ</td>
+                                        <td>Scoin VTCMobile</td>
+                                        <td>3.5</td>
                                     </tr>
                                     <tr>
-                                        <td>100.000đ - 300.000đ</td>
-                                        <td>19.000đ</td>
+                                        <td>Vegacard</td>
+                                        <td>3.5</td>
                                     </tr>
                                     <tr>
-                                        <td>300.000đ - 1.000.000đ</td>
-                                        <td>29.000đ</td>
+                                        <td>Vcoin</td>
+                                        <td>4</td>
                                     </tr>
                                     <tr>
-                                        <td>1.000.000đ - 5.000.000đ</td>
-                                        <td>39.000đ</td>
+                                        <td>Gate</td>
+                                        <td>4.5</td>
                                     </tr>
                                     <tr>
-                                        <td><b>Thẻ Visa vật lý</b></td>
-                                        <td colspan="2">79.000đ</td>
+                                        <td>Zing</td>
+                                        <td>4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oncash</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garena</td>
+                                        <td>4.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SohaGame</td>
+                                        <td>3.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bit Card</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Appota</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Megacard</td>
+                                        <td>5</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -444,10 +342,10 @@
 <script src="assets/js/FlexSlider.js"></script>
 <script>
     $(document).ready(function () {
-        $('.card-info').click(function () {
-            $(this).parent().toggleClass('active');
+        $('.section-slider .flexslider').flexslider({
+            animation: "slide",
+            autoplay: "false"
         });
-
         $('.slider-footer .flexslider').flexslider({
             animation: "slide",
             animationLoop: true,

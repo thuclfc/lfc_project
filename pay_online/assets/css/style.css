@@ -483,13 +483,115 @@ main {
   .breadcrumb a:hover {
     text-decoration: underline; }
 
-.main-left h2.title {
+.main-inner .header {
+  width: 75%;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: space-between; }
+
+.main-inner h2.title {
   font-size: 20px;
   font-weight: bold;
   margin: 15px 0; }
 
-.main-left .facebook {
+.main-inner .facebook {
   margin-top: 20px; }
+
+.main-inner .box-guide {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
+  .main-inner .box-guide h4 {
+    display: block;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #f7f7f7; }
+
+.main-inner .list-faq {
+  padding: 15px; }
+  .main-inner .list-faq article {
+    display: none;
+    padding: 10px 18px; }
+  .main-inner .list-faq li {
+    margin-bottom: 5px; }
+  .main-inner .list-faq li a {
+    padding-left: 18px;
+    font-size: 14px;
+    color: var(--gray1);
+    background: url("../images/item-bullet.png") no-repeat 0 2px; }
+
+.main-inner .commits {
+  margin-bottom: 17px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e4e4e4; }
+  .main-inner .commits li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center; }
+  .main-inner .commits .icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    padding-left: 48px;
+    margin-right: 7px;
+    background: url("../images/icons1.png") no-repeat; }
+  .main-inner .commits .icon-24h {
+    background-position: 0 0; }
+  .main-inner .commits .icon-nl {
+    background-position: 0 -96px; }
+  .main-inner .commits .icon-price {
+    background-position: 0 -240px; }
+  .main-inner .commits p {
+    color: #999;
+    line-height: 16px; }
+
+.main-inner .item-service h4 {
+  padding: 5px;
+  background: #e9e7e7;
+  color: #333;
+  font-weight: bold;
+  font-size: 12px; }
+
+.main-inner .item-service li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  color: #666;
+  border-bottom: 1px solid #e9e7e7;
+  font-size: 12px; }
+  .main-inner .item-service li span {
+    width: 50%;
+    padding: 0 2px;
+    text-align: center; }
+
+.main-inner .item-service li:nth-child(even) {
+  background: #f8f7f7; }
+
+.main-inner .news-hot {
+  margin: 0 0 17px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px dashed #c1c1c1; }
+  .main-inner .news-hot .list-news {
+    padding: 5px 15px; }
+    .main-inner .news-hot .list-news li {
+      padding: 5px 0; }
+    .main-inner .news-hot .list-news a {
+      display: block;
+      color: #333;
+      padding-left: 18px;
+      background: url("../images/item-bullet.png") no-repeat 0 2px; }
+    .main-inner .news-hot .list-news a:hover {
+      text-decoration: underline; }
+    .main-inner .news-hot .list-news span {
+      color: #c00; }
+  .main-inner .news-hot h4 {
+    padding: 10px 15px 10px 45px;
+    border-bottom: 1px solid #f7f7f7;
+    background: url("../images/icon-hot.png") no-repeat 20px center; }
 
 .form_pay, .form_buy {
   border: 4px solid var(--blue);
@@ -518,7 +620,7 @@ main {
       font-size: 13px;
       color: #666; }
     .form_pay .form-body input[type="text"], .form_pay .form-body select, .form_pay .form-body input[type="number"], .form_pay .form-body input[type="email"], .form_buy .form-body input[type="text"], .form_buy .form-body select, .form_buy .form-body input[type="number"], .form_buy .form-body input[type="email"] {
-      height: 30px;
+      height: 35px;
       width: calc(100% - 100px);
       padding: 0 6px;
       border-radius: 3px;
@@ -526,22 +628,6 @@ main {
     .form_pay .form-body input.full, .form_buy .form-body input.full {
       width: 100%;
       margin-top: 10px; }
-  .form_pay .btn-submit, .form_buy .btn-submit {
-    display: block;
-    margin: 10px 0;
-    width: auto !important;
-    padding: 5px 15px !important;
-    background: linear-gradient(#f56531, #d54b19);
-    color: #fff;
-    text-align: center;
-    border: 1px solid #d54b19;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 2px;
-    line-height: 20px;
-    cursor: pointer; }
-    .form_pay .btn-submit:hover, .form_buy .btn-submit:hover {
-      background: linear-gradient(#d54b19, #f56531); }
   .form_pay .multiple select, .form_pay .multiple input[type="email"], .form_buy .multiple select, .form_buy .multiple input[type="email"] {
     width: auto;
     min-width: 200px;
@@ -568,25 +654,40 @@ main {
       width: 15px;
       height: 15px; }
 
-.table_price {
+.form_card_game .form-body input[type="text"], .form_card_game .form-body input[type="email"], .form_card_game .form-body select {
+  width: 100%; }
+
+.form_half .form-body label {
+  width: 20%; }
+
+.form_half .form-body input[type="text"], .form_half .form-body input[type="number"], .form_half .form-body input[type="email"], .form_half .form-body select {
+  width: 40%; }
+
+.form_half .form-body .box-capcha {
+  margin-left: 15px; }
+
+.form_half .form-body .btn-submit {
+  margin-left: 20%; }
+
+.table_price, .box-service, .table_visa {
   margin: 0 0 17px;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid #e4e4e4; }
-  .table_price h2.title {
+  .table_price h2.title, .box-service h2.title, .table_visa h2.title {
     font-size: 18px;
     color: #333;
     margin: 12px 0 12px 20px; }
-  .table_price .logo-card {
+  .table_price .logo-card, .box-service .logo-card, .table_visa .logo-card {
     padding: 4px 2px;
     background: #e9e7e7; }
-    .table_price .logo-card li {
+    .table_price .logo-card li, .box-service .logo-card li, .table_visa .logo-card li {
       display: block;
       width: 72px;
       height: 42px;
       margin: 3px;
       border-radius: 4px;
       border: 1px solid #ccc; }
-    .table_price .logo-card .icon {
+    .table_price .logo-card .icon, .box-service .logo-card .icon, .table_visa .logo-card .icon {
       width: 100%;
       height: 100%;
       display: block;
@@ -594,46 +695,63 @@ main {
       background-position: 0 -41px !important;
       -webkit-filter: grayscale(1);
       filter: grayscale(1); }
-    .table_price .logo-card .icon:hover {
+    .table_price .logo-card .icon:hover, .box-service .logo-card .icon:hover, .table_visa .logo-card .icon:hover {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
-    .table_price .logo-card .icon-viettel {
+    .table_price .logo-card .icon-viettel, .box-service .logo-card .icon-viettel, .table_visa .logo-card .icon-viettel {
       background: url("../images/card/viettel.png") no-repeat; }
-    .table_price .logo-card .icon-mobiphone {
+    .table_price .logo-card .icon-mobiphone, .box-service .logo-card .icon-mobiphone, .table_visa .logo-card .icon-mobiphone {
       background: url("../images/card/mobiphone.png") no-repeat; }
-    .table_price .logo-card .icon-vina {
+    .table_price .logo-card .icon-vina, .box-service .logo-card .icon-vina, .table_visa .logo-card .icon-vina {
       background: url("../images/card/vinaphone.png") no-repeat; }
-    .table_price .logo-card .icon-vnm {
+    .table_price .logo-card .icon-vnm, .box-service .logo-card .icon-vnm, .table_visa .logo-card .icon-vnm {
       background: url("../images/card/vietnammobile.png") no-repeat; }
-    .table_price .logo-card .icon-sfone {
+    .table_price .logo-card .icon-sfone, .box-service .logo-card .icon-sfone, .table_visa .logo-card .icon-sfone {
       background: url("../images/card/sphone.png") no-repeat; }
-    .table_price .logo-card .icon-gmobi {
+    .table_price .logo-card .icon-gmobi, .box-service .logo-card .icon-gmobi, .table_visa .logo-card .icon-gmobi {
       background: url("../images/card/gmobile.png") no-repeat; }
-  .table_price table {
+  .table_price table, .box-service table, .table_visa table {
     width: 100%; }
-    .table_price table th {
+    .table_price table th, .box-service table th, .table_visa table th {
       padding: 5px;
       font-size: 12px;
       font-weight: bold;
       color: #333;
       text-align: center; }
-    .table_price table td {
+    .table_price table td, .box-service table td, .table_visa table td {
       padding: 5px;
       text-align: center;
       color: #666; }
-    .table_price table thead {
+    .table_price table thead, .box-service table thead, .table_visa table thead {
       background: #ccc; }
-    .table_price table tbody tr {
+    .table_price table tbody tr, .box-service table tbody tr, .table_visa table tbody tr {
       border-bottom: 1px solid #e9e7e7; }
-    .table_price table tbody tr:last-child {
+    .table_price table tbody tr:last-child, .box-service table tbody tr:last-child, .table_visa table tbody tr:last-child {
       border-bottom: none; }
-    .table_price table tbody tr:nth-child(even) td {
+    .table_price table tbody tr:nth-child(even) td, .box-service table tbody tr:nth-child(even) td, .table_visa table tbody tr:nth-child(even) td {
       background: #f8f7f7; }
-  .table_price .note p {
+  .table_price .note p, .box-service .note p, .table_visa .note p {
     font-size: 11px;
     color: var(--gray1);
     display: block;
     padding: 5px; }
+
+.table_visa {
+  border-collapse: collapse; }
+  .table_visa td {
+    border: 1px solid #e9e7e7; }
+  .table_visa thead th {
+    padding: 5px;
+    background: #e9e7e7;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center; }
+  .table_visa tbody td {
+    padding: 5px;
+    color: #666;
+    text-align: center; }
+  .table_visa table tbody tr:nth-child(even) td {
+    background: none; }
 
 .news-sidebar {
   padding: 10px;
@@ -647,11 +765,86 @@ main {
   .news-sidebar a:hover {
     text-decoration: underline; }
 
+.section-cards {
+  justify-content: space-between; }
+
+.card-credit {
+  width: 49%;
+  margin-bottom: 30px;
+  position: relative; }
+  .card-credit .card-info {
+    align-items: center;
+    background: #e0e0e0;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    cursor: pointer; }
+    .card-credit .card-info:hover {
+      background: #a2a5a4; }
+      .card-credit .card-info:hover .card-title {
+        color: #fff; }
+  .card-credit .card-thumb img {
+    width: 150px;
+    height: 95px;
+    object-fit: cover; }
+  .card-credit .card-title {
+    margin: 0 0 0 5px;
+    font-size: 16px; }
+  .card-credit .sale {
+    display: block;
+    width: 60px;
+    height: 52px;
+    background: url("../images/item-sale1.png") no-repeat;
+    padding: 10px 10px 0 0;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: -9px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold; }
+  .card-credit .form_credit {
+    display: none;
+    background: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    z-index: 90; }
+    .card-credit .form_credit .box-capcha {
+      margin-left: 10px; }
+    .card-credit .form_credit .frm-group {
+      display: flex;
+      align-items: center;
+      margin: 10px 0; }
+    .card-credit .form_credit label {
+      width: 100px;
+      margin-bottom: 0;
+      padding-right: 5px;
+      color: #666; }
+    .card-credit .form_credit input, .card-credit .form_credit select {
+      width: calc(100% - 100px);
+      padding: 0 6px;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px; }
+  .card-credit.active .form_credit {
+    display: block; }
+  .card-credit.active .card-info {
+    background: #a2a5a4; }
+  .card-credit.active .card-info .card-title {
+    color: #fff; }
+
 .bg-mobile {
   background: url(../images/bg-mobile.jpg) no-repeat top center fixed #fff; }
 
 .bg-mobilecard {
   background: url(../images/bg-mobilecard.jpg) no-repeat top center fixed #b1dffd; }
+
+.bg-game {
+  background: url(../images/bg-game.jpg) no-repeat top center fixed #fff; }
+
+.bg-invoices {
+  background: url(../images/bg-invoices.jpg) no-repeat top center fixed #dededc; }
 
 .buttons {
   border-top: 1px solid #f7f7f7;
@@ -669,6 +862,29 @@ main {
   .buttons .btns:hover {
     background: linear-gradient(#107cdc, #003C71);
     color: #fff; }
+
+.btn-submit {
+  display: block;
+  margin: 10px 0;
+  width: auto !important;
+  height: auto !important;
+  padding: 5px 15px !important;
+  background: linear-gradient(#f56531, #d54b19);
+  color: #fff;
+  text-align: center;
+  border: 1px solid #d54b19;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+  line-height: 20px;
+  cursor: pointer; }
+  .btn-submit:hover {
+    background: linear-gradient(#d54b19, #f56531); }
+
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--gray1); }
 
 footer {
   width: 100%;
