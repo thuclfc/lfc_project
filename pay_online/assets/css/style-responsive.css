@@ -12,7 +12,132 @@
   justify-content: center;
   -webkit-justify-content: center; }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .card-item {
+    width: 100%; }
+    .card-item .card-body {
+      min-height: 100px; }
+  .row_agency {
+    flex-direction: column-reverse; }
+  .agency-login {
+    margin-top: 20px; }
+  .main-inner .header {
+    width: 100%; }
+    .main-inner .header h2.title {
+      margin: 10px 0; }
+    .main-inner .header p {
+      margin-bottom: 10px; }
+  .form_half .form-body label {
+    width: 100%;
+    margin-bottom: 6px; }
+  .form_half .form-body select, .form_half .form-body input[type="number"], .form_half .form-body input[type="email"], .form_half .form-body input[type="text"] {
+    width: 100%; }
+  .form_half .form-body .verify_image {
+    width: 50% !important; }
+  .form_half .form-body .btn-submit {
+    margin-left: 0; }
+  .form_buy, .form_pay {
+    margin-bottom: 10px; }
+    .form_buy .multiple select, .form_buy .multiple input[type="email"], .form_pay .multiple select, .form_pay .multiple input[type="email"] {
+      width: 100%;
+      margin: 0 0 15px 0; }
+    .form_buy .checkbox, .form_pay .checkbox {
+      margin-left: 0; }
+    .form_buy.fh, .form_pay.fh {
+      height: auto; }
+    .form_buy .form-body .input_email, .form_pay .form-body .input_email {
+      width: 100% !important; }
+  .form_card_game {
+    margin-top: 15px; }
+  .card-credit {
+    width: 100%; }
+    .card-credit .card-title {
+      font-size: 14px;
+      margin-left: 8px; }
+    .card-credit .card-info {
+      flex-wrap: nowrap; }
+    .card-credit .form_credit {
+      position: relative; }
+  .popup_pay .pay_header {
+    padding: 10px 0;
+    flex-direction: column; }
+    .popup_pay .pay_header button {
+      position: relative; }
+    .popup_pay .pay_header h4 {
+      padding: 10px 0; }
+  .popup_pay .list-cards {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding-left: 0; }
+  .popup_pay .pay_info {
+    width: 100%; }
+  .news {
+    margin-top: 15px; }
+    .news .content {
+      width: calc(100% - 140px); }
+    .news .thumb img {
+      width: 125px;
+      height: 95px; }
+    .news .post h5 a {
+      margin-top: 0; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-item {
+    width: 48%; }
+  .agency-login {
+    margin-top: 40px; }
+  .form_half .form-body label {
+    width: 30%; }
+  .form_half .form-body select, .form_half .form-body input[type="number"], .form_half .form-body input[type="email"] {
+    width: 60%; }
+  .form_buy .multiple .input_group {
+    margin-top: 15px; }
+  .form_buy .checkbox {
+    margin: 15px 0 0 0; }
+  .form_pay.fh {
+    height: auto;
+    margin-bottom: 15px; }
+  .main-inner .header {
+    width: 66%; }
+    .main-inner .header p {
+      margin-bottom: 10px; }
+  .card-credit {
+    width: 100%; }
+    .card-credit .card-info {
+      flex-wrap: nowrap; }
+    .card-credit .form_credit {
+      position: relative; }
+  .news .content {
+    width: calc(100% - 160px); } }
+
 @media (min-width: 320px) and (max-width: 1023px) {
+  main {
+    padding: 0; }
+  main .home-inner {
+    margin-top: 30px; }
+  .box-facebook, .box-support {
+    display: none !important; }
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99; }
+  .section-slider, .category main {
+    margin-top: 57px; }
+  .category main {
+    padding: 20px 0; }
+  header.active .navbar .menu {
+    display: block;
+    opacity: 1;
+    right: 0; }
+  header.active .navbar-toggle span {
+    transform: translateY(-50%) rotate(45deg); }
+  header.active .navbar-toggle span:after {
+    bottom: -1px;
+    transform: rotate(90deg); }
+  header.active .navbar-toggle span:before {
+    display: none; }
   .navbar-toggle {
     display: block;
     padding: 0;
@@ -41,13 +166,21 @@
       bottom: -7px; }
   .navbar .menu {
     display: block;
+    height: 100%;
+    padding-bottom: 57px;
     margin-left: -15px;
-    position: absolute;
+    position: fixed;
+    right: -100%;
     top: 57px;
     width: 100%;
-    background: var(--blue); }
+    background: #0b4d88;
+    opacity: 0;
+    transition: 0.5s;
+    overflow: auto; }
+    .navbar .menu > li {
+      height: auto; }
     .navbar .menu > li > a {
-      padding: 18px 15px; }
+      padding: 10px 15px; }
     .navbar .menu .sub-menu {
       display: block;
       top: 0;
@@ -59,8 +192,69 @@
     width: 200px;
     height: 46px;
     background-size: 200px 46px;
-    margin: 6px 0 0 -10px; }
+    margin: 0 0 0 -10px; }
   .topbar {
     display: none; }
   .news-slider {
-    display: none; } }
+    display: none; }
+  .section-slider .flex-control-nav li {
+    margin: 0 4px; }
+  .section-slider .flex-control-nav li a {
+    width: 14px;
+    height: 14px; }
+  .section-slider .flexslider img {
+    object-fit: cover;
+    min-height: 150px; }
+  .section-slider:hover .flex-direction-nav .flex-next {
+    right: 10px; }
+  .section-slider:hover .flex-direction-nav .flex-prev {
+    left: 10px; }
+  .card-item .card-body {
+    padding: 10px 5px 10px 15px; }
+  .card-item .card-header {
+    flex-wrap: nowrap; }
+    .card-item .card-header .icon {
+      margin-left: 0; }
+    .card-item .card-header .sale {
+      right: 2px;
+      width: 50px;
+      height: 43px;
+      background-size: 50px 43px;
+      padding-right: 6px;
+      top: -9px; }
+    .card-item .card-header .sale span {
+      font-size: 13px; }
+    .card-item .card-header .sale span.free {
+      margin-top: 5px;
+      font-size: 11px; }
+    .card-item .card-header .text {
+      padding-right: 50px; }
+    .card-item .card-header .text p {
+      font-size: 11px; }
+  .card-item .list-card-visa {
+    width: 100% !important; }
+  .row_agency {
+    align-items: flex-start; }
+  .agency-info h2.title {
+    font-size: 20px; }
+  .table_price .logo-card {
+    justify-content: center; }
+  footer .slider-footer {
+    padding: 0 0 10px 0; }
+    footer .slider-footer h4 {
+      text-align: center;
+      float: none; }
+    footer .slider-footer .flexslider {
+      width: 80%;
+      margin: 0 auto;
+      position: relative; }
+  footer .flex-direction-nav .flex-prev {
+    left: -15px; }
+  footer .flex-direction-nav .flex-next {
+    right: -15px; } }
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .navbar .menu > li > a {
+    padding: 18px 25px; }
+  .form_half .form-body label {
+    width: 30%; } }

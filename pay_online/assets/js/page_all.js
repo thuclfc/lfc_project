@@ -1,9 +1,13 @@
 $(document).ready(function () {
     $('.slider-footer .flexslider').flexslider({
         animation: "slide",
-        animationLoop: true,
+        animationLoop: false,
         itemWidth: 37,
+        move: 1,
         itemMargin: 5
+    });
+    $('.navbar-toggle').click(function () {
+       $('header').toggleClass('active');
     });
 
     $('.btn-support').click(function () {

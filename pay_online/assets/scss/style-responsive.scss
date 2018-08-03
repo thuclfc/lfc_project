@@ -19,9 +19,120 @@
   -webkit-justify-content: center;
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  .card-item{
+    width: 100%;
+    .card-body{min-height: 100px;}
+  }
+  .row_agency{flex-direction: column-reverse;}
+  .agency-login{margin-top: 20px;}
 
+  .main-inner{
+    .header{
+      width: 100%;
+      h2.title{margin: 10px 0;}
+      p{margin-bottom: 10px;}
+    }
+  }
+
+  // form buy and sale
+  .form_half{
+    .form-body{
+      label {width: 100%; margin-bottom: 6px;}
+      select, input[type="number"],input[type="email"],input[type="text"]{width: 100%;}
+      .verify_image{width: 50% !important;}
+      .btn-submit{margin-left: 0;}
+    }
+  }
+  .form_buy,.form_pay{
+    margin-bottom: 10px;
+    .multiple{
+      select,input[type="email"]{width: 100%; margin: 0 0 15px 0;}
+    }
+    .checkbox{margin-left: 0;}
+    &.fh{height: auto;}
+    .form-body .input_email{width: 100% !important;}
+  }
+  .form_card_game{margin-top: 15px;}
+
+  // card credit
+  .card-credit{
+    width: 100%;
+    .card-title{font-size: 14px; margin-left: 8px;}
+    .card-info{flex-wrap: nowrap;}
+    .form_credit{position: relative;}
+  }
+
+  // popup
+  .popup_pay{
+    .pay_header{
+      padding: 10px 0;
+      flex-direction: column;
+      button{position: relative;}
+      h4{padding: 10px 0;}
+    }
+    .list-cards{width: 100%; justify-content: center; margin-bottom: 15px; padding-left: 0;}
+    .pay_info{width: 100%;}
+  }
+
+  // tin tuc
+  .news{
+    margin-top: 15px;
+    .content{width: calc(100% - 140px);}
+    .thumb img{width: 125px; height: 95px;}
+    .post h5 a{margin-top: 0;}
+  }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-item{width: 48%;}
+  .agency-login{margin-top: 40px;}
+
+  // form buy and sale
+  .form_half{
+    .form-body{
+      label{width: 30%;}
+      select, input[type="number"],input[type="email"]{width: 60%;}
+    }
+  }
+  .form_buy{
+    .multiple{
+      .input_group{margin-top: 15px;}
+    }
+    .checkbox{margin: 15px 0 0 0;}
+  }
+  .form_pay.fh{height: auto; margin-bottom: 15px;}
+  .main-inner .header{
+    width: 66%;
+    p{margin-bottom: 10px;}
+  }
+  .card-credit{
+    width: 100%;
+    .card-info{flex-wrap: nowrap;}
+    .form_credit{position: relative;}
+  }
+
+  // tin tuc
+  .news{
+    .content{width: calc(100% - 160px);}
+  }
+}
+
 @media (min-width: 320px) and (max-width: 1023px) {
+  // 1. header
+  main{padding: 0;}
+  main .home-inner{margin-top: 30px;}
+  .box-facebook,.box-support{display: none !important;}
+   header{width: 100%; position: fixed; top: 0; z-index: 99;}
+  .section-slider,.category main{margin-top: 57px;}
+  .category main{padding: 20px 0;}
+   header.active{
+     .navbar .menu{display: block; opacity: 1; right: 0;}
+     .navbar-toggle{
+       span{transform: translateY(-50%) rotate(45deg);}
+       span:after{bottom: -1px;  transform: rotate(90deg);}
+       span:before{display: none;}
+     }
+  }
   .navbar-toggle{
     display: block; padding: 0; position: relative; @include block(block,33px,18px);
     span{@include block(block,33px,2px); background: #fff; position: absolute; top: 50%; transform: translateY(-50%);}
@@ -33,18 +144,82 @@
   }
   .navbar .menu{
     display: block;
+    height: 100%;
+    padding-bottom: 57px;
     margin-left: -15px;
-    position: absolute;
+    position: fixed;
+    right: -100%;
     top: 57px;
     width: 100%;
-    background: var(--blue);
-    > li > a{padding: 18px 15px;}
+    background: #0b4d88;
+    opacity: 0; transition: 0.5s;
+    overflow: auto;
+    > li{height: auto;}
+    > li > a{padding: 10px 15px;}
     .sub-menu{
       display: block; top: 0; position: relative; width: 100%;
       li{width: 100%;}
     }
   }
-  .brand a{width: 200px; height: 46px; background-size: 200px 46px; margin: 6px 0 0 -10px;}
+  .brand a{width: 200px; height: 46px; background-size: 200px 46px; margin: 0 0 0 -10px;}
   .topbar{display: none;}
   .news-slider{display: none;}
+
+  // 2. slider
+  .section-slider{
+    .flex-control-nav{
+      li{margin: 0 4px;}
+      li a{width: 14px; height: 14px;}
+    }
+    .flexslider img{object-fit: cover; min-height: 150px;}
+    &:hover{
+      .flex-direction-nav{
+        .flex-next{right: 10px;}
+        .flex-prev{left: 10px;}
+      }
+    }
+  }
+
+  // 3. card-item
+  .card-item{
+    .card-body{padding: 10px 5px 10px 15px;}
+    .card-header{
+      flex-wrap: nowrap;
+      .icon{margin-left: 0;}
+      .sale{right: 2px; width: 50px; height: 43px; background-size: 50px 43px;padding-right: 6px; top: -9px;}
+      .sale span{font-size: 13px;}
+      .sale span.free{margin-top: 5px; font-size: 11px;}
+      .text{padding-right: 50px;}
+      .text p{font-size: 11px;}
+    }
+    .list-card-visa{width: 100% !important;}
+  }
+
+  // daily
+  .row_agency{align-items: flex-start;}
+  .agency-info{
+    h2.title{font-size: 20px;}
+  }
+
+  // form buy and sale
+  .table_price .logo-card{justify-content: center;}
+
+
+  // footer
+  footer{
+    .slider-footer{
+      padding: 0 0 10px 0;
+      h4{text-align: center; float: none;}
+      .flexslider{width: 80%; margin: 0 auto; position: relative;}
+    }
+    .flex-direction-nav{
+      .flex-prev{left: -15px;}
+      .flex-next{right: -15px;}
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .navbar .menu > li > a{padding: 18px 25px;}
+  .form_half .form-body label{width: 30%;}
 }

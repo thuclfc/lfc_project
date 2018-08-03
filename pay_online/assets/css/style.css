@@ -103,6 +103,7 @@ body {
       width: 60px;
       height: 60px;
       margin-left: 0 !important;
+      margin-right: 10px;
       background: url("../images/icons.png") no-repeat 0 0; }
       .navbar .sub-menu li i.icon-tel {
         background-position: 0 0; }
@@ -650,6 +651,8 @@ main {
     .form_pay .form-body input.full, .form_buy .form-body input.full {
       width: 100%;
       margin-top: 10px; }
+    .form_pay .form-body .input_email, .form_buy .form-body .input_email {
+      width: 62% !important; }
   .form_pay .multiple select, .form_pay .multiple input[type="email"], .form_buy .multiple select, .form_buy .multiple input[type="email"] {
     width: auto;
     min-width: 200px;
@@ -1220,15 +1223,17 @@ main {
     float: right;
     padding: 8px 20px !important; }
 
-.popup_pay a.close_popup {
+.popup_pay .close_popup {
   display: block;
   width: 22px;
   height: 22px;
+  border: none;
   background: url("../images/popup-close.png") no-repeat;
   position: absolute;
   top: -10px;
   right: -10px;
-  z-index: 9; }
+  z-index: 9;
+  cursor: pointer; }
 
 .bg-mobile {
   background: url(../images/bg-mobile.jpg) no-repeat top center fixed #fff; }
