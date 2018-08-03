@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 1200px)" href="assets/css/style-responsive.css">
 </head>
 <body>
-<div class="wrapper category">
+<div class="wrapper home">
     <header>
         <div class="topbar">
             <div class="container">
@@ -28,12 +29,11 @@
         </div>
         <nav class="navbar">
             <div class="container">
-                <div class="brand">
-                    <a href="" title=""></a>
-                </div>
+                <div class="brand"><a href="" title=""></a></div>
+                <a href="javascript:void(0)" class="navbar-toggle"><span></span></a>
                 <ul class="menu flex">
                     <li>
-                        <a href="" title="">Dịch vụ <i class="fas fa-sort-down"></i></a>
+                        <a href="javascript:void(0)" title="">Dịch vụ <i class="fas fa-sort-down"></i></a>
                         <ul class="sub-menu flex">
                             <li>
                                 <a href="" title="">
@@ -114,261 +114,200 @@
             </div>
         </div>
     </header>
-    <main>
+    <div class="section-slider pr">
         <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Mua thẻ trả trước</li>
-                </ol>
-            </nav>
-            <div class="main-inner">
-                <h2 class="title">Mua thẻ trả trước</h2>
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="news-hot">
-                            <h4>Hot</h4>
-                            <ul class="list-news">
-                                <li>
-                                    <a href="" title="">
-                                        <b>Thẻ visa ảo (thẻ mềm):</b> dùng thanh toán <span>Online</span>
-                                        các dịch vụ quốc tế (game, verify tài khoản, paypal, mua hàng
-                                        hóa….). Trừ thanh toán Google, Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" title="">
-                                        <b>Thẻ visa vật lý (giao thẻ cứng trong vòng 2- 5 ngày làm việc):</b>
-                                        Dùng thanh toán <b class="redFont">Online, Offline </b> các dịch vụ quốc tế (Google,
-                                        facebook, game, mua hàng hóa…).
-                                    </a>
-                                </li>
-                            </ul>
+            <div class="news-slider">
+                <ul class="slider">
+                    <li><a href="" title="">Bùng nổ thẻ game Funcard trên Thanhtoanonline.vn</a></li>
+                    <li><a href="" title="">Ra mắt phiên bản Mobile trên Hệ điều hành Androids</a></li>
+                    <li><a href="" title="">Thông báo Mở lại hệ thống dịch vụ thẻ Visa trả trước Sacombank</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flexslider">
+            <ul class="slides">
+                <li> <a target="_blank" href=""><img src="assets/images/slider1.jpg" alt=""/></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider2.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider3.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider4.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider5.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider6.png" alt="" /></a></li>
+                <li> <a target="_blank" href=""><img src="assets/images/slider7.png" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <div class="container home-inner">
+            <div class="row">
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"><i class="icon-tel"></i></div>
+                        <div class="text">
+                            <p>NẠP ĐIỆN THOẠI TRẢ TRƯỚC</p>
+                            <p>THANH TOÁN HÓA ĐƠN TRẢ SAU</p>
+                            <p>MUA MÃ THẺ ĐIỆN THOẠ</p>
                         </div>
-                        <div class="section-cards flex">
-                            <div class="card-credit">
-                                <div class="card-info flex">
-                                    <div class="card-thumb">
-                                        <img src="assets/images/card/img-sacombank.png" alt="">
-                                    </div>
-                                    <h4 class="card-title">Thẻ Visa mềm <br> Sacombank</h4>
-                                    <h5 class="sale">New</h5>
-                                </div>
-                                <form action="" method="" class="form_credit">
-                                    <div class="frm-group">
-                                        <label>Mệnh giá thẻ:</label>
-                                        <input type="text" name="">
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Phí phát hành:</label>
-                                        <h6 class="text-danger">0đ</h6>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ và tên:</label>
-                                        <input type="text" name="full_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ:</label>
-                                        <input type="text" name="first_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Tên đệm:</label>
-                                        <input type="text" name="last_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Giới tính:</label>
-                                        <select name="sex" required>
-                                            <option value="0">Nam</option>
-                                            <option value="1">Nữ</option>
-                                            <option value="2">Chưa rõ</option>
-                                        </select>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Ngày sinh:</label>
-                                        <input type="date" name="birthday" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Email:</label>
-                                        <input type="email" name="email" placeholder="Email kích hoạt, nhận thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Xác nhận Email:</label>
-                                        <input type="email" name="re_email" placeholder="Xác nhận email kích hoạt" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số điện thoại:</label>
-                                        <input type="number" name="number" placeholder="01642546328" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Mã bảo mật:</label>
-                                        <input type="text" name="verify_image_card" maxlength="5" required>
-                                        <div class="box-capcha">
-                                            <img src="assets/images/captcha.gif" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="frm-group">
-                                        <input name="submit1" type="submit" class="btn-submit" value="Đặt mua">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card-credit">
-                                <div class="card-info flex">
-                                    <div class="card-thumb">
-                                        <img src="assets/images/card/img-eximbank.png" alt="">
-                                    </div>
-                                    <h4 class="card-title">Thẻ VISA cứng <br>  EximBank (thẻ vật lý)</h4>
-                                    <h5 class="sale">New</h5>
-                                </div>
-                                <form action="" method="" class="form_credit">
-                                    <div class="frm-group">
-                                        <label>Mệnh giá thẻ:</label>
-                                        <select name="card_amount">
-                                            <option value="30000">30.000 đ</option>
-                                            <option value="50000">50.000 đ</option>
-                                        </select>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số lượng:</label>
-                                        <input type="number" name="amout" value="1">
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Phí phát hành:</label>
-                                        <h6 class="text-danger">0đ</h6>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ và tên:</label>
-                                        <input type="text" name="full_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Họ:</label>
-                                        <input type="text" name="first_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Tên đệm:</label>
-                                        <input type="text" name="last_name" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Email:</label>
-                                        <input type="email" name="email" placeholder="Email kích hoạt, nhận thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Xác nhận Email:</label>
-                                        <input type="email" name="re_email" placeholder="Xác nhận email kích hoạt" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số điện thoại:</label>
-                                        <input type="number" name="number" placeholder="01642546328" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Địa chỉ nhận thẻ:</label>
-                                        <input type="text" name="address" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Mã bảo mật:</label>
-                                        <input type="text" name="verify_image_card" maxlength="5" required>
-                                        <div class="box-capcha">
-                                            <img src="assets/images/captcha.gif" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="frm-group">
-                                        <input name="submit1" type="submit" class="btn-submit" value="Đặt mua">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card-credit">
-                                <div class="card-info flex">
-                                    <div class="card-thumb">
-                                        <img src="assets/images/card/eximbank-visa.png" alt="">
-                                    </div>
-                                    <h4 class="card-title">Nạp tiền vào thẻ VISA <br> EximBank</h4>
-                                    <h5 class="sale">New</h5>
-                                </div>
-                                <form action="" method="" class="form_credit">
-                                    <div class="frm-group">
-                                        <label>Nhập số tài khoản thẻ:</label>
-                                        <input class="full" type="text" name="account_number" placeholder="Nhập số tài khoản in trên thẻ">
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số điện thoại:</label>
-                                        <input class="full" type="number" name="number" placeholder="01642546328" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Nhập số thẻ:</label>
-                                        <input class="full" type="number" name="card_number" placeholder="Nhập số thẻ 16 số in trên thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Số tiền: </label>
-                                        <input type="number" name="card_amount" placeholder="Số tiền nạp vào thẻ" required>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Phí phát hành:</label>
-                                        <h6 class="text-danger">0đ</h6>
-                                    </div>
-                                    <div class="frm-group">
-                                        <label>Mã bảo mật:</label>
-                                        <input type="text" name="verify_image_card" maxlength="5" required>
-                                        <div class="box-capcha">
-                                            <img src="assets/images/captcha.gif" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="frm-group">
-                                        <input name="submit1" type="submit" class="btn-submit" value="Đặt mua">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="facebook">
-                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        <h5 class="sale"><span>5-10%</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-tel">
+                            <li><i class="icon icon-viettel"></i></li>
+                            <li><i class="icon icon-mobiphone"></i></li>
+                            <li><i class="icon icon-vina"></i></li>
+                            <li><i class="icon icon-gmobi"></i></li>
+                            <li><i class="icon icon-vnm"></i></li>
+                            <li><i class="icon icon-sfone"></i></li>
+                        </ul>
+                        <div class="text-note">
+                            <p>Giảm 5-10% cho các nhà mạng Viettel, Mobi, Vina, Vietnammobile, Gtel, Sfone</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="table_visa">
-                            <h2 class="title">Phí thẻ Visa trả trước</h2>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Loại thẻ</th>
-                                        <th>Mệnh giá</th>
-                                        <th>Phí</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="5"><b>Phí thẻ Visa ảo</b></td>
-                                    </tr>
-                                    <tr>
-                                        <td>25.000đ - 100.000đ</td>
-                                        <td>15.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td>100.000đ - 300.000đ</td>
-                                        <td>19.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td>300.000đ - 1.000.000đ</td>
-                                        <td>29.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1.000.000đ - 5.000.000đ</td>
-                                        <td>39.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Thẻ Visa vật lý</b></td>
-                                        <td colspan="2">79.000đ</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="note">
-                                <p>* Thanh toán qua ví NgânLượng: miễn phí</p>
-                                <p>* Thanh toán qua eBanking: 1.760đ + 1.1%</p>
-                                <p>* Thanh toán Visa, Master, JCB: 0 + 2.7%</p>
-                            </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Nạp tiền điện thoại">Nạp tiền điện thoại</a>
+                        <a class="btns" href="" title="Mua thẻ điện thoại">Mua thẻ điện thoại</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"><i class="icon-game"></i></div>
+                        <div class="text">
+                            <p>Nạp tài khoản Game</p>
+                            <p>Mua mã thẻ game</p>
                         </div>
-                        <ul class="news-sidebar">
-                            <li><a href="" title="">Bùng nổ thẻ game Funcard trên Thanhtoanonline.vn</a></li>
-                            <li><a href="" title="">Ra mắt phiên bản Mobile trên Hệ điều hành Androids</a></li>
-                            <li><a href="" title="">Thông báo Mở lại hệ thống dịch vụ thẻ Visa trả trước Sacombank</a></li>
+                        <h5 class="sale"><span>5-10%</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-game">
+                            <li><i class="icon icon-vcoin"></i></li>
+                            <li><i class="icon icon-vtc"></i></li>
+                            <li><i class="icon icon-scoin"></i></li>
+                            <li><i class="icon icon-funtab"></i></li>
+                            <li><i class="icon icon-appota"></i></li>
+                            <li><i class="icon icon-gate"></i></li>
+                            <li><i class="icon icon-zing"></i></li>
+                            <li><i class="icon icon-ongame"></i></li>
+                            <li><i class="icon icon-shg"></i></li>
+                            <li><i class="icon icon-garena"></i></li>
                         </ul>
+                        <div class="text-note">
+                            <p>Luôn giảm 6-12% khi nạp tiền, mua thẻ Vcoin, Zing, Garena, Gate, Ocash... thanh toán bằng mọi hình thức</p>
+                        </div>
+                    </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Nạp game - Mua thẻ game">Nạp game - Mua thẻ game</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"><i class="icon-bill"></i></div>
+                        <div class="text">
+                            <p>Thanh toán dịch vụ vay tiêu dùng</p>
+                        </div>
+                        <h5 class="sale"><span class="free">Miễn phí</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-acc">
+                            <li><i class="icon icon-credit"></i></li>
+                            <li><i class="icon icon-hc"></i></li>
+                            <li><i class="icon icon-doctor"></i></li>
+                        </ul>
+                        <div class="text-note">
+                            <p>Không thu phí</p>
+                        </div>
+                    </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Thanh toán">Thanh toán</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"><i class="icon-tel"></i></div>
+                        <div class="text">
+                            <p>Mua thẻ nạp data telco</p>
+                        </div>
+                        <h5 class="sale"><span>-9%</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-tel">
+                            <li><i class="icon icon-viettel"></i></li>
+                            <li><i class="icon icon-mobiphone"></i></li>
+                            <li><i class="icon icon-vina"></i></li>
+                            <li><i class="icon icon-gmobi"></i></li>
+                            <li><i class="icon icon-vnm"></i></li>
+                            <li><i class="icon icon-sfone"></i></li>
+                        </ul>
+                    </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Mua thẻ nạp data">Mua thẻ nạp data</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"><i class="icon-visa"></i></div>
+                        <div class="text">
+                            <p>Mua thẻ visa</p>
+                        </div>
+                        <h5 class="sale"><span>New</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-visa">
+                            <li><i class="icon icon-visa">10.000 Đ</i></li>
+                            <li><i class="icon icon-visa">20.000 Đ</i></li>
+                            <li><i class="icon icon-visa">50.000 Đ</i></li>
+                            <li><i class="icon icon-visa">100.000 Đ</i></li>
+                            <li><i class="icon icon-visa">200.000 Đ</i></li>
+                            <li><i class="icon icon-visa">500.000 Đ</i></li>
+                            <li><i class="icon icon-visa">1.000.000 Đ</i></li>
+                            <li><i class="icon icon-visa">5.000.000 Đ</i></li>
+                        </ul>
+                        <div class="text-note">
+                            <p>Phí thanh toán rẻ nhất thị trường.</p>
+                            <p>Mua thẻ visa trả trước với nhiều mệnh giá.</p>
+                        </div>
+                    </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Mua thẻ">Mua thẻ</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"><i class="icon-game"></i></div>
+                        <div class="text">
+                            <p>Mua thẻ game online nước ngoài</p>
+                            <p>chơi Game quốc tế</p>
+                        </div>
+                        <h5 class="sale"><span>New</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-game">
+                            <li><i class="icon code-game">$5</i></li>
+                            <li><i class="icon code-game">$10</i></li>
+                            <li><i class="icon code-game">$20</i></li>
+                        </ul>
+                    </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Mua mã thẻ game">Mua mã thẻ game</a>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header flex">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <p>Thẻ xem phim HD - phim Bản Quyền</p>
+                            <p>Film+ (FilmPlus)</p>
+                        </div>
+                        <h5 class="sale"><span>-10%</span></h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-card list-card-movie">
+                            <li><i class="icon icon-movie"></i></li>
+                        </ul>
+                        <div class="text-note">
+                            <p>Giá rẻ nhất - chiết khấu 10% khi mua Thẻ xem phim tại Fim+, thỏa sức xem phim HD, Phim Bản Quyền, Phim chiếu rạp....</p>
+                        </div>
+                    </div>
+                    <div class="buttons flex-center">
+                        <a class="btns" href="" title="Mua thẻ film">Mua thẻ film</a>
                     </div>
                 </div>
             </div>
@@ -442,32 +381,12 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 <script src="assets/js/FlexSlider.js"></script>
+<script src="assets/js/page_all.js"></script>
 <script>
     $(document).ready(function () {
-        $('.card-info').click(function () {
-            $(this).parent().toggleClass('active');
-        });
-
-        $('.slider-footer .flexslider').flexslider({
+        $('.section-slider .flexslider').flexslider({
             animation: "slide",
-            animationLoop: true,
-            itemWidth: 37,
-            itemMargin: 5
-        });
-
-
-        $('.btn-support').click(function () {
-            $('.box-support').addClass('active');
-        });
-        $('.close_support').click(function () {
-            $('.box-support').removeClass('active');
-        });
-
-        $('.sub-menu').mouseenter(function () {
-           $(this).parent().css('background','#022a4e');
-        });
-        $('.sub-menu').mouseleave(function () {
-            $(this).parent().css('background','none');
+            autoplay: "false"
         });
     });
 </script>

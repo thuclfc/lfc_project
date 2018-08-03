@@ -114,69 +114,48 @@
             </div>
         </div>
     </header>
-    <main class="bg-mobile">
+    <main class="bg-game">
         <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Nạp tiền điện thoại</li>
+                    <li class="breadcrumb-item active" aria-current="page">Thẻ xem phim</li>
                 </ol>
             </nav>
             <div class="main-inner">
-                <h2 class="title">Nạp tiền điện thoại</h2>
+                <div class="header flex">
+                    <h2 class="title">Thẻ xem phim</h2>
+                    <p>Giảm giá từ 10% mọi thẻ rẻ nhất thị trường ...</p>
+                </div>
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <form action="" method="" class="form_pay fh">
-                                    <div class="form-title">
-                                        <h4>Nạp cho thuê bao trả trước</h4>
-                                        <p>(Các mạng: Viettel, Mobi, Vina...) <br>(mạng Viettel Homephone trả trước)</p>
-                                    </div>
-                                    <div class="form-body">
-                                        <div class="frm-group">
-                                            <label>Chọn mệnh giá:</label>
-                                            <select name="" id="">
-                                                <option value="10000">10.000 đ</option>
-                                                <option value="0" selected="">Chọn mệnh giá nạp</option>
-                                            </select>
-                                        </div>
-                                        <div class="frm-group">
-                                            <label>Số điện thoại:</label>
-                                            <input type="text" placeholder="Ví dụ: 0912345678" maxlength="11" name="phone_number">
-                                        </div>
-                                        <div class="frm-group">
-                                            <input name="submit1" type="submit" class="btn-submit" value="Nạp điện thoại">
-                                        </div>
-                                    </div>
-                                </form>
+                        <form action="" method="" class="form_buy">
+                            <div class="form-title">
+                                <h4>Mua mã thẻ xem phim</h4>
+                                <p>(Thẻ phim plus)</p>
                             </div>
-                            <div class="col-md-6">
-                                <form action="" method="" class="form_pay fh">
-                                    <div class="form-title">
-                                        <h4>Nạp cho thuê bao trả sau</h4>
-                                        <p>(Các mạng: Viettel, Mobifone, Vinaphone)<br>(mạng Viettel Homephone trả sau)</p>
+                            <div class="form-body">
+                                <div class="frm-group multiple">
+                                    <select name="card_movie" required>
+                                        <option value="" selected="">Hiện tại đang hết vé</option>
+                                    </select>
+                                    <div class="input_group flex">
+                                        <label>Số lượng:</label>
+                                        <input type="number" value="1">
                                     </div>
-                                    <div class="form-body">
-                                        <div class="frm-group">
-                                            <label>Chọn mệnh giá:</label>
-                                            <input class="full" type="text" maxlength="7" placeholder="Giá trị hóa đơn điện thoại trả sau cần thanh toán">
-                                        </div>
-                                        <div class="frm-group">
-                                            <label>Làm tròn</label>
-                                            <h6><b class="brd" style="font-size: 18px; color: #FF3300;"> đ</b></h6>
-                                        </div>
-                                        <div class="frm-group">
-                                            <label>Số điện thoại:</label>
-                                            <input type="text" placeholder="Ví dụ: 0912345678" maxlength="11" name="phone_number">
-                                        </div>
-                                        <div class="frm-group">
-                                            <input name="submit1" type="submit" class="btn-submit" value="Nạp điện thoại">
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
+                                <div class="frm-group">
+                                    <label>Giá vé:</label>
+                                    <h6>0đ</h6>
+                                </div>
+                                <div class="frm-group">
+                                    <input style="width: 62%;" type="email" name="email" placeholder="Điền email của bạn để nhận mã thẻ!">
+                                </div>
+                                <div class="frm-group">
+                                    <input name="submit1" type="submit" class="btn-submit" value="Mua ngay">
+                                </div>
                             </div>
-                        </div>
+                        </form>
                         <div class="facebook">
                             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                         </div>
@@ -184,42 +163,62 @@
                     <div class="col-md-3">
                         <div class="table_price">
                             <h2 class="title">Bảng giá</h2>
-                            <ul class="logo-card flex">
-                                <li><i class="icon icon-viettel"></i></li>
-                                <li><i class="icon icon-mobiphone"></i></li>
-                                <li><i class="icon icon-vina"></i></li>
-                                <li><i class="icon icon-vnm"></i></li>
-                                <li><i class="icon icon-sfone"></i></li>
-                                <li><i class="icon icon-gmobi"></i></li>
-                            </ul>
                             <table>
                                 <thead>
-                                    <tr>
-                                        <th>Loại thẻ</th>
-                                        <th>Giảm giá</th>
-                                    </tr>
+                                <tr>
+                                    <th>Loại thẻ</th>
+                                    <th>Giảm giá(*)</th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Viettel</td>
-                                        <td>1.5%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mobifone</td>
-                                        <td>3%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vinaphone</td>
-                                        <td>4%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vietnam Mobile</td>
-                                        <td>6%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>GMobile</td>
-                                        <td>5.50%</td>
-                                    </tr>
+                                <tr>
+                                    <td>Funcard</td>
+                                    <td>6.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Scoin VTCMobile</td>
+                                    <td>3.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Vegacard</td>
+                                    <td>3.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Vcoin</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Gate</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Zing</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Oncash</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Garena</td>
+                                    <td>4.5</td>
+                                </tr>
+                                <tr>
+                                    <td>SohaGame</td>
+                                    <td>3.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Bit Card</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Appota</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Megacard</td>
+                                    <td>5</td>
+                                </tr>
                                 </tbody>
                             </table>
                             <div class="note">
@@ -307,5 +306,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 <script src="assets/js/FlexSlider.js"></script>
 <script src="assets/js/page_all.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.card-info').click(function () {
+            $(this).parent().toggleClass('active');
+        });
+        $(document).mouseup(function(e){
+            var container = $(".form_credit");
+            if (!container.is(e.target) && container.has(e.target).length === 0)
+            {
+                $('.card-credit').removeClass('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>

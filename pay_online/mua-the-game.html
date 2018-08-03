@@ -123,11 +123,11 @@
                 </ol>
             </nav>
             <div class="main-inner">
+                <div class="header flex">
+                    <h2 class="title"> Nạp game</h2>
+                    <p>Giảm giá từ 5-10% mọi thẻ Gate, Oncash, Vinagame, Garena, VTC ..</p>
+                </div>
                 <div class="row">
-                    <div class="header flex">
-                        <h2 class="title"> Nạp game</h2>
-                        <p>Giảm giá từ 5-10% mọi thẻ Gate, Oncash, Vinagame, Garena, VTC ..</p>
-                    </div>
                     <div class="col-md-9">
                         <div class="row">
                             <div class="col-md-6">
@@ -340,34 +340,6 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 <script src="assets/js/FlexSlider.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.section-slider .flexslider').flexslider({
-            animation: "slide",
-            autoplay: "false"
-        });
-        $('.slider-footer .flexslider').flexslider({
-            animation: "slide",
-            animationLoop: true,
-            itemWidth: 37,
-            itemMargin: 5
-        });
-
-
-        $('.btn-support').click(function () {
-            $('.box-support').addClass('active');
-        });
-        $('.close_support').click(function () {
-            $('.box-support').removeClass('active');
-        });
-
-        $('.sub-menu').mouseenter(function () {
-           $(this).parent().css('background','#022a4e');
-        });
-        $('.sub-menu').mouseleave(function () {
-            $(this).parent().css('background','none');
-        });
-    });
-</script>
+<script src="assets/js/page_all.js"></script>
 </body>
 </html>

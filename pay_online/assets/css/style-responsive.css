@@ -1,0 +1,66 @@
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.flex-center {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+@media (min-width: 320px) and (max-width: 1023px) {
+  .navbar-toggle {
+    display: block;
+    padding: 0;
+    position: relative;
+    display: block;
+    width: 33px;
+    height: 18px; }
+    .navbar-toggle span {
+      display: block;
+      width: 33px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+    .navbar-toggle span:before, .navbar-toggle span:after {
+      content: '';
+      display: block;
+      width: 33px;
+      height: 2px;
+      background: #fff;
+      position: absolute; }
+    .navbar-toggle span:before {
+      top: -7px; }
+    .navbar-toggle span:after {
+      bottom: -7px; }
+  .navbar .menu {
+    display: block;
+    margin-left: -15px;
+    position: absolute;
+    top: 57px;
+    width: 100%;
+    background: var(--blue); }
+    .navbar .menu > li > a {
+      padding: 18px 15px; }
+    .navbar .menu .sub-menu {
+      display: block;
+      top: 0;
+      position: relative;
+      width: 100%; }
+      .navbar .menu .sub-menu li {
+        width: 100%; }
+  .brand a {
+    width: 200px;
+    height: 46px;
+    background-size: 200px 46px;
+    margin: 6px 0 0 -10px; }
+  .topbar {
+    display: none; }
+  .news-slider {
+    display: none; } }

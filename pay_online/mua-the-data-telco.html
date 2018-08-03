@@ -272,46 +272,6 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 <script src="assets/js/FlexSlider.js"></script>
-<script>
-    $(document).ready(function () {
-        var detail_acc=$('.list-faq article');
-        var item_acc=$('.list-faq li a');
-        var active_acc=$('.list-faq li.active')
-        detail_acc.hide();
-        active_acc.find('article').slideToggle();
-        item_acc.click(function (e) {
-            $('.list-faq li').removeClass('active');
-            $(this).addClass('active');
-            detail_acc.slideUp();
-            if(item_acc.parent('.active')){
-                $(this).parent().find('article').slideToggle();
-            }
-            return false;
-        });
-
-
-        $('.slider-footer .flexslider').flexslider({
-            animation: "slide",
-            animationLoop: true,
-            itemWidth: 37,
-            itemMargin: 5
-        });
-
-
-        $('.btn-support').click(function () {
-            $('.box-support').addClass('active');
-        });
-        $('.close_support').click(function () {
-            $('.box-support').removeClass('active');
-        });
-
-        $('.sub-menu').mouseenter(function () {
-           $(this).parent().css('background','#022a4e');
-        });
-        $('.sub-menu').mouseleave(function () {
-            $(this).parent().css('background','none');
-        });
-    });
-</script>
+<script src="assets/js/page_all.js"></script>
 </body>
 </html>
