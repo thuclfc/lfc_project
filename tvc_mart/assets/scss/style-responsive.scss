@@ -1,0 +1,37 @@
+@mixin block($display,$width,$height){
+  display: $display;
+  width: $width;
+  height: $height;
+}
+
+.flex{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+.flex-center{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+
+
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+
+
+}
