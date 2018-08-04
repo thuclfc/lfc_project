@@ -61,7 +61,6 @@
     .card-info{flex-wrap: nowrap;}
     .form_credit{position: relative;}
   }
-
   // popup
   .popup_pay{
     .pay_header{
@@ -73,7 +72,6 @@
     .list-cards{width: 100%; justify-content: center; margin-bottom: 15px; padding-left: 0;}
     .pay_info{width: 100%;}
   }
-
   // tin tuc
   .news{
     margin-top: 15px;
@@ -92,6 +90,7 @@
     .form-body{
       label{width: 30%;}
       select, input[type="number"],input[type="email"]{width: 60%;}
+      .btn-submit{margin-left: 30%;}
     }
   }
   .form_buy{
@@ -121,7 +120,19 @@
   // 1. header
   main{padding: 0;}
   main .home-inner{margin-top: 30px;}
-  .box-facebook,.box-support{display: none !important;}
+  .box-social,.box-support{
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    border-radius: 0;
+    .g{text-align: left;}
+    .btn-support{display: none;}
+    .support-detail{
+      display: block; width: 100%;
+      .head{border-radius: 0;}
+      .close_support{display: none;}
+    }
+  }
    header{width: 100%; position: fixed; top: 0; z-index: 99;}
   .section-slider,.category main{margin-top: 57px;}
   .category main{padding: 20px 0;}
@@ -207,6 +218,7 @@
 
   // footer
   footer{
+    padding-bottom: 0;
     .slider-footer{
       padding: 0 0 10px 0;
       h4{text-align: center; float: none;}
@@ -216,10 +228,14 @@
       .flex-prev{left: -15px;}
       .flex-next{right: -15px;}
     }
+    .slick-arrow.slick-prev{left: -10px;}
+    .slider-logo li{margin: 0 3px;}
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
   .navbar .menu > li > a{padding: 18px 25px;}
-  .form_half .form-body label{width: 30%;}
+  .form_half .form-body label{width: 20%;}
+  // footer
+
 }

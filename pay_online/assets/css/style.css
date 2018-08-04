@@ -21,7 +21,7 @@ body {
   font-family: Arial, Tahoma;
   font-weight: 400;
   font-size: 13px;
-  background: #fbfbfb; }
+  background: #efefef; }
 
 .wrapper {
   width: 100%;
@@ -135,7 +135,7 @@ body {
     .navbar .menu > li:hover .sub-menu {
       display: flex; }
 
-.box-facebook {
+.box-social {
   background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   position: fixed;
@@ -143,7 +143,7 @@ body {
   transform: translateY(-50%);
   border-radius: 0 8px 8px 0;
   z-index: 9; }
-  .box-facebook .g {
+  .box-social .g {
     display: block;
     text-align: center; }
 
@@ -297,14 +297,19 @@ body {
       line-height: 16px;
       font-size: 13px;
       background: url("../images/item-bullet.png") no-repeat 0 2px; }
+    .section-slider .news-slider a:hover {
+      color: #c00; }
 
 .section-slider .flexslider {
   margin: 0 auto;
+  padding: 1px 2px 2px;
   max-width: 1360px;
   background: #fff;
+  border: 1px solid #e2e0e0;
   position: relative; }
   .section-slider .flexslider img {
-    width: 100%; }
+    width: 100%;
+    border-radius: 2px; }
 
 .home main .container {
   max-width: 980px; }
@@ -1311,25 +1316,29 @@ footer {
     footer .slider-footer .flex-control-nav {
       display: none; }
     footer .slider-footer .flexslider {
-      margin-left: 125px; }
-  footer .flex-direction-nav a {
+      overflow: hidden;
+      width: 800px; }
+  footer .slick-arrow {
     display: block;
     width: 7px;
     height: 11px;
+    padding: 0;
     text-indent: -9999em;
     background: url("../images/nav-slider.png") no-repeat 0 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); }
-  footer .flex-direction-nav .flex-next {
-    right: 0;
-    transform: translateY(-50%) rotate(-180deg); }
-  footer .flex-direction-nav .flex-prev {
-    left: 125px; }
-  footer .slides li {
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer; }
+    footer .slick-arrow.slick-next {
+      right: -10px;
+      transform: translateY(-50%) rotate(-180deg); }
+    footer .slick-arrow.slick-prev {
+      left: 130px; }
+  footer .slider-logo li {
     margin: 0 5px;
     width: 37px; }
-  footer .slides li a {
+  footer .slider-logo li a {
     display: block;
     width: 37px;
     height: 37px;
@@ -1337,40 +1346,40 @@ footer {
     border: 1px solid #d1d1d1;
     border-radius: 3px 3px 3px 3px;
     background-position: 0 0; }
-  footer .slides li a:hover {
+  footer .slider-logo li a:hover {
     background-position: 0 -40px !important;
     border-color: #222; }
-  footer .slides li a.vietcombank {
+  footer .slider-logo li a.vietcombank {
     background: url("../images/logo/vietcombank.png") no-repeat; }
-  footer .slides li a.techbk {
+  footer .slider-logo li a.techbk {
     background: url("../images/logo/techbk.png") no-repeat; }
-  footer .slides li a.dongabk {
+  footer .slider-logo li a.dongabk {
     background: url("../images/logo/dongabk.png") no-repeat; }
-  footer .slides li a.vietinbk {
+  footer .slider-logo li a.vietinbk {
     background: url("../images/logo/vietinbk.png") no-repeat; }
-  footer .slides li a.vibk {
+  footer .slider-logo li a.vibk {
     background: url("../images/logo/vibk.png") no-repeat; }
-  footer .slides li a.shbk {
+  footer .slider-logo li a.shbk {
     background: url("../images/logo/shbk.png") no-repeat; }
-  footer .slides li a.acbbk {
+  footer .slider-logo li a.acbbk {
     background: url("../images/logo/acbbk.png") no-repeat; }
-  footer .slides li a.sacombk {
+  footer .slider-logo li a.sacombk {
     background: url("../images/logo/sacombk.png") no-repeat; }
-  footer .slides li a.bidvbk {
+  footer .slider-logo li a.bidvbk {
     background: url("../images/logo/bidvbk.png") no-repeat; }
-  footer .slides li a.agrbk {
+  footer .slider-logo li a.agrbk {
     background: url("../images/logo/agrbk.png") no-repeat; }
-  footer .slides li a.mbk {
+  footer .slider-logo li a.mbk {
     background: url("../images/logo/mbk.png") no-repeat; }
-  footer .slides li a.exembank {
+  footer .slider-logo li a.exembank {
     background: url("../images/logo/exembank.png") no-repeat; }
-  footer .slides li a.vpbk {
+  footer .slider-logo li a.vpbk {
     background: url("../images/logo/vpbk.png") no-repeat; }
-  footer .slides li a.seabk {
+  footer .slider-logo li a.seabk {
     background: url("../images/logo/seabk.png") no-repeat; }
-  footer .slides li a.bacabk {
+  footer .slider-logo li a.bacabk {
     background: url("../images/logo/bacabk.png") no-repeat; }
-  footer .slides li a.maritbk {
+  footer .slider-logo li a.maritbk {
     background: url("../images/logo/maritbk.png") no-repeat; }
   footer .list-service {
     margin-bottom: 6px; }
@@ -1390,3 +1399,90 @@ footer {
       color: #1E5AA5; }
     footer .info a:hover {
       color: #333; }
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide img {
+  display: block; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }

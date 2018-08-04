@@ -91,6 +91,8 @@
     width: 30%; }
   .form_half .form-body select, .form_half .form-body input[type="number"], .form_half .form-body input[type="email"] {
     width: 60%; }
+  .form_half .form-body .btn-submit {
+    margin-left: 30%; }
   .form_buy .multiple .input_group {
     margin-top: 15px; }
   .form_buy .checkbox {
@@ -116,8 +118,22 @@
     padding: 0; }
   main .home-inner {
     margin-top: 30px; }
-  .box-facebook, .box-support {
-    display: none !important; }
+  .box-social, .box-support {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    border-radius: 0; }
+    .box-social .g, .box-support .g {
+      text-align: left; }
+    .box-social .btn-support, .box-support .btn-support {
+      display: none; }
+    .box-social .support-detail, .box-support .support-detail {
+      display: block;
+      width: 100%; }
+      .box-social .support-detail .head, .box-support .support-detail .head {
+        border-radius: 0; }
+      .box-social .support-detail .close_support, .box-support .support-detail .close_support {
+        display: none; }
   header {
     width: 100%;
     position: fixed;
@@ -239,22 +255,28 @@
     font-size: 20px; }
   .table_price .logo-card {
     justify-content: center; }
-  footer .slider-footer {
-    padding: 0 0 10px 0; }
-    footer .slider-footer h4 {
-      text-align: center;
-      float: none; }
-    footer .slider-footer .flexslider {
-      width: 80%;
-      margin: 0 auto;
-      position: relative; }
-  footer .flex-direction-nav .flex-prev {
-    left: -15px; }
-  footer .flex-direction-nav .flex-next {
-    right: -15px; } }
+  footer {
+    padding-bottom: 0; }
+    footer .slider-footer {
+      padding: 0 0 10px 0; }
+      footer .slider-footer h4 {
+        text-align: center;
+        float: none; }
+      footer .slider-footer .flexslider {
+        width: 80%;
+        margin: 0 auto;
+        position: relative; }
+    footer .flex-direction-nav .flex-prev {
+      left: -15px; }
+    footer .flex-direction-nav .flex-next {
+      right: -15px; }
+    footer .slick-arrow.slick-prev {
+      left: -10px; }
+    footer .slider-logo li {
+      margin: 0 3px; } }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
   .navbar .menu > li > a {
     padding: 18px 25px; }
   .form_half .form-body label {
-    width: 30%; } }
+    width: 20%; } }
