@@ -19,19 +19,161 @@
   -webkit-justify-content: center;
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  h2.title{
+    font-size: 22px; line-height: 32px;
+    &:after{margin-bottom: 20px;}
+  }
+  .topbar{
+    height: auto;
+    .textbar{
+      display: none;
+      padding: 5px 0;
+      height: auto;
+      justify-content: center;
+      font-size: 14px;
+      .hotline{margin-right: 0;}
+    }
+  }
+  .menubar{
+    height: 45px;
+    justify-content: center;
+    padding-right: 30px;
+    li a{padding: 5px 8px; font-size: 13px;}
+    a.login{padding: 4px 10px 6px; margin-left: 5px;}
+  }
+  .select_language{right: 5px; font-size: 13px; background: url(../images/arrow_down.png) no-repeat right 8px;}
+  .box-slider{
+    .item-slider{
+      min-height: 300px;
+    }
+    img{width: 100%; min-height: 300px; object-fit: cover;}
+    .detail{
+      h2{font-size: 22px;}
+      h2:before{width: 60px; margin-bottom: 15px;}
+    }
+    .btn-buy{margin: 20px 0 0 0;  padding: 6px 15px;  font-size: 18px;}
+  }
+  .slick-arrow{
+    width: 60px; height: 60px;
+    &:before{left: 11px; width: 16px; height: 11px; background-size: 16px 11px;}
+    &.slick-next{right: -30px;}
+    &.slick-prev{left: -30px;}
+  }
+  .section{padding-top: 40px;}
 
+  //hot trend
+  .hot-trend{
+    .card_info{margin-bottom: 15px;}
+  }
+  .tab_product{
+    li{padding: 2px 20px;}
+    a{font-size: 16px;}
+  }
+
+  // list product
+  .category_product{
+    h2.title{margin-bottom: 62px;}
+    .list-category{margin-bottom: 20px;}
+  }
+
+  // section introduce
+  .section.introduce{
+    background-size: 100% 100%;
+    .content_intro{padding: 0;}
+    .btn-buy{margin-top: 40px;}
+  }
+
+  .viewed_product{
+    h2.title{width: auto; margin-bottom: 40px; padding-left: 15px;}
+  }
+  .get_email{
+    padding: 20px 0;
+    form{
+      input[type="email"]{width: 70%;}
+      .btn-submit{padding: 0 4px; margin-left: 2px; font-size: 13px;}
+    }
+  }
+
+  // footer
+  footer{
+    .bt_bar{
+      .container{flex-wrap: wrap;}
+      height: auto; padding: 10px 0; text-align: center;
+    }
+    .copyright{padding-left: 0; text-align: center;}
+    .method_pay{justify-content: center; padding: 10px 0;}
+    .list-item{margin-bottom: 15px;}
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .card-new .thumb img{width: 100%;}
+  .category_product .slider_category img{width: 100%;}
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
+  .textbar{display: none;}
+  .select_language{right: 15px;}
+  .box-slider{
+    .item-slider{min-height: 300px;}
+    img{width: 100%; min-height: 300px; object-fit: cover;}
+    .detail{
+      h2{font-size: 28px;}
+      h2:after{width: 80px; margin-top: 20px;}
+    }
+    .btn-buy{
+      margin: 20px 0 0 0;
+      padding: 6px 15px;
+      font-size: 18px;
+    }
+  }
+  .category_product{
+    .list-category a{font-size: 15px;}
+  }
 }
 
 @media (min-width: 320px) and (max-width: 1023px) {
-
-
+  .navbar{
+    padding: 15px 0;
+    align-items: center;
+    flex-direction: row;
+    .brand{margin: 0;}
+    .social_cart{
+      position: absolute;
+      right: -15px;
+      top: 2px;
+    }
+  }
+  .navbar-toggle{
+    display: block; padding: 0; position: relative; @include block(block,33px,18px);
+    background: none; border: none;
+    span{@include block(block,33px,2px); background: #231f20; position: absolute; top: 50%; transform: translateY(-50%);}
+    span:before,span:after{
+      content: ''; @include block(block,33px,2px); background: #231f20; position: absolute;
+    }
+    span:before{top: -7px;}
+    span:after{bottom: -7px;}
+  }
+  .navbar-nav{
+    margin-top: 15px;
+    li{padding: 0;}
+    li a{padding: 5px 0; font-size: 14px;}
+  }
+  .content_product{
+    .thumb img{display: block; margin: 0 auto;}
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-
-
+  .select_language{right: 20px;}
+  .topbar .textbar{font-size: 15px;}
+  .navbar-nav li{padding: 0 15px;}
+  .topbar .textbar .hotline{margin-right: 15px;}
+  .box-slider{
+    .detail{
+      h2{font-size: 36px;}
+      h2:after{margin-bottom: 15px;}
+      .btn-buy{margin: 30px 0 0 0;  padding: 8px 22px; font-size: 22px;}
+    }
+  }
 }
